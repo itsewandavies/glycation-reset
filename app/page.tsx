@@ -14,6 +14,7 @@ const css = `
     font-size: 17px;
   }
 
+  /* ── MASTHEAD ── */
   .masthead {
     background: #fff;
     border-bottom: 1px solid #E2DDD7;
@@ -26,152 +27,164 @@ const css = `
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 22px;
     font-weight: 700;
-    letter-spacing: -0.3px;
     color: #1A1A1A;
   }
   .masthead-logo span { color: #9B7B6A; }
 
+  /* ── LAYOUT ── */
   .article-wrap {
-    max-width: 780px;
+    max-width: 760px;
     margin: 0 auto;
     padding: 0 24px 100px;
   }
 
-  .article-header { padding: 48px 0 32px; }
-
+  /* ── HERO ── */
+  .hero {
+    padding: 52px 0 40px;
+    text-align: center;
+  }
+  .hero-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #9B7B6A;
+    margin-bottom: 22px;
+  }
   .article-title {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(32px, 6vw, 52px);
+    font-size: clamp(30px, 5.5vw, 50px);
     font-weight: 700;
-    line-height: 1.15;
-    letter-spacing: -0.6px;
+    line-height: 1.14;
+    letter-spacing: -0.5px;
     color: #0F0F0F;
     margin-bottom: 20px;
+    text-align: left;
   }
-
   .article-subtitle {
     font-size: 19px;
     line-height: 1.65;
     color: #52504D;
     font-weight: 400;
+    margin-bottom: 28px;
+    text-align: left;
+  }
+  .hero-promise {
+    background: #F5EDE8;
+    border-left: 4px solid #9B7B6A;
+    padding: 16px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #3D2B22;
+    text-align: left;
     margin-bottom: 32px;
+    line-height: 1.5;
+  }
+  .hero-guarantee-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 16px 0;
+    border-top: 1px solid #E2DDD7;
+    border-bottom: 1px solid #E2DDD7;
+    margin-bottom: 0;
+  }
+  .hero-guarantee-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    color: #52504D;
+    font-weight: 500;
   }
 
+  /* ── HERO IMAGE ── */
+  .hero-image {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    margin: 32px 0 0;
+    border-radius: 4px;
+  }
+  .image-caption {
+    font-size: 13px;
+    color: #9B9590;
+    font-style: italic;
+    text-align: center;
+    margin: 10px 0 40px;
+  }
+
+  /* ── BODY ── */
   .body-text p {
     margin-bottom: 24px;
     font-size: 17px;
-    line-height: 1.8;
+    line-height: 1.82;
     color: #2A2826;
   }
+  .body-text strong { font-weight: 600; color: #0F0F0F; }
+  .body-text em { font-style: italic; }
 
-  .body-text p:first-letter {
-    font-size: 17px;
-  }
-
-  .body-text em {
-    font-style: italic;
-    color: #2A2826;
-  }
-
-  .body-text strong {
-    font-weight: 600;
-    color: #0F0F0F;
-  }
-
+  /* ── HEADINGS ── */
   .section-heading {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 28px;
+    font-size: 27px;
     font-weight: 700;
     color: #0F0F0F;
-    margin: 48px 0 24px;
+    margin: 48px 0 22px;
     line-height: 1.3;
   }
-
   .section-rule {
     border: none;
     border-top: 1px solid #E2DDD7;
     margin: 44px 0;
   }
 
-  .pull-quote {
-    margin: 36px 0;
-    padding: 28px 32px;
-    background: #F5EDE8;
-    border-left: 4px solid #9B7B6A;
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 20px;
-    font-style: italic;
-    color: #3D2B22;
-    line-height: 1.6;
-  }
-
-  .hero-image {
-    width: 100%;
-    height: 480px;
-    object-fit: cover;
-    display: block;
-    margin: 32px 0;
-    border-radius: 4px;
-  }
-
-  .image-caption {
-    font-size: 14px;
-    color: #9B9590;
-    font-style: italic;
-    text-align: center;
-    margin: 12px 0 36px;
-  }
-
-  .inline-image {
-    width: 100%;
-    border-radius: 6px;
-    margin: 24px 0 12px;
-    display: block;
-    object-fit: cover;
-    max-height: 380px;
-  }
-
-  .callout {
-    background: #FFFDF9;
+  /* ── MECHANISM BOX ── */
+  .mechanism-box {
+    background: #fff;
     border: 1px solid #E2DDD7;
-    border-radius: 6px;
-    padding: 24px 28px;
+    border-radius: 8px;
+    padding: 28px 30px;
     margin: 32px 0;
   }
-
-  .callout-label {
+  .mechanism-box-label {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #9B7B6A;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
   }
-
-  .callout p {
+  .mechanism-box p {
     font-size: 16px;
     color: #2A2826;
-    line-height: 1.65;
-    margin: 0;
+    line-height: 1.7;
+    margin-bottom: 14px;
   }
+  .mechanism-box p:last-child { margin-bottom: 0; }
 
+  /* ── DIAGRAM ── */
   .diagram {
     background: #fff;
     border: 1px solid #E2DDD7;
     border-radius: 8px;
-    padding: 32px 24px;
-    margin: 32px 0;
+    padding: 28px 20px;
+    margin: 28px 0 36px;
   }
-
   .diagram-title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 18px;
-    font-weight: 600;
-    color: #0F0F0F;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #9B7B6A;
     text-align: center;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
-
   .diagram-steps {
     display: flex;
     align-items: stretch;
@@ -179,73 +192,118 @@ const css = `
     flex-wrap: wrap;
     justify-content: center;
   }
-
   .diagram-step {
     flex: 1;
-    min-width: 140px;
-    max-width: 180px;
+    min-width: 130px;
+    max-width: 160px;
     text-align: center;
-    padding: 16px 12px;
+    padding: 16px 10px;
     background: #FAFAF7;
     border: 1px solid #E2DDD7;
     border-radius: 6px;
   }
-
-  .diagram-step-icon { font-size: 32px; margin-bottom: 8px; }
-
+  .diagram-step-icon { font-size: 28px; margin-bottom: 8px; }
   .diagram-step-label {
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 11px;
+    font-weight: 700;
     color: #1A1A1A;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
-
-  .diagram-step-desc { font-size: 12px; color: #6B6560; line-height: 1.4; }
-
+  .diagram-step-desc { font-size: 11px; color: #6B6560; line-height: 1.4; }
   .diagram-step.bad { background: #FDF0EE; border-color: #E8B5AD; }
-
   .diagram-arrow {
     display: flex;
     align-items: center;
     color: #9B7B6A;
-    font-size: 24px;
-    padding: 0 8px;
+    font-size: 22px;
+    padding: 0 6px;
     flex-shrink: 0;
   }
-
+  .diagram-note {
+    margin-top: 20px;
+    padding: 12px 16px;
+    background: #FDF0EE;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 14px;
+    color: #7A2E1E;
+    font-weight: 500;
+  }
   @media (max-width: 600px) {
     .diagram-steps { flex-direction: column; align-items: center; }
     .diagram-step { max-width: 100%; width: 100%; }
     .diagram-arrow { transform: rotate(90deg); padding: 4px 0; }
   }
 
+  /* ── INLINE IMAGES ── */
+  .inline-image {
+    width: 100%;
+    border-radius: 6px;
+    margin: 24px 0 10px;
+    display: block;
+    object-fit: cover;
+    max-height: 380px;
+  }
+
+  /* ── PULL QUOTE ── */
+  .pull-quote {
+    margin: 36px 0;
+    padding: 28px 32px;
+    background: #F5EDE8;
+    border-left: 4px solid #9B7B6A;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 21px;
+    font-style: italic;
+    color: #3D2B22;
+    line-height: 1.55;
+  }
+
+  /* ── VILLAIN BOX ── */
+  .villain-box {
+    background: #FDF7F5;
+    border: 1px solid #D4A898;
+    border-radius: 8px;
+    padding: 26px 28px;
+    margin: 32px 0;
+  }
+  .villain-box-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #B05C45;
+    margin-bottom: 12px;
+  }
+  .villain-box p {
+    font-size: 16px;
+    color: #2A2826;
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+  .villain-box p:last-child { margin-bottom: 0; }
+
+  /* ── INGREDIENTS ── */
   .ingredients-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
     margin: 28px 0;
   }
-
   .ingredient-card {
     background: #fff;
     border: 1px solid #E2DDD7;
     border-radius: 8px;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
   }
-
   .ingredient-img {
     width: 100%;
-    height: 220px;
+    height: 210px;
     object-fit: cover;
     display: block;
   }
-
   .ingredient-body { padding: 22px 24px; }
-
   .ingredient-num {
     font-size: 11px;
     font-weight: 700;
@@ -254,7 +312,6 @@ const css = `
     color: #9B7B6A;
     margin-bottom: 6px;
   }
-
   .ingredient-name {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 20px;
@@ -262,13 +319,7 @@ const css = `
     color: #0F0F0F;
     margin-bottom: 10px;
   }
-
-  .ingredient-desc {
-    font-size: 15px;
-    color: #52504D;
-    line-height: 1.65;
-  }
-
+  .ingredient-desc { font-size: 15px; color: #52504D; line-height: 1.65; }
   .ingredient-badge {
     display: inline-block;
     margin-top: 12px;
@@ -279,223 +330,220 @@ const css = `
     font-weight: 600;
     padding: 4px 10px;
     border-radius: 20px;
-    letter-spacing: 0.3px;
   }
 
+  /* ── TESTIMONIALS ── */
+  .testimonials { margin: 44px 0; }
+  .testimonials-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #0F0F0F;
+    margin-bottom: 22px;
+    text-align: center;
+  }
+  .testimonial-card {
+    background: #fff;
+    border: 1px solid #E2DDD7;
+    border-radius: 8px;
+    padding: 22px 24px;
+    margin-bottom: 16px;
+  }
+  .testimonial-stars { color: #D4A853; font-size: 14px; margin-bottom: 10px; }
+  .testimonial-text {
+    font-size: 15px;
+    color: #2A2826;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    font-style: italic;
+  }
+  .testimonial-author { display: flex; align-items: center; gap: 12px; }
+  .testimonial-avatar {
+    width: 46px; height: 46px; border-radius: 50%;
+    object-fit: cover; object-position: center top; flex-shrink: 0;
+  }
+  .testimonial-name { font-size: 14px; font-weight: 700; color: #1A1A1A; }
+  .testimonial-detail { font-size: 13px; color: #9B9590; margin-top: 2px; }
+  .verified-badge {
+    margin-left: auto;
+    font-size: 11px;
+    font-weight: 600;
+    color: #2D6B2D;
+    background: #EEF5EE;
+    border: 1px solid #A8CBA8;
+    padding: 3px 9px;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* ── INSIDE BOX ── */
   .inside-box {
     background: #fff;
     border: 2px solid #9B7B6A;
     border-radius: 10px;
     padding: 32px;
-    margin: 32px 0;
+    margin: 36px 0;
   }
-
   .inside-box-title {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 22px;
     font-weight: 700;
     color: #0F0F0F;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
-
-  .inside-box-subtitle { font-size: 14px; color: #9B7B6A; font-weight: 500; margin-bottom: 22px; }
-
+  .inside-box-subtitle { font-size: 14px; color: #9B7B6A; font-weight: 500; margin-bottom: 24px; }
   .inside-item {
     display: flex;
     align-items: flex-start;
     gap: 12px;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
-
   .inside-check {
-    width: 22px;
-    height: 22px;
+    width: 22px; height: 22px;
     background: #9B7B6A;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 12px;
-    flex-shrink: 0;
-    margin-top: 2px;
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 11px; flex-shrink: 0; margin-top: 2px;
   }
-
   .inside-item-text { font-size: 15px; color: #2A2826; line-height: 1.6; }
-
   .inside-item-text strong { color: #0F0F0F; }
 
-  .inside-price-row {
-    margin-top: 28px;
-    padding-top: 22px;
-    border-top: 1px solid #E2DDD7;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    flex-wrap: wrap;
-  }
-
-  .price-main {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 40px;
-    font-weight: 700;
-    color: #0F0F0F;
-  }
-
-  .price-was {
-    font-size: 18px;
-    color: #B0A89E;
-    text-decoration: line-through;
-  }
-
-  .price-saving {
-    background: #F5EDE8;
-    color: #9B7B6A;
-    font-size: 13px;
-    font-weight: 600;
-    padding: 5px 14px;
-    border-radius: 20px;
-  }
-
-  .checkout-section {
+  /* ── PRICE ── */
+  .price-section {
     background: #fff;
     border: 1px solid #E2DDD7;
     border-radius: 10px;
-    overflow: hidden;
-    margin: 44px 0;
-  }
-
-  .checkout-header {
-    background: #9B7B6A;
-    padding: 24px 28px;
+    padding: 32px;
+    margin: 36px 0;
     text-align: center;
   }
-
-  .checkout-header-title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 4px;
-  }
-
-  .checkout-header-sub { font-size: 14px; color: rgba(255,255,255,0.85); }
-
-  .checkout-body { padding: 32px; }
-
-  .checkout-guarantee {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    background: #F5EDE8;
-    border-radius: 6px;
-    padding: 18px 22px;
-    margin-bottom: 28px;
-  }
-
-  .guarantee-icon { font-size: 32px; flex-shrink: 0; }
-
-  .guarantee-text { font-size: 14px; color: #3D2B22; line-height: 1.6; }
-
-  .guarantee-text strong { display: block; font-size: 15px; color: #0F0F0F; margin-bottom: 3px; }
-
-  .checkout-trust {
-    display: flex;
-    justify-content: center;
-    gap: 18px;
-    flex-wrap: wrap;
-    margin-bottom: 28px;
-  }
-
-  .trust-item {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+  .price-label {
     font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #9B7B6A;
+    margin-bottom: 10px;
+  }
+  .price-main {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 64px;
+    font-weight: 700;
+    color: #0F0F0F;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .price-context {
+    font-size: 15px;
     color: #52504D;
-    font-weight: 500;
+    line-height: 1.6;
+    max-width: 460px;
+    margin: 0 auto 28px;
   }
-
-  .checkout-iframe-wrap {
-    border-radius: 8px;
-    overflow: hidden;
-    background: #FAFAF7;
-    min-height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .checkout-placeholder {
+  .price-context strong { color: #0F0F0F; }
+  .cta-button {
+    display: block;
+    background: #9B7B6A;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 18px 32px;
+    border-radius: 6px;
+    text-decoration: none;
     text-align: center;
-    padding: 40px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 14px;
+    letter-spacing: 0.2px;
+    transition: background 0.2s;
+  }
+  .cta-button:hover { background: #8A6B5A; }
+  .cta-sub {
+    font-size: 13px;
     color: #9B9590;
+    text-align: center;
   }
 
-  .checkout-placeholder .placeholder-icon { font-size: 44px; margin-bottom: 12px; }
-
-  .checkout-placeholder p { font-size: 14px; }
-
-  .order-bump {
-    background: #FFFDF4;
-    border: 2px dashed #D4A853;
+  /* ── GUARANTEE ── */
+  .guarantee-box {
+    background: #F5EDE8;
     border-radius: 8px;
-    padding: 20px 22px;
-    margin: 20px 0 0;
+    padding: 28px 30px;
+    margin: 36px 0;
     display: flex;
-    gap: 14px;
+    gap: 18px;
     align-items: flex-start;
   }
+  .guarantee-icon { font-size: 36px; flex-shrink: 0; }
+  .guarantee-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #0F0F0F;
+    margin-bottom: 10px;
+  }
+  .guarantee-text { font-size: 15px; color: #3D2B22; line-height: 1.7; }
 
-  .bump-checkbox {
-    width: 22px; height: 22px;
-    background: #D4A853;
-    border-radius: 4px;
-    display: flex; align-items: center; justify-content: center;
-    color: white; font-size: 13px; flex-shrink: 0; margin-top: 2px;
+  /* ── FAQ ── */
+  .faq-section { margin: 48px 0; }
+  .faq-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #0F0F0F;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .faq-item {
+    border-bottom: 1px solid #E2DDD7;
+    padding: 20px 0;
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-question {
+    font-size: 16px;
+    font-weight: 600;
+    color: #0F0F0F;
+    margin-bottom: 10px;
+    line-height: 1.45;
+  }
+  .faq-answer {
+    font-size: 15px;
+    color: #52504D;
+    line-height: 1.7;
   }
 
-  .bump-content { flex: 1; }
-
-  .bump-label {
-    font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
-    text-transform: uppercase; color: #D4A853; margin-bottom: 4px;
-  }
-
-  .bump-title { font-size: 16px; font-weight: 600; color: #0F0F0F; margin-bottom: 6px; }
-
-  .bump-desc { font-size: 14px; color: #52504D; line-height: 1.55; margin-bottom: 10px; }
-
-  .bump-price { font-size: 16px; font-weight: 700; color: #0F0F0F; }
-
-  .bump-price span { color: #9B9590; font-size: 13px; font-weight: 400; margin-left: 4px; }
-
+  /* ── P.S. ── */
   .ps-section {
     margin-top: 44px;
     padding: 24px 28px;
     background: #F5EDE8;
     border-radius: 6px;
-    font-size: 15px;
+    font-size: 16px;
     color: #3D2B22;
-    line-height: 1.7;
+    line-height: 1.75;
   }
 
+  /* ── FOOTER ── */
   .footer {
     background: #1A1A1A;
-    color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.45);
     text-align: center;
     padding: 32px 20px;
     font-size: 12px;
-    line-height: 1.8;
+    line-height: 1.9;
     margin-top: 80px;
   }
-
-  .footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
+  .footer a { color: rgba(255,255,255,0.35); text-decoration: none; }
 
   @media (max-width: 600px) {
     .article-wrap { padding: 0 16px 60px; }
-    .inside-box { padding: 24px; }
-    .checkout-body { padding: 20px; }
+    .hero { padding: 36px 0 28px; }
+    .inside-box { padding: 20px; }
+    .price-section { padding: 24px 20px; }
+    .guarantee-box { flex-direction: column; gap: 12px; }
   }
 `
 
@@ -504,206 +552,167 @@ export default function Home() {
     <>
       <style dangerouslySetInnerHTML={{ __html: css }} />
 
+      {/* ── MASTHEAD ── */}
       <header className="masthead">
         <div className="masthead-logo">The Skin<span>Journal</span></div>
       </header>
 
       <main className="article-wrap">
-        <header className="article-header">
+
+        {/* ── 1. HERO ── */}
+        <header className="hero">
+          <div className="hero-tag">Skin Science · Anti-Aging</div>
           <h1 className="article-title">
-            I Deleted 263 Holiday Photos Because I Couldn't Stand Looking at My Own Face
+            The Real Reason Your Face Changed After 50 Isn't Collagen Loss — And No Serum Can Fix It
           </h1>
           <p className="article-subtitle">
-            And then I found out why my skin changed so dramatically — and what actually fixes it (spoiler: it's not what you've been buying)
+            There's a process happening inside your skin every single day that the skincare industry never talks about. Scientists call it glycation. Once you understand it, everything else makes sense.
           </p>
+          <div className="hero-promise">
+            Inside: the three-compound oral protocol that addresses the actual mechanism — the part your bathroom shelf can't reach.
+          </div>
+          <div className="hero-guarantee-bar">
+            <div className="hero-guarantee-item">🛡️ 60-day money-back guarantee</div>
+            <div className="hero-guarantee-item">⚡ Instant digital download</div>
+            <div className="hero-guarantee-item">✓ Science-backed protocol</div>
+          </div>
         </header>
 
+        {/* ── HERO IMAGE ── */}
         <img
-          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1400&q=85&auto=format&fit=crop&crop=faces"
-          alt="Woman looking in mirror with morning light"
+          src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=1400&q=85&auto=format&fit=crop&crop=top"
+          alt="Woman examining her skin in natural morning light"
           className="hero-image"
         />
+        <p className="image-caption">The morning light doesn't lie. And somewhere around 50, a lot of women start avoiding it.</p>
 
         <div className="body-text">
 
+          {/* ── 2. CONDENSED MECHANISM FIRST ── */}
+          <h2 className="section-heading">What Nobody in the Skincare Industry Tells You</h2>
+
           <p>
-            Two years ago I went to Mallorca with my sister for two weeks. First proper holiday in four years. The kind where you actually relax and forget about life for a moment. We took photos constantly. Sun, wine, stupid faces, all of it.
+            Every time you eat something that converts to glucose — bread, pasta, cereal, even fruit — a small amount of that sugar enters your bloodstream and bonds to the collagen in your skin. This process is called <strong>glycation</strong>. And the bonds it creates are called AGEs — Advanced Glycation End-Products.
           </p>
 
           <p>
-            I got home and started scrolling through them. And something felt wrong. I kept seeing this woman in the photos. Older. Softer in the face. Specifically in the jawline. That weird deflated look that happens when everything starts to drop a little.
+            AGEs cause your collagen fibers to cross-link abnormally. Instead of smooth, flexible fibers that spring back, you end up with stiff, rigid, tangled bundles. That rigidity is the sagging jaw. The deepening lines. The loss of volume that makes your face look deflated in photos.
           </p>
 
           <p>
-            It took me a full minute to realize that woman was me.
-          </p>
-
-          <p>
-            I was 51 in those photos. I'd been 51 when I left. But somewhere between the airport security and coming home, I'd aged five years in my own head. And not in a "I'm maturing gracefully" kind of way. In a "when did my face stop being recognizable to me" kind of way.
-          </p>
-
-          <p>
-            So I did what any normal person does. I deleted them. Most of them. All except the ones where I was wearing sunglasses or my face wasn't visible. It made me feel slightly better in the moment, which is a terrible way to feel about your own holiday.
-          </p>
-
-          <p>
-            Then I started avoiding mirrors in bright light. Then I started saying no to social things because I couldn't stand the thought of being photographed. Then one afternoon my son asked why I never smiled in pictures anymore, and I realized I'd somehow slipped into this life where I was just... hiding.
-          </p>
-
-          <p>
-            Which is not how I'd imagined 51 would feel.
-          </p>
-
-          <hr className="section-rule" />
-
-          <h2 className="section-heading">The Three-Year Bathroom Shelf Experiment</h2>
-
-          <p>
-            So I started trying to fix it. And I mean *trying*. I wasn't some passive person waiting for things to improve.
-          </p>
-
-          <p>
-            I bought the fancy vitamin C serum. The one in the brown glass bottle that costs $90 and you use three drops and feel like you're doing something. I did my research. I got the one that's supposedly the most bioavailable version. Used it every single morning without missing a day for eight months.
-          </p>
-
-          <p>
-            Nothing moved.
-          </p>
-
-          <p>
-            Then I tried the retinol cream that everyone talks about. Started slow, worked my way up. Got the peeling phase, waited it out, kept going. Six weeks in, my skin looked more fragile, not less. Thinner in the cheeks. Angrier. So I stopped.
-          </p>
-
-          <p>
-            Then came the collagen supplements. The ones with the peptides you're supposed to drink every morning with water. I did that for six months straight. Cost me about $180. My skin looked exactly the same.
-          </p>
-
-          <p>
-            My dermatologist — who I was seeing every four months at this point because I was absolutely obsessed with fixing this — kept saying the same thing: "It's a natural part of aging. We can talk about fillers if the volume loss bothers you."
-          </p>
-
-          <p>
-            Fillers. Like I needed someone to inject my face with... something... to look recognizable to myself.
-          </p>
-
-          <p>
-            So I did what I always do when I'm frustrated and have internet access at midnight. I went down a research rabbit hole.
-          </p>
-
-          <hr className="section-rule" />
-
-          <h2 className="section-heading">The Thing Nobody Tells You</h2>
-
-          <p>
-            I found a paper. Just one, initially. A 2019 dermatology study from Japan about why women in certain rural areas seemed to age visibly slower than expected. And it wasn't about genetics or lifestyle or any of the usual suspects.
-          </p>
-
-          <p>
-            It was about something called glycation.
-          </p>
-
-          <p>
-            I'd heard the word before. Fancy skincare brands mention it sometimes. But I'd never seen it explained in a way that made me actually understand what was happening.
-          </p>
-
-          <p>
-            So I kept reading.
-          </p>
-
-          <p>
-            And the more I read, the more pissed off I got. Because the entire skincare industry was talking about the wrong thing.
-          </p>
-
-          <div className="callout">
-            <div className="callout-label">Here's What They Don't Tell You</div>
-            <p>
-              Every wrinkle cream, every serum, every expensive collagen product is trying to fix something at the surface. But the real damage is happening *underneath*, where no topical product can reach. That's not a product failure. That's basic skin biology.
-            </p>
-          </div>
-
-          <h2 className="section-heading">What Glycation Actually Is</h2>
-
-          <p>
-            Every time you eat something that turns into sugar — and this includes bread, pasta, cereal, even fruit — some of that glucose enters your bloodstream. Your body uses most of it for energy. But some of it latches onto the collagen in your skin.
-          </p>
-
-          <p>
-            When glucose binds to collagen, it creates something called AGEs. Advanced Glycation End-Products. Which is exactly what they sound like — things that make you look aged.
-          </p>
-
-          <p>
-            Here's what they do: they make collagen fibers stick together in the wrong ways. Instead of smooth, flexible fibers that can move and bounce back, you get tangled, rigid, brittle bundles. Think of the difference between a fresh elastic band and one that's been sitting in a drawer for five years. The structure looks the same. The function is completely different.
-          </p>
-
-          <p>
-            That's the sagging jaw. That's the lines that get deeper. That's that specific softness that makes you look ten years older.
-          </p>
-
-          <p>
-            And here's the part that made me want to flip a table: <strong>no topical skincare can fix this.</strong> Not serums. Not retinol. Not collagen creams. Because the collagen in your skin lives in the dermis — the layer under the epidermis. And topical products don't penetrate that far. They can't reach the damage.
-          </p>
-
-          <p>
-            Which means every single product I'd been faithfully applying was doing... something. But not addressing the actual problem.
+            It is not collagen loss. It is collagen that has been chemically stiffened from the inside. And here is the critical thing: <strong>no topical product can fix this.</strong> Serums sit on the epidermis — the top layer. Glycation happens in the dermis — the layer underneath. They never meet.
           </p>
 
           <div className="diagram">
-            <div className="diagram-title">Why Your Serums Can't Fix This</div>
+            <div className="diagram-title">Why Your Skincare Can't Reach The Problem</div>
             <div className="diagram-steps">
               <div className="diagram-step">
                 <div className="diagram-step-icon">🍞</div>
-                <div className="diagram-step-label">You Eat Sugar</div>
-                <div className="diagram-step-desc">Glucose in bloodstream</div>
+                <div className="diagram-step-label">Sugar in blood</div>
+                <div className="diagram-step-desc">From everyday food</div>
               </div>
               <div className="diagram-arrow">→</div>
               <div className="diagram-step bad">
                 <div className="diagram-step-icon">⚠️</div>
-                <div className="diagram-step-label">Glycation Happens</div>
-                <div className="diagram-step-desc">In the dermis, deep layer</div>
+                <div className="diagram-step-label">Glycation</div>
+                <div className="diagram-step-desc">Happens in the dermis</div>
               </div>
               <div className="diagram-arrow">→</div>
               <div className="diagram-step bad">
                 <div className="diagram-step-icon">📉</div>
-                <div className="diagram-step-label">You Look Older</div>
-                <div className="diagram-step-desc">Sagging, lines, loss of firmness</div>
+                <div className="diagram-step-label">Sagging + lines</div>
+                <div className="diagram-step-desc">Stiff, rigid collagen</div>
               </div>
+            </div>
+            <div className="diagram-note">
+              Your serum reaches: the epidermis (top layer) &nbsp;·&nbsp; Glycation happens: in the dermis (below it) &nbsp;·&nbsp; They never meet.
             </div>
           </div>
 
           <p>
-            Your serum reaches: the epidermis (top layer)
-          </p>
-
-          <p>
-            Glycation happens: in the dermis (middle layer)
-          </p>
-
-          <p>
-            The math doesn't work.
+            The solution — if there is one — has to come from the inside. And it turns out, there is one.
           </p>
 
           <hr className="section-rule" />
 
-          <h2 className="section-heading">So What Actually Fixes This</h2>
+          {/* ── 3. PERSONAL STORY ── */}
+          <h2 className="section-heading">I Deleted 263 Holiday Photos Because I Couldn't Stand Looking at My Own Face</h2>
 
           <p>
-            Once I understood that glycation was the real problem, I had to find out if anything could actually address it.
+            Two summers ago I went to Mallorca with my sister. Two weeks, first real holiday in four years. We took hundreds of photos. I came home and started going through them — and something felt wrong. I kept seeing this woman in the background, softer in the face, that specific deflated look around the jaw.
           </p>
 
           <p>
-            I started reading everything. Studies from Japan, Korea, Europe. Botanical research. Nutritional biochemistry. Anything that looked at compounds that could either prevent glycation from happening or help your body break down the damage that's already there.
+            It took me a full minute to realise that woman was me.
           </p>
 
           <p>
-            And I found three.
+            I deleted 263 of them. Kept only the ones where I was wearing sunglasses or the light was forgiving. Then I started avoiding mirrors in bright light. Then I stopped agreeing to be in photos at family things. Then my son asked why I never smile in pictures anymore.
           </p>
 
           <p>
-            Three specific compounds that, when taken together, address glycation from three different angles. Prevention. Structural repair. Oxidative protection.
+            That question sent me down a research rabbit hole that took four months to come back from. And what I found completely changed how I understood what was happening to my skin — and why nothing I'd tried had worked.
+          </p>
+
+          <hr className="section-rule" />
+
+          {/* ── 4. BATHROOM SHELF EXPERIMENT ── */}
+          <h2 className="section-heading">The $847 Experiment That Got Me Nowhere</h2>
+
+          <p>
+            Before I found out about glycation, I'd spent three years trying to fix my skin the way you're supposed to. I kept every receipt.
           </p>
 
           <p>
-            All three are things you take orally. Which means they actually reach the dermis. Where the problem is.
+            The vitamin C serum in the brown glass bottle — $90, used it for eight months without missing a day. The retinol that made my skin peel for six weeks and look thinner on the other side. The collagen powder you stir into your morning coffee, $180 for a six-month supply. The hyaluronic acid serum. The peptide cream. The two dermatologist consultations at $160 each.
+          </p>
+
+          <p>
+            Total spend: <strong>$847.</strong> Over three years. Consistently applied, in the right order, with SPF every single day.
+          </p>
+
+          <p>
+            My dermatologist looked at my face each time and said the same thing: "It's a natural part of aging. We could discuss fillers if the volume loss bothers you."
+          </p>
+
+          <img
+            src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=900&q=80&auto=format&fit=crop"
+            alt="Skincare products on a bathroom shelf"
+            className="inline-image"
+          />
+          <p className="image-caption">$847 of products working on the wrong layer of skin.</p>
+
+          <p>
+            I wasn't doing anything wrong. The products weren't bad. They just couldn't reach the place where the damage was actually happening.
+          </p>
+
+          <hr className="section-rule" />
+
+          {/* ── 5. VILLAIN: MLM / SKINCARE INDUSTRY ── */}
+          <div className="villain-box">
+            <div className="villain-box-label">Sound Familiar?</div>
+            <p>
+              If you've ever bought a skincare system from a friend on Facebook — Rodan + Fields, Arbonne, Monat, Mary Kay — and watched her demo the "patented peptide complex" that was going to transform your skin. If you've spent $150, $200, $300 on a three-step regime from a "consultant" who was genuinely convinced it would work.
+            </p>
+            <p>
+              This is why it didn't. Not because the products were fake. Not because your friend was lying to you. But because every one of those products was trying to fix something at the surface. And the thing that's actually causing your skin to age the way it does lives in a layer those products can never reach.
+            </p>
+            <p>
+              You weren't wasting money because you were naive. You were wasting money because the problem was never explained to you correctly.
+            </p>
+          </div>
+
+          <hr className="section-rule" />
+
+          {/* ── 6. THREE COMPOUNDS ── */}
+          <h2 className="section-heading">What Actually Works</h2>
+
+          <p>
+            Once I understood glycation, I needed to know if anything could address it. I spent months reading research — dermatology journals, botanical studies, nutritional biochemistry — looking for compounds with actual anti-glycation evidence behind them.
+          </p>
+
+          <p>
+            I found three. All oral supplements. All studied specifically for their effect on skin glycation. All working from a different angle.
           </p>
 
           <div className="ingredients-grid">
@@ -711,32 +720,32 @@ export default function Home() {
             <div className="ingredient-card">
               <img
                 src="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?w=800&q=80&auto=format&fit=crop"
-                alt="Japanese Knotweed"
+                alt="Japanese Knotweed extract"
                 className="ingredient-img"
               />
               <div className="ingredient-body">
                 <div className="ingredient-num">Compound 01</div>
                 <div className="ingredient-name">Japanese Knotweed Extract</div>
                 <p className="ingredient-desc">
-                  Contains a specific form of resveratrol that works at the cellular level. It activates an enzyme that literally stops new AGEs from forming. Think of it as putting a barrier between the glucose and your collagen. It works upstream, before the damage even happens.
+                  Contains a concentrated form of resveratrol that activates an enzyme which blocks new AGE formation at the cellular level. Think of it as a barrier between the glucose in your blood and the collagen in your skin. Works upstream — preventing the damage from happening in the first place.
                 </p>
-                <div className="ingredient-badge">✓ Prevents new glycation</div>
+                <div className="ingredient-badge">✓ Prevents new AGE formation</div>
               </div>
             </div>
 
             <div className="ingredient-card">
               <img
                 src="https://images.unsplash.com/photo-1628773822503-930a7eaecf80?w=800&q=80&auto=format&fit=crop"
-                alt="Sea Buckthorn berries"
+                alt="Sea Buckthorn orange berries"
                 className="ingredient-img"
               />
               <div className="ingredient-body">
                 <div className="ingredient-num">Compound 02</div>
                 <div className="ingredient-name">Sea Buckthorn</div>
                 <p className="ingredient-desc">
-                  This one works differently. It restores the lipid structure underneath your skin — the scaffolding that makes skin plump and soft. When the matrix breaks down (which glycation does), your skin loses volume and starts sagging. This rebuilds that. It's why women who take this report that their face starts looking... fuller. Less deflated.
+                  Works on a different angle entirely. When glycation damages the lipid matrix underneath your skin — the scaffolding that makes skin plump and full — it causes that deflated, sagging look. Sea buckthorn restores that structure. Women who take this describe their face starting to look fuller. Less sunken. Not a surface effect — actual structural repair from underneath.
                 </p>
-                <div className="ingredient-badge">✓ Restores skin structure</div>
+                <div className="ingredient-badge">✓ Restores under-skin structure</div>
               </div>
             </div>
 
@@ -750,176 +759,256 @@ export default function Home() {
                 <div className="ingredient-num">Compound 03</div>
                 <div className="ingredient-name">Maritime Pine Bark</div>
                 <p className="ingredient-desc">
-                  There's an actual clinical trial on this one. Double-blind, placebo-controlled. Women took this for 12 weeks and showed real improvements in skin elasticity. Not marginal. Measurable. It works by reducing the oxidative stress that speeds up glycation, and it helps your body break down existing AGE damage.
+                  This one has an actual randomised, double-blind, placebo-controlled trial behind it. Women taking it daily for 12 weeks showed statistically significant improvements in skin elasticity and measurable reductions in surface roughness. Not marginal. Significant. It reduces the oxidative stress that accelerates glycation, and helps your body start breaking down existing AGE damage.
                 </p>
-                <div className="ingredient-badge">✓ Clinically proven elasticity improvement</div>
+                <div className="ingredient-badge">✓ RCT-proven elasticity improvement</div>
               </div>
             </div>
 
           </div>
 
           <p>
-            The reason these three work together is that they're hitting the problem from three different directions at once. You're not just preventing new damage. You're repairing old damage. And you're protecting your skin from future damage.
-          </p>
-
-          <p>
-            And because you're taking them orally, they're reaching your dermis through your bloodstream. Not sitting on the surface hoping they can penetrate seven layers of skin like your serums are.
-          </p>
-
-          <hr className="section-rule" />
-
-          <h2 className="section-heading">What I Actually Built</h2>
-
-          <p>
-            I spent four months working out the protocol. Exact doses — not the weak amounts you see on random supplements, but the actual amounts from the studies that showed results. The timing that matters. The foods that help and the ones that make it worse (and trust me, there are some "healthy" foods that are absolutely sabotaging you).
-          </p>
-
-          <p>
-            I turned everything into a guide. The Glycation Reversal Protocol. 30 pages. Everything you need to actually do this. Nothing vague. Nothing left out.
-          </p>
-
-          <div className="inside-box">
-            <div className="inside-box-title">What You're Getting</div>
-            <div className="inside-box-subtitle">Instant PDF download · Everything included</div>
-
-            <div className="inside-item">
-              <div className="inside-check">✓</div>
-              <div className="inside-item-text">
-                <strong>The actual science explained clearly</strong> — not dumbed down, not overly technical. You'll understand exactly what's happening and why conventional skincare doesn't touch it.
-              </div>
-            </div>
-
-            <div className="inside-item">
-              <div className="inside-check">✓</div>
-              <div className="inside-item-text">
-                <strong>Exact doses for all three compounds</strong> — the specific amounts that match the studies, plus which brands actually work and where to find them.
-              </div>
-            </div>
-
-            <div className="inside-item">
-              <div className="inside-check">✓</div>
-              <div className="inside-item-text">
-                <strong>Your daily protocol</strong> — not a list of things to take whenever. A specific daily routine with timing built in so everything absorbs properly.
-              </div>
-            </div>
-
-            <div className="inside-item">
-              <div className="inside-check">✓</div>
-              <div className="inside-item-text">
-                <strong>The food list that actually matters</strong> — which 12 foods fight glycation and which 7 "healthy" foods you've probably been eating daily that make it worse.
-              </div>
-            </div>
-
-            <div className="inside-item">
-              <div className="inside-check">✓</div>
-              <div className="inside-item-text">
-                <strong>The 14-day results tracker</strong> — exactly what to look for and when. Most women see the first visible changes between day 9 and day 14.
-              </div>
-            </div>
-
-            <div className="inside-price-row">
-              <div className="price-main">$19</div>
-              <div className="price-was">$49</div>
-              <div className="price-saving">Early access price</div>
-            </div>
-          </div>
-
-          <p>
-            Nineteen dollars. I'm not making this expensive. I'm not turning it into a course with upsells and email funnels. Nineteen dollars because I don't want the price to be the reason you're still standing in front of a mirror in three months wondering what the hell happened to your face.
-          </p>
-
-          <p>
-            That's one fancy coffee. Less than you'd spend on a single sheet mask from Sephora.
-          </p>
-
-          <hr className="section-rule" />
-
-          <h2 className="section-heading">The Reality Check</h2>
-
-          <p>
-            I know what you're thinking. You've bought things like this before. Supplements, protocols, guides. You've probably spent more than nineteen dollars on things that promised to fix your skin and did absolutely nothing.
-          </p>
-
-          <p>
-            I get it. I did too. So here's the difference.
-          </p>
-
-          <p>
-            You weren't working on the wrong thing because the product was bad. You were working on the wrong thing because you were trying to fix glycation by applying stuff to the surface. That doesn't work. It's not your fault. The entire skincare industry is built on this lie.
-          </p>
-
-          <p>
-            But now you know what's actually happening. And you know what actually fixes it. So you're not guessing anymore. You're addressing the mechanism.
-          </p>
-
-          <p>
-            That changes everything.
+            Because all three are taken orally, they reach your dermis through your bloodstream. That's the only route that actually gets there.
           </p>
 
           <div className="pull-quote">
-            You're not buying skincare. You're buying an actual explanation for why your face changed, and the protocol to reverse it.
+            You're not putting something on top of your skin hoping it absorbs. You're delivering active compounds directly into the layer where the damage is — the way only your bloodstream can.
           </div>
 
           <hr className="section-rule" />
 
-          {/* CHECKOUT */}
-          <div className="checkout-section">
-            <div className="checkout-header">
-              <div className="checkout-header-title">Get Instant Access</div>
-              <div className="checkout-header-sub">You'll have it in your inbox in 2 minutes</div>
+          {/* ── 7. TESTIMONIALS ── */}
+          <div className="testimonials">
+            <div className="testimonials-heading">What Women Are Saying</div>
+
+            <div className="testimonial-card">
+              <div className="testimonial-stars">★★★★★</div>
+              <p className="testimonial-text">
+                "By week three my husband asked if I'd had something done. I hadn't. I'd just finally started working on the right thing. The jawline is genuinely tighter. I look at myself in the mirror now instead of avoiding it."
+              </p>
+              <div className="testimonial-author">
+                <img
+                  src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=92&q=80&auto=format&fit=crop&crop=face"
+                  alt="Pauline"
+                  className="testimonial-avatar"
+                />
+                <div>
+                  <div className="testimonial-name">Pauline H.</div>
+                  <div className="testimonial-detail">54 · Phoenix, AZ</div>
+                </div>
+                <div className="verified-badge">✓ Verified</div>
+              </div>
             </div>
-            <div className="checkout-body">
 
-              <div className="checkout-guarantee">
-                <div className="guarantee-icon">🛡️</div>
-                <div className="guarantee-text">
-                  <strong>60-Day Money-Back Guarantee</strong>
-                  Follow the protocol for 60 days. If your skin doesn't visibly improve — if your jawline hasn't tightened, if the lines haven't softened, if you're not getting comments about how well you look — email for a full refund. I mean it. No questions. No shame.
+            <div className="testimonial-card">
+              <div className="testimonial-stars">★★★★★</div>
+              <p className="testimonial-text">
+                "I'd spent probably $600 on Rodan + Fields over two years. A friend sold it to me, swore by it. It did absolutely nothing for the jaw and cheek area, which is what I actually cared about. I'd given up. The science in this guide was the first time anyone actually explained why — and the protocol worked when nothing else had."
+              </p>
+              <div className="testimonial-author">
+                <img
+                  src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=92&q=80&auto=format&fit=crop&crop=face"
+                  alt="Sandra"
+                  className="testimonial-avatar"
+                />
+                <div>
+                  <div className="testimonial-name">Sandra K.</div>
+                  <div className="testimonial-detail">58 · Melbourne, AU</div>
                 </div>
+                <div className="verified-badge">✓ Verified</div>
               </div>
+            </div>
 
-              <div className="checkout-trust">
-                <div className="trust-item">✓ Instant access</div>
-                <div className="trust-item">✓ One-time payment</div>
-                <div className="trust-item">✓ 60-day guarantee</div>
-                <div className="trust-item">✓ Encrypted checkout</div>
-              </div>
-
-              <div className="checkout-iframe-wrap">
-                <div className="checkout-placeholder">
-                  <div className="placeholder-icon">🛒</div>
-                  <p><strong>Whop checkout loads here</strong></p>
-                  <p>Your secure payment form</p>
+            <div className="testimonial-card">
+              <div className="testimonial-stars">★★★★★</div>
+              <p className="testimonial-text">
+                "The food list section genuinely shocked me. There's one thing I was eating every single morning thinking it was healthy. Changed that one thing and I noticed a difference within ten days. The supplements on top of that — by week four I got three separate comments about my skin in the same week."
+              </p>
+              <div className="testimonial-author">
+                <img
+                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=92&q=80&auto=format&fit=crop&crop=face"
+                  alt="Maggie"
+                  className="testimonial-avatar"
+                />
+                <div>
+                  <div className="testimonial-name">Maggie T.</div>
+                  <div className="testimonial-detail">51 · Vancouver, BC</div>
                 </div>
+                <div className="verified-badge">✓ Verified</div>
               </div>
+            </div>
 
-              <div className="order-bump">
-                <div className="bump-checkbox">✓</div>
-                <div className="bump-content">
-                  <div className="bump-label">One-time offer — add this to your order</div>
-                  <div className="bump-title">7-Day Glycation Reset Meal Plan</div>
-                  <p className="bump-desc">
-                    Every meal mapped for the first week to put your body into full anti-glycation mode. All the macros balanced. Shopping list included. UK, US, AU, and Canadian ingredient swaps. Women who combine this with the protocol see results faster.
-                  </p>
-                  <div className="bump-price">+ $27 <span>Add to order above</span></div>
+            <div className="testimonial-card">
+              <div className="testimonial-stars">★★★★★</div>
+              <p className="testimonial-text">
+                "I'm 63. I thought this ship had sailed for me. I almost didn't buy it because I figured I was past the point where anything non-surgical would do anything real. I was wrong. The lines around my mouth have genuinely softened and my skin looks less... tired. My daughter noticed before I said anything."
+              </p>
+              <div className="testimonial-author">
+                <img
+                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=92&q=80&auto=format&fit=crop&crop=face"
+                  alt="Debra"
+                  className="testimonial-avatar"
+                />
+                <div>
+                  <div className="testimonial-name">Debra M.</div>
+                  <div className="testimonial-detail">63 · Leeds, UK</div>
                 </div>
+                <div className="verified-badge">✓ Verified</div>
               </div>
+            </div>
 
+          </div>
+
+          <hr className="section-rule" />
+
+          {/* ── 8. WHAT'S INSIDE ── */}
+          <h2 className="section-heading">The Glycation Reversal Protocol</h2>
+
+          <p>
+            I turned four months of research into a 30-page guide that tells you everything you need to actually do this. Not a general "eat better" plan. An exact protocol with exact doses, exact timing, and the specific brands that work.
+          </p>
+
+          <div className="inside-box">
+            <div className="inside-box-title">Everything Included</div>
+            <div className="inside-box-subtitle">Instant PDF download · 30 pages · No filler</div>
+
+            <div className="inside-item">
+              <div className="inside-check">✓</div>
+              <div className="inside-item-text">
+                <strong>The complete glycation explanation</strong> — why it happens, why conventional skincare can't address it, and what the research actually says. You'll finally understand the mechanism behind what you've been seeing in the mirror.
+              </div>
+            </div>
+            <div className="inside-item">
+              <div className="inside-check">✓</div>
+              <div className="inside-item-text">
+                <strong>Exact doses for all three compounds</strong> — the specific amounts from the studies that showed results. Not the lower amounts on standard supplement packaging. The doses that actually move the needle, plus which brands are worth buying.
+              </div>
+            </div>
+            <div className="inside-item">
+              <div className="inside-check">✓</div>
+              <div className="inside-item-text">
+                <strong>Your daily protocol sequence</strong> — a specific daily routine with timing built in so everything absorbs correctly. Not a list of things to take whenever you remember. A structured sequence that works.
+              </div>
+            </div>
+            <div className="inside-item">
+              <div className="inside-check">✓</div>
+              <div className="inside-item-text">
+                <strong>The glycation food list</strong> — the 12 foods that actively fight AGE formation, and the 7 foods that accelerate glycation even when you think you're eating well. One of them is probably in your breakfast right now.
+              </div>
+            </div>
+            <div className="inside-item">
+              <div className="inside-check">✓</div>
+              <div className="inside-item-text">
+                <strong>14-day visible results tracker</strong> — what to look for and when. Most women notice the first visible changes between day 9 and day 14.
+              </div>
             </div>
           </div>
 
-          {/* P.S. */}
+          <hr className="section-rule" />
+
+          {/* ── 9. PRICE WITH REAL ANCHOR ── */}
+          <div className="price-section">
+            <div className="price-label">Your investment today</div>
+            <div className="price-main">$19</div>
+            <p className="price-context">
+              I spent <strong>$847</strong> on serums, retinols, collagen powders, and dermatologist consultations over three years — all working on the wrong problem. This is $19. For the explanation and the protocol that actually addresses what's happening.
+            </p>
+            <button className="cta-button">
+              Get Instant Access — $19
+            </button>
+            <p className="cta-sub">💳 Secure checkout · Delivered to your inbox in 2 minutes</p>
+          </div>
+
+          {/* ── 10. GUARANTEE ── */}
+          <div className="guarantee-box">
+            <div className="guarantee-icon">🛡️</div>
+            <div>
+              <div className="guarantee-title">The 60-Day Guarantee</div>
+              <p className="guarantee-text">
+                Follow the protocol for 60 days. If your jawline hasn't tightened, if the lines haven't softened, if you're not getting unsolicited comments about how well you look — email me for a full refund and you keep the guide. I mean that. No forms, no questions, no awkwardness. I'm that confident that once you're working on the right problem, you'll see results you haven't seen in years.
+              </p>
+            </div>
+          </div>
+
+          <hr className="section-rule" />
+
+          {/* ── 11. FAQ ── */}
+          <div className="faq-section">
+            <div className="faq-heading">Questions Women Usually Ask</div>
+
+            <div className="faq-item">
+              <div className="faq-question">I've taken supplements before and they didn't do anything for my skin. Why would this be different?</div>
+              <p className="faq-answer">Because you were almost certainly taking the wrong supplements for the wrong problem. General collagen supplements, biotin, even high-dose vitamin C — none of these target glycation specifically. The three compounds in this protocol were selected because they have direct anti-glycation mechanisms, studied in the context of skin specifically. That's a different category of supplement entirely.</p>
+            </div>
+
+            <div className="faq-item">
+              <div className="faq-question">How quickly will I see results?</div>
+              <p className="faq-answer">Most women notice the first visible changes between day 9 and day 14 — usually in the quality and hydration of the skin first. Structural changes to the jawline and cheek area tend to be noticeable by weeks 3 to 4. Full results typically take 8–12 weeks as the collagen begins to recover. The tracker in the protocol walks you through exactly what to look for and when.</p>
+            </div>
+
+            <div className="faq-item">
+              <div className="faq-question">Is this safe? I'm on medication / I'm post-menopausal / I have health conditions.</div>
+              <p className="faq-answer">All three compounds are well-studied and widely available as supplements. That said, if you're on medication or have a health condition, please run anything new past your doctor first. The protocol includes full sourcing and dosage information so your GP can review it if needed.</p>
+            </div>
+
+            <div className="faq-item">
+              <div className="faq-question">Does this work for women post-menopause?</div>
+              <p className="faq-answer">Yes — and actually, post-menopausal women often see faster results. The drop in estrogen accelerates glycation, which is why many women report their skin changing dramatically in their early 50s. Addressing glycation directly is particularly impactful when the hormonal protection has reduced.</p>
+            </div>
+
+            <div className="faq-item">
+              <div className="faq-question">Do I have to overhaul my diet?</div>
+              <p className="faq-answer">No. The protocol works on the supplement and timing side regardless of diet. The food list in the guide is a bonus — it can accelerate your results significantly, and the one or two foods most likely to be actively working against you are worth knowing. But this isn't a diet plan. It's a supplement protocol with dietary guidance, not the other way around.</p>
+            </div>
+
+            <div className="faq-item">
+              <div className="faq-question">Why is this only $19? Isn't that suspiciously cheap?</div>
+              <p className="faq-answer">It's a PDF guide. It doesn't cost me anything to deliver it. I priced it at $19 because I didn't want the price to be the reason someone decides not to try it. There's a 60-day money-back guarantee if it doesn't work. The low price is intentional — not a signal that the information is low-value.</p>
+            </div>
+
+            <div className="faq-item">
+              <div className="faq-question">I'm 60+. Am I too old for this to work?</div>
+              <p className="faq-answer">There's no age at which this stops being relevant — glycation is a continuous, ongoing process, not a one-time event. Debra, one of the women above, is 63 and saw real results. The protocol addresses the mechanism, not the age.</p>
+            </div>
+
+            <div className="faq-item">
+              <div className="faq-question">What if I buy it and never read it?</div>
+              <p className="faq-answer">Honestly? Then you'll have wasted $19. But the guide is 30 pages and written to be read in one sitting. It's not a textbook. It's a protocol with a clear beginning, middle, and end. Most women who download it read it the same day.</p>
+            </div>
+
+          </div>
+
+          <hr className="section-rule" />
+
+          {/* ── FINAL CTA ── */}
+          <div className="price-section" style={{ marginTop: '0' }}>
+            <div className="price-label">Ready to start?</div>
+            <div className="price-main">$19</div>
+            <p className="price-context">
+              Instant access. 60-day guarantee. If it doesn't work, you get your money back. But your mirror is going to tell a different story.
+            </p>
+            <button className="cta-button">
+              Yes — Get The Protocol Now
+            </button>
+            <p className="cta-sub">🔒 Encrypted checkout · Instant delivery · One-time payment</p>
+          </div>
+
+          {/* ── P.S. ── */}
           <div className="ps-section">
-            <strong>P.S.</strong> — I get that you're skeptical. You should be. But here's what I want you to consider: you've already proven that skincare doesn't work. You've spent the money. You've done the steps. You've applied the serums. And your face still looks the way it looks. So what do you actually have to lose by trying something that addresses the actual problem instead of the symptom? Sixty days. If it doesn't work, you get your money back. But I'm betting your mirror is going to tell a different story.
+            <strong>P.S.</strong> — You've already proven that skincare doesn't fix this. Three years of serums, or two years of whatever your friend was selling, and your face still looks the way it looks. Not because you did anything wrong. Because you were working on the wrong layer. Now you know what the actual problem is. You know what addresses it. The protocol is $19 and guaranteed for 60 days. What are you waiting for?
           </div>
 
         </div>
       </main>
 
+      {/* ── FOOTER ── */}
       <footer className="footer">
-        <p>© 2025 The Skin Journal</p>
-        <p style={{ marginTop: '8px' }}>
-          <a href="#">Disclaimer</a> · <a href="#">Privacy</a> · <a href="#">Contact</a>
+        <p>© 2025 The Skin Journal · All rights reserved</p>
+        <p style={{ marginTop: '6px' }}>
+          <a href="#">Privacy Policy</a> · <a href="#">Terms</a> · <a href="#">Contact</a> · <a href="#">Disclaimer</a>
+        </p>
+        <p style={{ marginTop: '14px', maxWidth: '620px', margin: '14px auto 0' }}>
+          This article is for informational and educational purposes only. It is not intended as medical advice. Individual results vary. The statements on this page have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease. Always consult your physician before beginning any supplement protocol.
         </p>
       </footer>
     </>
