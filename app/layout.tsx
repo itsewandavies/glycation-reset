@@ -1,9 +1,8 @@
 import type { Metadata } from 'next'
-import './globals.css'
 
 export const metadata: Metadata = {
   title: 'The Glycation Reversal Protocol',
-  description: 'Why your expensive skincare isn't working (and what actually does)',
+  description: 'Why your expensive skincare isnt working (and what actually does)',
 }
 
 export default function RootLayout({
@@ -13,6 +12,61 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <style>{`
+          * { margin: 0; padding: 0; box-sizing: border-box; }
+          html { scroll-behavior: smooth; }
+          body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: #fafaf9;
+            color: #1f2937;
+            line-height: 1.6;
+          }
+          .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px 20px;
+          }
+          h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 32px 0 16px 0;
+            color: #111827;
+          }
+          p {
+            margin-bottom: 16px;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #374151;
+          }
+          strong { color: #111827; font-weight: 600; }
+          em { color: #6b7280; font-style: italic; }
+          .checkout {
+            margin: 48px 0;
+            padding: 32px;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            text-align: center;
+          }
+          .ps {
+            margin-top: 40px;
+            padding-top: 32px;
+            border-top: 1px solid #e5e7eb;
+            font-size: 14px;
+            color: #6b7280;
+          }
+          hr {
+            margin: 32px 0;
+            border: none;
+            border-top: 1px solid #e5e7eb;
+          }
+          ul { margin-bottom: 16px; margin-left: 20px; }
+          li { margin-bottom: 8px; }
+        `}</style>
+      </head>
       <body>{children}</body>
     </html>
   )
