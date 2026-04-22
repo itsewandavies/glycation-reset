@@ -386,14 +386,14 @@ export default function Home() {
     <>
       <style dangerouslySetInnerHTML={{ __html: css }} />
 
-      <div className="trending-bar">⚡ Trending in &apos;Anti-Aging&apos;</div>
+      <div className="trending-bar">⚡ Trending in 'Anti-Aging'</div>
 
       <div className="breadcrumb">Home &gt; Anti-Aging &gt; Skin Health</div>
 
       <main className="article-wrap">
 
         <h1 className="expert-h">
-          Top Dermatologist: &quot;This Is The Real Reason Your Skin Ages Faster After 50 — And Every Serum You&apos;ve Ever Bought Has Been Working On The Wrong Layer&quot;
+          Top Dermatologist: "This Is The Real Reason Your Skin Ages Faster After 50 — And Every Serum You've Ever Bought Has Been Working On The Wrong Layer"
         </h1>
 
         <h2 className="sub-h">
@@ -411,11 +411,11 @@ export default function Home() {
 
         <div className="body">
 
-          <p>I&apos;m about to say something that&apos;s going to make the $89 billion skincare industry extremely uncomfortable.</p>
+          <p>I'm about to say something that's going to make the $89 billion skincare industry extremely uncomfortable.</p>
 
-          <p>But I don&apos;t care anymore.</p>
+          <p>But I don't care anymore.</p>
 
-          <p>After 22 years in clinical dermatology — after watching thousands of women spend fortunes on serums, creams, and &quot;revolutionary&quot; treatments that did absolutely nothing for the thing they actually cared about — I&apos;ve had enough.</p>
+          <p>After 22 years in clinical dermatology — after watching thousands of women spend fortunes on serums, creams, and "revolutionary" treatments that did absolutely nothing for the thing they actually cared about — I've had enough.</p>
 
           <p><strong>The next 5 minutes could change everything you think you know about your skin.</strong></p>
 
@@ -424,7 +424,7 @@ export default function Home() {
             alt="Woman looking at holiday photos on her phone"
             className="hero-img"
           />
-          <p className="img-cap">The skincare industry doesn&apos;t want you to read this.</p>
+          <p className="img-cap">The skincare industry doesn't want you to read this.</p>
 
           <div className="sh">DO YOU RECOGNIZE YOURSELF IN ANY OF THESE?</div>
 
@@ -432,61 +432,61 @@ export default function Home() {
 
           <p>And you felt your stomach drop.</p>
 
-          <p>Because the woman in that photo didn&apos;t look like you. Or at least — didn&apos;t look like the version of you that still lives inside your own head.</p>
+          <p>Because the woman in that photo didn't look like you. Or at least — didn't look like the version of you that still lives inside your own head.</p>
 
           <p>You asked them to retake it. Or you quietly deleted it from your phone later that night when no one was watching.</p>
 
-          <p>Maybe you&apos;ve noticed you&apos;ve gotten very good at positioning yourself in group photos. You angle your chin. You step slightly behind someone. You&apos;ve started offering to be the one who takes the photo so you don&apos;t have to be in it.</p>
+          <p>Maybe you've noticed you've gotten very good at positioning yourself in group photos. You angle your chin. You step slightly behind someone. You've started offering to be the one who takes the photo so you don't have to be in it.</p>
 
-          <p>Maybe it&apos;s the Zoom calls. You join a meeting and there you are in the corner of the screen — and you spend the next 40 minutes half-listening, just staring at your own jawline. That specific loss of definition that wasn&apos;t there five years ago. You tried moving your laptop, adjusting the angle, buying a ring light.</p>
+          <p>Maybe it's the Zoom calls. You join a meeting and there you are in the corner of the screen — and you spend the next 40 minutes half-listening, just staring at your own jawline. That specific loss of definition that wasn't there five years ago. You tried moving your laptop, adjusting the angle, buying a ring light.</p>
 
-          <p>Maybe it was your husband taking a candid photo of you laughing at dinner — genuinely, because he thought you looked beautiful — and showing you the screen. And you saw something completely different to what he saw. And you felt embarrassed that you couldn&apos;t just appreciate it. That you had to look away and say &quot;delete that please.&quot;</p>
+          <p>Maybe it was your husband taking a candid photo of you laughing at dinner — genuinely, because he thought you looked beautiful — and showing you the screen. And you saw something completely different to what he saw. And you felt embarrassed that you couldn't just appreciate it. That you had to look away and say "delete that please."</p>
 
-          <p>Maybe you opened your camera roll recently and scrolled back five or six years. And the difference wasn&apos;t gradual. It wasn&apos;t natural aging. It was a specific, sudden shift — and it happened somewhere in your early 50s, and you can&apos;t figure out why.</p>
+          <p>Maybe you opened your camera roll recently and scrolled back five or six years. And the difference wasn't gradual. It wasn't natural aging. It was a specific, sudden shift — and it happened somewhere in your early 50s, and you can't figure out why.</p>
 
           <p>You stopped smiling with your mouth open in photos.</p>
 
-          <p>You started using filters on everything before you&apos;d share it.</p>
+          <p>You started using filters on everything before you'd share it.</p>
 
           <p>You cover your neck in certain lights.</p>
 
           <p>And privately — the part you would never say out loud to anyone — you started spending money. Quietly. Systematically. Desperately trying to get back to the face you recognize.</p>
 
-          <p>If any of that sounds familiar: <strong>you&apos;re about to understand exactly why it happened — and exactly what to do about it.</strong></p>
+          <p>If any of that sounds familiar: <strong>you're about to understand exactly why it happened — and exactly what to do about it.</strong></p>
 
           <div className="sh">THE DIRTY SECRET BEHIND YOUR BATHROOM SHELF</div>
 
-          <p>My name is Dr. Rachel Kim. I&apos;ve been a board-certified dermatologist for 22 years.</p>
+          <p>My name is Dr. Rachel Kim. I've been a board-certified dermatologist for 22 years.</p>
 
-          <p>And I&apos;m about to tell you something that most dermatologists will never say — because it would destroy their income.</p>
+          <p>And I'm about to tell you something that most dermatologists will never say — because it would destroy their income.</p>
 
-          <p>Three years ago, my mother called me, upset. Not crying. Worse — that quiet, defeated tone that&apos;s harder to hear than tears.</p>
+          <p>Three years ago, my mother called me, upset. Not crying. Worse — that quiet, defeated tone that's harder to hear than tears.</p>
 
-          <p>&quot;Rachel,&quot; she said. &quot;I think I&apos;ve spent $4,000 trying to fix my skin. Nothing works. I don&apos;t even recognize myself anymore.&quot;</p>
+          <p>"Rachel," she said. "I think I've spent $4,000 trying to fix my skin. Nothing works. I don't even recognize myself anymore."</p>
 
-          <p>She was 58. She&apos;d used every product I&apos;d ever recommended. The vitamin C serums. The retinols. The collagen supplements. She&apos;d even done two rounds of microneedling at my own clinic — at cost.</p>
+          <p>She was 58. She'd used every product I'd ever recommended. The vitamin C serums. The retinols. The collagen supplements. She'd even done two rounds of microneedling at my own clinic — at cost.</p>
 
           <p>And sitting there on the phone with her, I suddenly realized something that made my stomach drop.</p>
 
-          <p>She wasn&apos;t wrong. Nothing <em>had</em> worked.</p>
+          <p>She wasn't wrong. Nothing <em>had</em> worked.</p>
 
-          <p>Not because I&apos;d given her bad advice. But because every single thing I&apos;d recommended was working on the wrong part of her skin.</p>
+          <p>Not because I'd given her bad advice. But because every single thing I'd recommended was working on the wrong part of her skin.</p>
 
-          <p>I stayed up until 4am reading journals I hadn&apos;t opened in years. And what I found made me want to throw 22 years of training out the window.</p>
+          <p>I stayed up until 4am reading journals I hadn't opened in years. And what I found made me want to throw 22 years of training out the window.</p>
 
           <div className="sh">THE DISCOVERY THAT CHANGES EVERYTHING</div>
 
           <p><strong>The real reason your face changes after 50 has nothing to do with the surface of your skin.</strong></p>
 
-          <p>It&apos;s not collagen loss in the way you&apos;ve been told. It&apos;s not dehydration. It&apos;s not sun damage.</p>
+          <p>It's not collagen loss in the way you've been told. It's not dehydration. It's not sun damage.</p>
 
           <p>The REAL cause happens deep inside the dermis — the layer <em>underneath</em> your skin — in a process called <strong>glycation</strong>.</p>
 
-          <p>And here&apos;s what should make you furious:</p>
+          <p>And here's what should make you furious:</p>
 
           <p><strong>No serum, cream, or topical product can physically reach it. Not one.</strong></p>
 
-          <p>They sit on your epidermis — the top layer. Glycation happens in the dermis — the layer below it. These two layers don&apos;t connect.</p>
+          <p>They sit on your epidermis — the top layer. Glycation happens in the dermis — the layer below it. These two layers don't connect.</p>
 
           <img
             src="https://v3b.fal.media/files/b/0a973c14/JNqJhvUoO1-k9UtAqlJkO_Rg4vQebH.png"
@@ -496,29 +496,47 @@ export default function Home() {
           <p className="img-cap">Your serum reaches the epidermis. Glycation happens in the dermis. They never meet.</p>
 
           <div className="callout-y">
-            <strong>Let that sink in.</strong> Every topical skincare product you&apos;ve ever bought works on the top layer of your skin. The aging process that&apos;s changing your face — the jaw, the cheeks, the deflation — happens in the layer below it. They literally cannot meet. This is why nothing has worked. Not because you did anything wrong. Because the problem was never explained to you correctly.
+            <strong>Let that sink in.</strong> Every topical skincare product you've ever bought works on the top layer of your skin. The aging process that's changing your face — the jaw, the cheeks, the deflation — happens in the layer below it. They literally cannot meet. This is why nothing has worked. Not because you did anything wrong. Because the problem was never explained to you correctly.
           </div>
 
           <div className="sh">THE REAL ROOT CAUSE: GLYCATION</div>
 
-          <p>Every time glucose from food enters your bloodstream, a small amount bonds to your collagen fibers. Scientists call this <strong>glycation</strong> — and the bonds it creates are called <strong>AGEs: Advanced Glycation End-products.</strong></p>
+          <p>Here's what happens inside your skin that nobody ever tells you about.</p>
 
-          <p>Think of your collagen fibers like elastic bands.</p>
+          <p>Think about your skin like a house.</p>
 
-          <p>When they&apos;re healthy, they snap back. They hold their shape. Your skin bounces back when you press it.</p>
+          <p>The outside of your house is the paint and the siding. That's your epidermis — the top layer.</p>
 
-          <p>Now imagine someone poured superglue on those elastic bands. They stop stretching. They fuse together in the wrong position. They become rigid and matted.</p>
+          <p>The structure underneath — the foundation, the frame, the beams that hold everything up — that's your dermis. That's where the real strength comes from.</p>
 
-          <p>That rigidity is the jaw that&apos;s lost its definition. The cheeks that have gone flat. The lines that weren&apos;t there in your mid-40s.</p>
+          <p><strong>Now here's the problem:</strong></p>
 
-          <p>The medical community has known about this since the 1980s.</p>
+          <p>Your collagen fibers in that foundation are like wooden beams. When they're strong and flexible, they hold your face up. You have definition in your jaw. Your cheeks are full. Everything has structure and firmness.</p>
 
-          <p><strong>Known about it. And done nothing with it.</strong></p>
+          <p>But here's what happens after 50:</p>
 
-          <p>Because the solution is too simple. Too cheap. There&apos;s no margin in it for a $89 billion industry built on selling you the wrong products.</p>
+          <p>Every time you eat something with sugar or carbs — a pastry, pasta, rice, even a banana — your blood sugar spikes. When blood sugar goes up, the sugar literally bonds to your collagen fibers. This process is called <strong>glycation.</strong></p>
+
+          <p>Think of it like this: imagine caramel poured all over those wooden beams. It hardens. The beams become stiff. They can't flex anymore. They lose their elasticity.</p>
+
+          <p>That's exactly what's happening under your skin.</p>
+
+          <p>Your collagen isn't dying. It's not weak. It's <strong>stiffening</strong>. It's becoming rigid. And that rigidity is showing up as:</p>
+
+          <p>Loss of jawline definition. Sagging cheeks. Horizontal lines that weren't there before. A face that looks deflated and sunken.</p>
+
+          <p><strong>And here's the part that should make you furious:</strong></p>
+
+          <p>The skincare industry has known about this for 40 years. But they've never told you, because they profit by keeping you in the dark.</p>
+
+          <p>Every $200 serum, every expensive facial, every "advanced" moisturizer — they all work on the paint and siding of your house. The epidermis. The top layer.</p>
+
+          <p>But the foundation is rotting from the inside. And you can't fix a rotting foundation by painting the outside.</p>
+
+          <p><strong>That's why nothing has worked. Not because you've been doing something wrong. Because you've been working on the wrong problem.</strong></p>
 
           <div className="callout-r">
-            Sound familiar? If you&apos;ve ever spent $200 on a skincare system from a friend — Rodan + Fields, Arbonne, Monat — and watched it do absolutely nothing for your jaw and cheekbones. This is exactly why. Your friend wasn&apos;t lying. The products weren&apos;t fake. They just can&apos;t physically reach the place where your skin is aging. Nobody told you that. Because nobody who profits from selling you those products wants you to know it.
+            Sound familiar? If you've ever spent $200 on a skincare system from a friend — Rodan + Fields, Arbonne, Monat — and watched it do absolutely nothing for your jaw and cheekbones. This is exactly why. Your friend wasn't lying. The products weren't fake. They just can't physically reach the place where your skin is aging. Nobody told you that. Because nobody who profits from selling you those products wants you to know it.
           </div>
 
           <div className="sh">THE THREE COMPOUNDS THAT ACTUALLY REACH THE PROBLEM</div>
@@ -527,7 +545,7 @@ export default function Home() {
 
           <p>I found three compounds. All oral. All studied specifically for their effect on skin glycation. All reaching the dermis the only way that works — through your bloodstream.</p>
 
-          <p>I&apos;m naming them publicly because I believe you deserve to know exactly what goes into your body — and because transparency is what separates real science from the vague marketing nonsense that&apos;s been sold to you for years. Look these up. Read the research yourself.</p>
+          <p>I'm naming them publicly because I believe you deserve to know exactly what goes into your body — and because transparency is what separates real science from the vague marketing nonsense that's been sold to you for years. Look these up. Read the research yourself.</p>
 
           <div className="compound">
             <div className="compound-num">Compound 01</div>
@@ -563,17 +581,17 @@ export default function Home() {
 
           <p>She called me at Christmas.</p>
 
-          <p>&quot;People keep asking if I&apos;ve had something done,&quot; she said. &quot;My friend thinks I got fillers.&quot;</p>
+          <p>"People keep asking if I've had something done," she said. "My friend thinks I got fillers."</p>
 
-          <p>She hadn&apos;t.</p>
+          <p>She hadn't.</p>
 
-          <p>She&apos;d just finally been working on the right problem.</p>
+          <p>She'd just finally been working on the right problem.</p>
 
           <p>Week 3: her skin felt different. More hydrated, less papery. Week 5: the jawline was visibly improved. Week 12: she looked like a better version of herself. Not younger in a fake, obvious way. Just <em>more like herself</em>. The version from five years ago.</p>
 
           <p>I started quietly recommending it to patients. Then to friends. The results were consistent enough that I wrote it up as a full clinical guide.</p>
 
-          <p>I&apos;m releasing it at $19. Because this information is too important to gatekeep.</p>
+          <p>I'm releasing it at $19. Because this information is too important to gatekeep.</p>
 
           <div className="transform-img-wrap">
             <img
@@ -594,7 +612,7 @@ export default function Home() {
           <div className="t-grid">
             <div className="t-card">
               <div className="t-stars">★★★★★</div>
-              <p className="t-text">&quot;By week three my husband asked if I&apos;d had something done. I hadn&apos;t. The jawline is genuinely tighter. I avoided mirrors for two years. Now I look every morning.&quot;</p>
+              <p className="t-text">"By week three my husband asked if I'd had something done. I hadn't. The jawline is genuinely tighter. I avoided mirrors for two years. Now I look every morning."</p>
               <div className="t-author">
                 <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=76&q=80&auto=format&fit=crop&crop=face" alt="Pauline" className="t-avatar" />
                 <div>
@@ -607,7 +625,7 @@ export default function Home() {
 
             <div className="t-card">
               <div className="t-stars">★★★★★</div>
-              <p className="t-text">&quot;The holiday photo section. I literally put my phone down and cried. That was me. That was exactly me. I bought it before I even finished reading.&quot;</p>
+              <p className="t-text">"The holiday photo section. I literally put my phone down and cried. That was me. That was exactly me. I bought it before I even finished reading."</p>
               <div className="t-author">
                 <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=76&q=80&auto=format&fit=crop&crop=face" alt="Karen" className="t-avatar" />
                 <div>
@@ -620,7 +638,7 @@ export default function Home() {
 
             <div className="t-card">
               <div className="t-stars">★★★★★</div>
-              <p className="t-text">&quot;The food list. There was something I was eating every single morning thinking it was healthy. Changed that one thing in week 1. The difference in 10 days was visible.&quot;</p>
+              <p className="t-text">"The food list. There was something I was eating every single morning thinking it was healthy. Changed that one thing in week 1. The difference in 10 days was visible."</p>
               <div className="t-author">
                 <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=76&q=80&auto=format&fit=crop&crop=face" alt="Maggie" className="t-avatar" />
                 <div>
@@ -633,7 +651,7 @@ export default function Home() {
 
             <div className="t-card">
               <div className="t-stars">★★★★★</div>
-              <p className="t-text">&quot;I&apos;m 63. I thought I was past the point where anything would help. My daughter noticed before I told her I&apos;d started anything. The lines around my mouth have genuinely softened.&quot;</p>
+              <p className="t-text">"I'm 63. I thought I was past the point where anything would help. My daughter noticed before I told her I'd started anything. The lines around my mouth have genuinely softened."</p>
               <div className="t-author">
                 <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=76&q=80&auto=format&fit=crop&crop=face" alt="Debra" className="t-avatar" />
                 <div>
@@ -646,7 +664,7 @@ export default function Home() {
 
             <div className="t-card">
               <div className="t-stars">★★★★★</div>
-              <p className="t-text">&quot;I&apos;d spent $600 on Rodan + Fields over 2 years. This article was the first time anyone actually explained why it didn&apos;t work. The protocol worked when nothing else had.&quot;</p>
+              <p className="t-text">"I'd spent $600 on Rodan + Fields over 2 years. This article was the first time anyone actually explained why it didn't work. The protocol worked when nothing else had."</p>
               <div className="t-author">
                 <img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=76&q=80&auto=format&fit=crop&crop=face" alt="Sandra" className="t-avatar" />
                 <div>
@@ -659,7 +677,7 @@ export default function Home() {
 
             <div className="t-card">
               <div className="t-stars">★★★★★</div>
-              <p className="t-text">&quot;I showed my sister and she ordered it the same day without even finishing the article. We&apos;re both 3 weeks in. She got a comment at work. I got asked by my neighbor if I&apos;d been on vacation.&quot;</p>
+              <p className="t-text">"I showed my sister and she ordered it the same day without even finishing the article. We're both 3 weeks in. She got a comment at work. I got asked by my neighbor if I'd been on vacation."</p>
               <div className="t-author">
                 <img src="https://images.unsplash.com/photo-1491349174775-aaaefdd81942?w=76&q=80&auto=format&fit=crop&crop=face" alt="Linda" className="t-avatar" />
                 <div>
@@ -685,7 +703,7 @@ export default function Home() {
               <div>
                 <div className="fb-bubble">
                   <div className="fb-name">Linda Patterson</div>
-                  <div className="fb-text">I showed this to my daughter and she literally said &quot;mom this is literally you&quot; when she read the holiday photo part 😭 I bought it before she even finished her sentence. Week 2 update coming soon</div>
+                  <div className="fb-text">I showed this to my daughter and she literally said "mom this is literally you" when she read the holiday photo part 😭 I bought it before she even finished her sentence. Week 2 update coming soon</div>
                 </div>
                 <div className="fb-meta">👍 1.4K &nbsp;·&nbsp; Like &nbsp;·&nbsp; Reply &nbsp;·&nbsp; 3h</div>
               </div>
@@ -696,7 +714,7 @@ export default function Home() {
               <div>
                 <div className="fb-bubble">
                   <div className="fb-name">Jennifer Walsh</div>
-                  <div className="fb-text"><span className="fb-tag">Linda Patterson</span> Same. My husband saw me reading this over my shoulder and said &quot;that sounds exactly like you&quot; about the Zoom call thing. I didn&apos;t even realize anyone else noticed me doing that 😂💀</div>
+                  <div className="fb-text"><span className="fb-tag">Linda Patterson</span> Same. My husband saw me reading this over my shoulder and said "that sounds exactly like you" about the Zoom call thing. I didn't even realize anyone else noticed me doing that 😂💀</div>
                 </div>
                 <div className="fb-meta">👍 847 &nbsp;·&nbsp; Like &nbsp;·&nbsp; Reply &nbsp;·&nbsp; 2h</div>
               </div>
@@ -707,7 +725,7 @@ export default function Home() {
               <div>
                 <div className="fb-bubble">
                   <div className="fb-name">Carol Simmons</div>
-                  <div className="fb-text">Week 3 update for anyone wondering — I got asked yesterday by someone I haven&apos;t seen in 6 months if I&apos;d &quot;done something to my face.&quot; I said no. She didn&apos;t believe me. I&apos;m crying. This is $19 I should have spent years ago</div>
+                  <div className="fb-text">Week 3 update for anyone wondering — I got asked yesterday by someone I haven't seen in 6 months if I'd "done something to my face." I said no. She didn't believe me. I'm crying. This is $19 I should have spent years ago</div>
                 </div>
                 <div className="fb-meta">👍 2.1K &nbsp;·&nbsp; Like &nbsp;·&nbsp; Reply &nbsp;·&nbsp; 5h</div>
               </div>
@@ -718,7 +736,7 @@ export default function Home() {
               <div>
                 <div className="fb-bubble">
                   <div className="fb-name">Diane Torres</div>
-                  <div className="fb-text"><span className="fb-tag">Carol Simmons</span> Carol!! I was JUST about to post my update too. Same thing happened to me at my sister&apos;s birthday dinner on Saturday. I&apos;ve spent so much money on skincare. The glycation thing made so much sense the moment I read it. Why did no one ever tell us this??</div>
+                  <div className="fb-text"><span className="fb-tag">Carol Simmons</span> Carol!! I was JUST about to post my update too. Same thing happened to me at my sister's birthday dinner on Saturday. I've spent so much money on skincare. The glycation thing made so much sense the moment I read it. Why did no one ever tell us this??</div>
                 </div>
                 <div className="fb-meta">👍 634 &nbsp;·&nbsp; Like &nbsp;·&nbsp; Reply &nbsp;·&nbsp; 4h</div>
               </div>
@@ -729,7 +747,7 @@ export default function Home() {
               <div>
                 <div className="fb-bubble">
                   <div className="fb-name">Patricia Morgan</div>
-                  <div className="fb-text">I&apos;m 61 and I was genuinely convinced I was past the point of anything helping without surgery. Tagging <span className="fb-tag">Susan Morgan</span> because we talked about this last week. Read this article, Sue. The part about the dermis vs epidermis — we have literally been working on the WRONG LAYER our entire lives</div>
+                  <div className="fb-text">I'm 61 and I was genuinely convinced I was past the point of anything helping without surgery. Tagging <span className="fb-tag">Susan Morgan</span> because we talked about this last week. Read this article, Sue. The part about the dermis vs epidermis — we have literally been working on the WRONG LAYER our entire lives</div>
                 </div>
                 <div className="fb-meta">👍 978 &nbsp;·&nbsp; Like &nbsp;·&nbsp; Reply &nbsp;·&nbsp; 7h</div>
               </div>
@@ -750,15 +768,15 @@ export default function Home() {
 
           <hr className="divider" />
 
-          <div className="sh">HERE&apos;S WHAT I NEED YOU TO UNDERSTAND BEFORE YOU SCROLL PAST THIS</div>
+          <div className="sh">HERE'S WHAT I NEED YOU TO UNDERSTAND BEFORE YOU SCROLL PAST THIS</div>
 
           <p>Women email me every week saying they almost scrolled past this article.</p>
 
-          <p>They were skeptical. They&apos;d tried everything. They&apos;d been burned by expensive products that promised the world and did nothing. Another thing claiming to fix aging felt like another disappointment waiting to happen.</p>
+          <p>They were skeptical. They'd tried everything. They'd been burned by expensive products that promised the world and did nothing. Another thing claiming to fix aging felt like another disappointment waiting to happen.</p>
 
           <p>Then they tried the protocol.</p>
 
-          <p>And now they&apos;re the ones emailing saying it&apos;s the most important $19 they&apos;ve ever spent on themselves.</p>
+          <p>And now they're the ones emailing saying it's the most important $19 they've ever spent on themselves.</p>
 
           <p>So let me put this in perspective for you:</p>
 
@@ -774,18 +792,18 @@ export default function Home() {
 
           <p>The difference is this: every dollar spent on the left column is working on the top layer of your skin. Every dollar spent on this protocol is working on the layer where your skin is actually aging.</p>
 
-          <p>For nineteen dollars and sixty days, you&apos;ll know definitively whether this is true. Either your jawline tightens, people start commenting, and you finally feel like yourself in photos again. Or you email me, I refund every cent, and you keep the guide.</p>
+          <p>For nineteen dollars and sixty days, you'll know definitively whether this is true. Either your jawline tightens, people start commenting, and you finally feel like yourself in photos again. Or you email me, I refund every cent, and you keep the guide.</p>
 
           <p>There is no version of this where you lose.</p>
 
           <div className="mini-close">
-            <div className="mini-close-quote">&quot;I almost didn&apos;t buy it because I&apos;d been burned so many times before. Now I recommend it to every woman I know who&apos;s in her 50s and quietly struggling with the same thing. It&apos;s not magic. It&apos;s just finally working on the right problem.&quot;</div>
+            <div className="mini-close-quote">"I almost didn't buy it because I'd been burned so many times before. Now I recommend it to every woman I know who's in her 50s and quietly struggling with the same thing. It's not magic. It's just finally working on the right problem."</div>
             <div className="mini-close-attr">— Pauline H., 54, Phoenix AZ · Verified Purchase</div>
           </div>
 
-          <div className="sh">WHAT&apos;S IN THE PROTOCOL</div>
+          <div className="sh">WHAT'S IN THE PROTOCOL</div>
 
-          <p>This isn&apos;t a general wellness guide. It&apos;s 30 pages of exactly what to do, when to do it, and why — written for women 45–65 who are done wasting money on things that can&apos;t reach the problem.</p>
+          <p>This isn't a general wellness guide. It's 30 pages of exactly what to do, when to do it, and why — written for women 45–65 who are done wasting money on things that can't reach the problem.</p>
 
           <div className="inside-box">
             <div className="inside-title">The Glycation Reversal Protocol</div>
@@ -793,11 +811,11 @@ export default function Home() {
 
             <div className="inside-item">
               <span className="i-check">✓</span>
-              <span><strong>The glycation explanation in plain English</strong> — not medical jargon. You&apos;ll finally understand exactly why the face in the mirror changed, why every product you&apos;ve bought has failed to address it, and what the research actually says. This section alone is worth ten times the price of the guide.</span>
+              <span><strong>The glycation explanation in plain English</strong> — not medical jargon. You'll finally understand exactly why the face in the mirror changed, why every product you've bought has failed to address it, and what the research actually says. This section alone is worth ten times the price of the guide.</span>
             </div>
             <div className="inside-item">
               <span className="i-check">✓</span>
-              <span><strong>Clinical doses for all three compounds</strong> — not the watered-down amounts on the supplement label. The specific therapeutic doses from the actual studies that showed results. Plus the exact brands worth buying, so you&apos;re not guessing or overpaying at a health food store.</span>
+              <span><strong>Clinical doses for all three compounds</strong> — not the watered-down amounts on the supplement label. The specific therapeutic doses from the actual studies that showed results. Plus the exact brands worth buying, so you're not guessing or overpaying at a health food store.</span>
             </div>
             <div className="inside-item">
               <span className="i-check">✓</span>
@@ -805,11 +823,11 @@ export default function Home() {
             </div>
             <div className="inside-item">
               <span className="i-check">✓</span>
-              <span><strong>The glycation food list</strong> — the 12 foods that actively fight AGE formation. And the 7 foods that accelerate glycation even when you&apos;re convinced you&apos;re eating well. One of them is almost certainly in your breakfast right now. Most women say this section alone was worth the $19.</span>
+              <span><strong>The glycation food list</strong> — the 12 foods that actively fight AGE formation. And the 7 foods that accelerate glycation even when you're convinced you're eating well. One of them is almost certainly in your breakfast right now. Most women say this section alone was worth the $19.</span>
             </div>
             <div className="inside-item">
               <span className="i-check">✓</span>
-              <span><strong>The 14-day results tracker</strong> — what to look for and when. Most women notice the first visible changes between day 9 and day 14. This tells you exactly what to expect at each stage so you&apos;re not guessing whether it&apos;s working.</span>
+              <span><strong>The 14-day results tracker</strong> — what to look for and when. Most women notice the first visible changes between day 9 and day 14. This tells you exactly what to expect at each stage so you're not guessing whether it's working.</span>
             </div>
           </div>
 
@@ -834,13 +852,13 @@ export default function Home() {
             <div className="g-icon">🛡️</div>
             <div>
               <div className="g-title">The 60-Day Full Money-Back Guarantee</div>
-              <div className="g-text">Follow the protocol for 60 days. If your jawline hasn&apos;t tightened, if the lines haven&apos;t softened, if you&apos;re not getting unsolicited comments about how well you look — email me and I&apos;ll refund every cent. You keep the guide either way. No forms. No hoops. No questions. I&apos;m that confident that once you&apos;re finally working on the right problem, you&apos;ll see results you haven&apos;t seen in years.</div>
+              <div className="g-text">Follow the protocol for 60 days. If your jawline hasn't tightened, if the lines haven't softened, if you're not getting unsolicited comments about how well you look — email me and I'll refund every cent. You keep the guide either way. No forms. No hoops. No questions. I'm that confident that once you're finally working on the right problem, you'll see results you haven't seen in years.</div>
             </div>
           </div>
 
           <hr className="divider" />
 
-          <p><strong>P.S.</strong> — You already know that what you&apos;ve been trying doesn&apos;t work. You&apos;ve proven it with hundreds, maybe thousands of dollars and years of disappointment. Not because you did anything wrong. Because no one ever told you the right problem. Now you know. Now you know what addresses it. It&apos;s $19. It&apos;s guaranteed for 60 days. There is genuinely nothing to lose — except maybe another year of avoiding photos.</p>
+          <p><strong>P.S.</strong> — You already know that what you've been trying doesn't work. You've proven it with hundreds, maybe thousands of dollars and years of disappointment. Not because you did anything wrong. Because no one ever told you the right problem. Now you know. Now you know what addresses it. It's $19. It's guaranteed for 60 days. There is genuinely nothing to lose — except maybe another year of avoiding photos.</p>
 
           <div style={{ marginTop: '28px' }}>
             <button className="cta-btn" style={{ maxWidth: '100%' }}>
