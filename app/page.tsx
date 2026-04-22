@@ -1,5 +1,7 @@
 'use client'
 
+const BASE = 'https://assets.checkoutchamp.com/Funnel/assets/images/fadfad32-3aee-484f-859c-b3ac63a4a1f3/9cb704f3-ec9c-4b35-b540-d2faa38624c8/'
+
 const css = `
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -11,7 +13,6 @@ const css = `
     line-height: 1.78;
   }
 
-  /* PUBLICATION HEADER */
   .pub-header {
     border-bottom: 3px solid #1a1a1a;
     padding: 14px 20px 10px;
@@ -186,12 +187,7 @@ const css = `
 
   .divider { border: none; border-top: 1px solid #e8e8e8; margin: 40px 0; }
 
-  /* AGE bullet list */
-  .age-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 24px;
-  }
+  .age-list { list-style: none; padding: 0; margin: 0 0 24px; }
   .age-list li {
     display: flex;
     gap: 12px;
@@ -220,42 +216,84 @@ const css = `
   .t-author { display: flex; align-items: center; gap: 10px; }
   .t-avatar { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
   .t-name { font-size: 13px; font-weight: 800; color: #111; }
-  .t-detail { font-size: 12px; color: #999; margin-top: 2px; }
   .t-verified { font-size: 11px; color: #1e6b1e; font-weight: 700; margin-top: 3px; }
 
-  /* FACEBOOK COMMENTS */
-  .fb-section {
-    background: #f0f2f5;
-    border-radius: 10px;
-    padding: 20px;
+  /* ─── EXACT FACEBOOK COMMENT UI ─── */
+  .fb-wrap {
     margin: 36px 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   }
-  .fb-header {
+  /* Top-level comment row */
+  .fbc {
     display: flex;
-    align-items: center;
     gap: 8px;
-    margin-bottom: 18px;
-    font-size: 15px;
-    font-weight: 700;
-    color: #1c1e21;
+    margin-bottom: 2px;
+    align-items: flex-start;
   }
-  .fb-icon { font-size: 20px; }
-  .fb-comment { display: flex; gap: 8px; margin-bottom: 14px; align-items: flex-start; }
-  .fb-avatar { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
-  .fb-bubble {
-    background: #fff;
+  /* Avatars */
+  .fbc-av {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .fbc-av-sm {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  /* Comment bubble — grey, rounded, inline */
+  .fbc-bubble {
+    background: #f0f2f5;
     border-radius: 18px;
-    padding: 10px 14px;
-    max-width: 88%;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+    padding: 8px 12px;
+    align-self: flex-start;
+    max-width: calc(100% - 52px);
   }
-  .fb-name { font-size: 13px; font-weight: 700; color: #050505; margin-bottom: 3px; }
-  .fb-admin-name { font-size: 13px; font-weight: 700; color: #1877f2; margin-bottom: 3px; }
-  .fb-text { font-size: 14px; color: #1c1e21; line-height: 1.48; }
-  .fb-meta { font-size: 12px; color: #65676b; margin-top: 6px; padding-left: 2px; }
-  .fb-reply { padding-left: 44px; }
-  .fb-tag { color: #1877f2; font-weight: 600; }
+  .fbc-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #050505;
+    line-height: 1.2;
+    margin-bottom: 3px;
+  }
+  .fbc-name-admin {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1877f2;
+    line-height: 1.2;
+    margin-bottom: 3px;
+  }
+  .fbc-text {
+    font-size: 15px;
+    color: #050505;
+    line-height: 1.34;
+  }
+  .fbc-tag { color: #1877f2; font-weight: 600; }
+  /* Action row — outside the bubble, left-aligned under avatar */
+  .fbc-acts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 0 14px 48px;
+    font-size: 12px;
+    color: #65676b;
+  }
+  .fbc-acts-sm { padding-left: 40px; }
+  .fbc-act-group { display: flex; align-items: center; }
+  .fbc-act {
+    font-weight: 700;
+    color: #65676b;
+    cursor: pointer;
+  }
+  .fbc-sep { margin: 0 4px; font-weight: 400; }
+  .fbc-ts { font-weight: 400; }
+  .fbc-lc { font-weight: 400; font-size: 13px; }
+  /* Reply indent */
+  .fbc-replies { padding-left: 48px; }
 
   /* INSIDE BOX */
   .inside-box {
@@ -360,10 +398,111 @@ const css = `
     .inside-box { padding: 20px 18px; }
     .transform-img-wrap { flex-direction: column; }
     .transform-img-wrap img { width: 100%; }
+    .fbc-acts { padding-left: 48px; }
   }
 `
 
+// Profile pics from reference pages (HydroHealth / SmoothSpine)
+const PIC = {
+  wilma:    BASE + '1.jpg?versionId=0NUAWrBI2VRSuyISbojxI79d82WYU1NQ',
+  mary:     BASE + '2.jpg?versionId=xU3ZcPP7DJric56PFRy8jrDu0xHei3Je',
+  debra:    BASE + '2_1.jpg?versionId=Ps8uA8c4eOsFnAGmwbXvUtms08ikqERx',
+  marie:    BASE + '5.jpg?versionId=yi_8gXzTticpY4GWx61Ns2pxVDxlW19w',
+  agnes:    BASE + '3_1.jpg?versionId=yYhKj_Q9YvaS3G5ogBwiUHGr9ZDoZb1z',
+  emma:     BASE + '18.jpg?versionId=RdtH5isqAbkYtVrNWFWk.IQUx4zKOzSO',
+  barbara:  BASE + '5_1.jpg?versionId=gUygReqwqy7tyqXINzU3VrHaum6CS9o0',
+  edith:    BASE + '1_1.jpg?versionId=VSs1LgTNfG_zeSLPSFqQAmgq.ba1VlfH',
+  anna:     'https://assets.checkoutchamp.com/9db753a0-5b0b-11ef-8422-a5e3860e605f/1731516814824_download_3_.jpg',
+  kate:     BASE + '7_1.jpg?versionId=ln1INfx.XveCvSdbpONkswXQaIEVfV4R',
+}
+
+type FbComment = {
+  av: string
+  avSm?: boolean
+  name: string
+  admin?: boolean
+  text: React.ReactNode
+  ts: string
+  likes: string
+  replies?: FbComment[]
+}
+
+function FbBubble({ c }: { c: FbComment }) {
+  return (
+    <>
+      <div className="fbc">
+        <img src={c.av} alt="" className={c.avSm ? 'fbc-av-sm' : 'fbc-av'} />
+        <div className="fbc-bubble">
+          {c.admin
+            ? <div className="fbc-name-admin">{c.name}</div>
+            : <div className="fbc-name">{c.name}</div>
+          }
+          <div className="fbc-text">{c.text}</div>
+        </div>
+      </div>
+      <div className={`fbc-acts${c.avSm ? ' fbc-acts-sm' : ''}`}>
+        <div className="fbc-act-group">
+          <span className="fbc-act">Like</span>
+          <span className="fbc-sep">·</span>
+          <span className="fbc-act">Reply</span>
+          <span className="fbc-sep">·</span>
+          <span className="fbc-ts">{c.ts}</span>
+        </div>
+        <span className="fbc-lc">👍 {c.likes}</span>
+      </div>
+      {c.replies && (
+        <div className="fbc-replies">
+          {c.replies.map((r, i) => <FbBubble key={i} c={{ ...r, avSm: true }} />)}
+        </div>
+      )}
+    </>
+  )
+}
+
 export default function Home() {
+  const comments: FbComment[] = [
+    {
+      av: PIC.wilma, name: 'Wilma Devon', ts: '3h', likes: '1.4K',
+      text: <>I showed this to my daughter and she said &quot;mom this is literally you&quot; when she got to the part about the phone cameras 😭 I bought it before she finished the paragraph</>,
+      replies: [{
+        av: PIC.mary, name: 'Mary Vernon', ts: '2h', likes: '847',
+        text: <><span className="fbc-tag">Wilma Devon</span> Same. My husband said &quot;that sounds exactly like you&quot; about the Zoom call thing. I didn&apos;t know other people noticed I was doing that 💀</>
+      }]
+    },
+    {
+      av: PIC.debra, name: 'Debra Peyton', ts: '5h', likes: '2.1K',
+      text: <>Week 3 update — a woman I haven&apos;t seen in 6 months asked me yesterday if I&apos;d &quot;done something.&quot; I said no and she literally did not believe me. I&apos;m in tears writing this. $19 I should have spent years ago</>,
+      replies: [{
+        av: PIC.marie, name: 'Marie Campbell', ts: '4h', likes: '634',
+        text: <><span className="fbc-tag">Debra Peyton</span> Same thing at my sister&apos;s birthday dinner. The glycation thing made sense the second I read it. Why has nobody ever told us this?? I&apos;ve spent so much money</>
+      }]
+    },
+    {
+      av: PIC.agnes, name: 'Agnes Graeme', ts: '7h', likes: '978',
+      text: <>I&apos;m 61 and I was convinced I was past the point of anything helping without surgery. Tagging <span className="fbc-tag">Emma Shelby</span> because we literally talked about this last week. Emma — we&apos;ve been working on the wrong LAYER of skin our whole lives</>,
+      replies: [{
+        av: PIC.emma, name: 'Emma Shelby', ts: '6h', likes: '412',
+        text: <><span className="fbc-tag">Agnes Graeme</span> Just bought it. I could scream about the $90 serum sitting on the top layer 😤 will report back</>
+      }]
+    },
+    {
+      av: PIC.barbara, name: 'Barbara Bradly', ts: '8h', likes: '23',
+      text: <>Ordered. How long does shipping take? Is it a physical book or a PDF?</>,
+      replies: [{
+        av: PIC.kate, name: 'Aging Backwards · Dr. Kim\'s Team ✓', admin: true, ts: '8h', likes: '47',
+        text: <>Hi Barbara — it&apos;s an instant PDF, goes to your email within 2 minutes of checkout. No shipping. Let us know how you get on 💛</>
+      }]
+    },
+    {
+      av: PIC.edith, name: 'Edith Ashton', ts: '11h', likes: '89',
+      text: <>My mother is 71 and I want to get this for her but I&apos;m worried it&apos;s too late. Does the protocol work past 65?</>,
+      replies: [{
+        av: PIC.anna, name: 'Anna Madison', ts: '10h', likes: '156',
+        text: <><span className="fbc-tag">Edith Ashton</span> Edith I&apos;m 68 and started 4 months ago. I don&apos;t know what to tell you except my sister told me last week I look 10 years younger and she doesn&apos;t lie about that kind of thing. Just try it</>
+      }]
+    },
+  ]
+
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: css }} />
@@ -596,7 +735,7 @@ export default function Home() {
               <div className="t-stars">★★★★★</div>
               <p className="t-text">"I'll be honest, I almost didn't buy it. I'd been burned so many times. My husband asked what I was doing differently around week 4. I just started crying. That's the only part of this review that sounds fake but I swear it's true."</p>
               <div className="t-author">
-                <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=76&q=80&auto=format&fit=crop&crop=face" alt="Pauline" className="t-avatar" />
+                <img src={PIC.wilma} alt="Pauline" className="t-avatar" />
                 <div>
                   <div className="t-name">Pauline H., 54 · Phoenix AZ</div>
                   <div className="t-verified">✓ Verified Purchase</div>
@@ -608,7 +747,7 @@ export default function Home() {
               <div className="t-stars">★★★★★</div>
               <p className="t-text">"The food list. I was eating one of the seven foods every single morning. I'd been eating it since I was 35 because a nutritionist told me it was healthy. Cut it out. My jawline changed in ten days. I cannot believe nobody in my life has ever told me this."</p>
               <div className="t-author">
-                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=76&q=80&auto=format&fit=crop&crop=face" alt="Maggie" className="t-avatar" />
+                <img src={PIC.marie} alt="Maggie" className="t-avatar" />
                 <div>
                   <div className="t-name">Maggie T., 51 · Austin TX</div>
                   <div className="t-verified">✓ Verified Purchase</div>
@@ -620,7 +759,7 @@ export default function Home() {
               <div className="t-stars">★★★★★</div>
               <p className="t-text">"I'm 63 and I was genuinely convinced I was past the point of anything working without surgery. My daughter asked me last weekend if I'd 'started something.' I hadn't told her. She just saw it."</p>
               <div className="t-author">
-                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=76&q=80&auto=format&fit=crop&crop=face" alt="Debra" className="t-avatar" />
+                <img src={PIC.edith} alt="Debra" className="t-avatar" />
                 <div>
                   <div className="t-name">Debra M., 63 · Scottsdale AZ</div>
                   <div className="t-verified">✓ Verified Purchase</div>
@@ -632,7 +771,7 @@ export default function Home() {
               <div className="t-stars">★★★★★</div>
               <p className="t-text">"Before this I'd spent $600 on Rodan + Fields over two years. This article is the first time anyone actually explained why it didn't work. I don't resent the woman who sold it to me anymore. She didn't know either."</p>
               <div className="t-author">
-                <img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=76&q=80&auto=format&fit=crop&crop=face" alt="Sandra" className="t-avatar" />
+                <img src={PIC.agnes} alt="Sandra" className="t-avatar" />
                 <div>
                   <div className="t-name">Sandra K., 57 · Denver CO</div>
                   <div className="t-verified">✓ Verified Purchase</div>
@@ -644,7 +783,7 @@ export default function Home() {
               <div className="t-stars">★★★★☆</div>
               <p className="t-text">"Okay I'll be the skeptical one. Week 3, no change. Week 5, my sister noticed before I did. I'm dropping a star just because it took longer than the article suggested but honestly at my age I'll take it."</p>
               <div className="t-author">
-                <img src="https://images.unsplash.com/photo-1491349174775-aaaefdd81942?w=76&q=80&auto=format&fit=crop&crop=face" alt="Linda" className="t-avatar" />
+                <img src={PIC.emma} alt="Linda" className="t-avatar" />
                 <div>
                   <div className="t-name">Linda R., 55 · Tampa FL</div>
                   <div className="t-verified">✓ Verified Purchase</div>
@@ -655,122 +794,9 @@ export default function Home() {
 
           <hr className="divider" />
 
-          <div className="fb-section">
-            <div className="fb-header">
-              <span className="fb-icon">💬</span>
-              <span>Comments · 2,847</span>
-            </div>
-
-            <div className="fb-comment">
-              <img src="https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c?w=72&q=80&auto=format&fit=crop&crop=face" alt="" className="fb-avatar" />
-              <div>
-                <div className="fb-bubble">
-                  <div className="fb-name">Linda Patterson</div>
-                  <div className="fb-text">I showed this to my daughter and she said "mom this is literally you" when she got to the part about the phone cameras 😭 I bought it before she finished the paragraph</div>
-                </div>
-                <div className="fb-meta">👍 1.4K &nbsp;·&nbsp; Like &nbsp;·&nbsp; Reply &nbsp;·&nbsp; 3h</div>
-              </div>
-            </div>
-
-            <div className="fb-comment fb-reply">
-              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=72&q=80&auto=format&fit=crop&crop=face" alt="" className="fb-avatar" />
-              <div>
-                <div className="fb-bubble">
-                  <div className="fb-name">Jennifer Walsh</div>
-                  <div className="fb-text"><span className="fb-tag">Linda Patterson</span> Same. My husband said "that sounds exactly like you" about the Zoom call thing. I didn't know other people noticed I was doing that 💀</div>
-                </div>
-                <div className="fb-meta">👍 847 &nbsp;·&nbsp; Like &nbsp;·&nbsp; Reply &nbsp;·&nbsp; 2h</div>
-              </div>
-            </div>
-
-            <div className="fb-comment">
-              <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=72&q=80&auto=format&fit=crop&crop=face" alt="" className="fb-avatar" />
-              <div>
-                <div className="fb-bubble">
-                  <div className="fb-name">Carol Simmons</div>
-                  <div className="fb-text">Week 3 update — a woman I haven't seen in 6 months asked me yesterday if I'd "done something." I said no and she literally did not believe me. I'm in tears writing this. $19 I should have spent years ago</div>
-                </div>
-                <div className="fb-meta">👍 2.1K &nbsp;·&nbsp; Like &nbsp;·&nbsp; Reply &nbsp;·&nbsp; 5h</div>
-              </div>
-            </div>
-
-            <div className="fb-comment fb-reply">
-              <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=72&q=80&auto=format&fit=crop&crop=face" alt="" className="fb-avatar" />
-              <div>
-                <div className="fb-bubble">
-                  <div className="fb-name">Diane Torres</div>
-                  <div className="fb-text"><span className="fb-tag">Carol Simmons</span> Carol!! Same thing at my sister's birthday dinner. The glycation thing made sense the second I read it. Why has nobody ever told us this?? I've spent so much money</div>
-                </div>
-                <div className="fb-meta">👍 634 &nbsp;·&nbsp; Like &nbsp;·&nbsp; Reply &nbsp;·&nbsp; 4h</div>
-              </div>
-            </div>
-
-            <div className="fb-comment">
-              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=72&q=80&auto=format&fit=crop&crop=face" alt="" className="fb-avatar" />
-              <div>
-                <div className="fb-bubble">
-                  <div className="fb-name">Patricia Morgan</div>
-                  <div className="fb-text">I'm 61 and I was convinced I was past the point of anything helping without surgery. Tagging <span className="fb-tag">Susan Morgan</span> because we literally talked about this last week. Sue — we've been working on the wrong LAYER of skin our whole lives</div>
-                </div>
-                <div className="fb-meta">👍 978 &nbsp;·&nbsp; Like &nbsp;·&nbsp; Reply &nbsp;·&nbsp; 7h</div>
-              </div>
-            </div>
-
-            <div className="fb-comment fb-reply">
-              <img src="https://images.unsplash.com/photo-1491349174775-aaaefdd81942?w=72&q=80&auto=format&fit=crop&crop=face" alt="" className="fb-avatar" />
-              <div>
-                <div className="fb-bubble">
-                  <div className="fb-name">Susan Morgan</div>
-                  <div className="fb-text"><span className="fb-tag">Patricia Morgan</span> Just bought it. I could scream about the $90 serum sitting on the top layer 😤 will report back</div>
-                </div>
-                <div className="fb-meta">👍 412 &nbsp;·&nbsp; Like &nbsp;·&nbsp; Reply &nbsp;·&nbsp; 6h</div>
-              </div>
-            </div>
-
-            <div className="fb-comment">
-              <img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=72&q=80&auto=format&fit=crop&crop=face" alt="" className="fb-avatar" />
-              <div>
-                <div className="fb-bubble">
-                  <div className="fb-name">Beverly K.</div>
-                  <div className="fb-text">Ordered. How long does shipping take? Is it a physical book or a PDF?</div>
-                </div>
-                <div className="fb-meta">👍 23 &nbsp;·&nbsp; Like &nbsp;·&nbsp; Reply &nbsp;·&nbsp; 8h</div>
-              </div>
-            </div>
-
-            <div className="fb-comment fb-reply">
-              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=72&q=80&auto=format&fit=crop&crop=face" alt="" className="fb-avatar" />
-              <div>
-                <div className="fb-bubble">
-                  <div className="fb-admin-name">Admin (Dr. Kim's team) ✓</div>
-                  <div className="fb-text">Hi Beverly — it's an instant PDF, goes to your email within 2 minutes of checkout. No shipping. Let us know how you get on 💛</div>
-                </div>
-                <div className="fb-meta">👍 47 &nbsp;·&nbsp; Like &nbsp;·&nbsp; Reply &nbsp;·&nbsp; 8h</div>
-              </div>
-            </div>
-
-            <div className="fb-comment">
-              <img src="https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c?w=72&q=80&auto=format&fit=crop&crop=face" alt="" className="fb-avatar" />
-              <div>
-                <div className="fb-bubble">
-                  <div className="fb-name">Ellen R.</div>
-                  <div className="fb-text">My mother is 71 and I want to get this for her but I'm worried it's too late. Does the protocol work past 65?</div>
-                </div>
-                <div className="fb-meta">👍 89 &nbsp;·&nbsp; Like &nbsp;·&nbsp; Reply &nbsp;·&nbsp; 11h</div>
-              </div>
-            </div>
-
-            <div className="fb-comment fb-reply">
-              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=72&q=80&auto=format&fit=crop&crop=face" alt="" className="fb-avatar" />
-              <div>
-                <div className="fb-bubble">
-                  <div className="fb-name">Donna Michael</div>
-                  <div className="fb-text"><span className="fb-tag">Ellen R.</span> Ellen I'm 68 and started 4 months ago. I don't know what to tell you except my sister told me last week I look 10 years younger and she doesn't lie about that kind of thing. Just try it</div>
-                </div>
-                <div className="fb-meta">👍 156 &nbsp;·&nbsp; Like &nbsp;·&nbsp; Reply &nbsp;·&nbsp; 10h</div>
-              </div>
-            </div>
-
+          {/* ── EXACT FACEBOOK COMMENTS UI ── */}
+          <div className="fb-wrap">
+            {comments.map((c, i) => <FbBubble key={i} c={c} />)}
           </div>
 
           <hr className="divider" />
