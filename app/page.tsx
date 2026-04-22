@@ -5,44 +5,43 @@ const BASE = 'https://assets.checkoutchamp.com/Funnel/assets/images/fadfad32-3ae
 const CDN = 'https://assets.cdn.filesafe.space/fveUHPreYRqiA1APSbJt/media/'
 
 const IMGS = {
-  featuredIn:    CDN + '69e88fdd06d54209df9204ae.png',
-  heroGif:       CDN + '69e88f32a1636a6c651bfda1.gif',
+  heroGif:         CDN + '69e88f32a1636a6c651bfda1.gif',
   emotionalAnchor: CDN + '69e88f60a1636a6c651c0897.png',
-  mechanismGif:  CDN + '69e88f88a1636a6c651c1055.gif',
-  mattressGif:   CDN + '69e89005b0e5e2bb7fbd808d.gif',
-  researchImg:   CDN + '69e8901c168febbdc22551c6.png',
-  bloodstreamGif:CDN + '69e890a206d54209df923088.gif',
-  compoundsImg:  CDN + '69e89041b0e5e2bb7fbd8ecd.png',
-  weddingPhoto:  CDN + '69e890c3b0e5e2bb7fbdae2e.png',
-  productMockup: CDN + '69e890ec717d5dd4e1f91384.png',
+  mechanismGif:    CDN + '69e88f88a1636a6c651c1055.gif',
+  mattressGif:     CDN + '69e89005b0e5e2bb7fbd808d.gif',
+  researchImg:     CDN + '69e8901c168febbdc22551c6.png',
+  bloodstreamGif:  CDN + '69e890a206d54209df923088.gif',
+  compoundsImg:    CDN + '69e89041b0e5e2bb7fbd8ecd.png',
+  weddingPhoto:    CDN + '69e890c3b0e5e2bb7fbdae2e.png',
+  productMockup:   CDN + '69e890ec717d5dd4e1f91384.png',
   testimonialGrid: CDN + '69e891bd717d5dd4e1f94797.png',
-  guaranteeBadge: CDN + '69e8916006d54209df925c4f.png',
-  drKim:         CDN + '69e891d98313fff52bb06955.png',
-  brenda:        BASE + '9_1.jpg?versionId=_NrFzoGUnndioDAABcjz6al86X0letnS',
-  donna:         BASE + '2_1.jpg?versionId=Ps8uA8c4eOsFnAGmwbXvUtms08ikqERx',
-  marcia:        BASE + '4_1.jpg?versionId=utFzlkNYBuPmzPsNyUk5cd75NcnOK7kV',
-  ruth:          BASE + '8_1.jpg?versionId=.DWIe9uvM1jKnKNpaJgMDPHBteBX19sc',
-  barbara:       BASE + '1_1.jpg?versionId=VSs1LgTNfG_zeSLPSFqQAmgq.ba1VlfH',
-  eleanor:       BASE + '4.jpg?versionId=EEpo4rQl.5.gWGqPWQZT2CGKNlirgFLZ',
-  gladys:        BASE + '1.jpg?versionId=0NUAWrBI2VRSuyISbojxI79d82WYU1NQ',
-  admin:         BASE + '2.jpg?versionId=xU3ZcPP7DJric56PFRy8jrDu0xHei3Je',
+  guaranteeBadge:  CDN + '69e8916006d54209df925c4f.png',
+  drKim:           CDN + '69e891d98313fff52bb06955.png',
+  brenda:  BASE + '9_1.jpg?versionId=_NrFzoGUnndioDAABcjz6al86X0letnS',
+  donna:   BASE + '2_1.jpg?versionId=Ps8uA8c4eOsFnAGmwbXvUtms08ikqERx',
+  marcia:  BASE + '4_1.jpg?versionId=utFzlkNYBuPmzPsNyUk5cd75NcnOK7kV',
+  ruth:    BASE + '8_1.jpg?versionId=.DWIe9uvM1jKnKNpaJgMDPHBteBX19sc',
+  barbara: BASE + '1_1.jpg?versionId=VSs1LgTNfG_zeSLPSFqQAmgq.ba1VlfH',
+  eleanor: BASE + '4.jpg?versionId=EEpo4rQl.5.gWGqPWQZT2CGKNlirgFLZ',
+  gladys:  BASE + '1.jpg?versionId=0NUAWrBI2VRSuyISbojxI79d82WYU1NQ',
+  admin:   BASE + '2.jpg?versionId=xU3ZcPP7DJric56PFRy8jrDu0xHei3Je',
 }
 
 const css = `
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;600;700;800;900&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 html { scroll-behavior: smooth; }
 
 body {
   background: #FAF8F5;
-  color: #1A1A1A;
+  color: #111;
   font-family: 'Lora', Georgia, serif;
-  font-size: 19px;
-  line-height: 1.7;
+  font-size: 21px;
+  line-height: 1.75;
 }
 
+/* ── PUB HEADER ── */
 .trending-bar {
   background: #C0392B;
   color: #fff;
@@ -98,8 +97,7 @@ body {
   text-transform: uppercase;
 }
 
-.pub-nav a:hover { color: #C0392B; }
-
+/* ── ARTICLE ── */
 .article-wrap {
   max-width: 680px;
   margin: 0 auto;
@@ -118,19 +116,19 @@ body {
 
 h1 {
   font-family: 'Inter', sans-serif;
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 900;
-  line-height: 1.25;
-  color: #1A1A1A;
+  line-height: 1.22;
+  color: #111;
   margin-bottom: 16px;
 }
 
 .deck {
   font-family: 'Lora', Georgia, serif;
   font-style: italic;
-  font-size: 20px;
-  color: #444;
-  line-height: 1.6;
+  font-size: 21px;
+  color: #222;
+  line-height: 1.65;
   margin-bottom: 20px;
 }
 
@@ -143,7 +141,7 @@ h1 {
   padding: 16px 0;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
 }
 
 .byline-left {
@@ -153,8 +151,8 @@ h1 {
 }
 
 .byline-avatar {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
@@ -162,206 +160,50 @@ h1 {
 
 .byline-name {
   font-family: 'Inter', sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
-  color: #1A1A1A;
+  color: #111;
   line-height: 1.4;
 }
 
 .byline-title {
   font-family: 'Inter', sans-serif;
-  font-size: 12px;
-  color: #666;
+  font-size: 13px;
+  color: #555;
 }
 
 .byline-right {
   font-family: 'Inter', sans-serif;
-  font-size: 12px;
-  color: #666;
+  font-size: 13px;
+  color: #555;
   line-height: 1.7;
   text-align: right;
 }
 
-.featured-in-img {
-  width: 100%;
-  display: block;
-  margin: 20px auto;
-}
-
+/* ── IMAGES ── */
 .hero-gif {
   width: 100%;
   border-radius: 8px;
   display: block;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
-.body-copy {
-  font-family: 'Lora', Georgia, serif;
-  font-size: 19px;
-  color: #1A1A1A;
-  line-height: 1.7;
+.emotional-img, .mechanism-gif, .research-img, .compounds-img, .wedding-photo {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  margin: 24px 0;
 }
 
-.body-copy p {
-  margin-bottom: 24px;
-}
-
-.body-copy strong { font-weight: 700; }
-
-.sh {
+.gif-caption, .wedding-caption {
   font-family: 'Inter', sans-serif;
-  font-size: 28px;
-  font-weight: 700;
-  color: #1A1A1A;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  letter-spacing: -0.02em;
-}
-
-.emotional-img {
-  width: 100%;
-  border-radius: 8px;
-  display: block;
-  margin: 20px 0 28px;
-}
-
-.pull-quote {
-  background: #FFF7F2;
-  border-left: 4px solid #E07856;
-  border-radius: 6px;
-  padding: 24px;
-  margin: 28px 0;
   font-style: italic;
-  font-size: 19px;
-  color: #444;
-  line-height: 1.7;
-}
-
-.mechanism-gif {
-  width: 100%;
-  border-radius: 8px;
-  display: block;
-  margin: 20px 0;
-}
-
-.gif-caption {
-  font-style: italic;
-  color: #999;
-  font-size: 13px;
+  color: #777;
+  font-size: 14px;
   text-align: center;
-  margin-bottom: 28px;
+  margin-top: -16px;
+  margin-bottom: 32px;
 }
-
-.soft-cta {
-  background: #F0F4F9;
-  border: 1.5px solid #1F3A5F;
-  border-radius: 8px;
-  padding: 20px 24px;
-  margin: 30px 0;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.soft-cta a {
-  color: #1F3A5F;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.soft-cta a:hover { text-decoration: underline; }
-
-.icon-list { list-style: none; padding: 0; margin: 24px 0; }
-
-.icon-list li {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  font-size: 17px;
-  color: #222;
-  line-height: 1.65;
-  margin-bottom: 12px;
-}
-
-.compound-list { list-style: none; padding: 0; margin: 24px 0; }
-
-.compound-list li {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-  font-size: 17px;
-  color: #222;
-  line-height: 1.65;
-  margin-bottom: 12px;
-}
-
-.compound-num {
-  color: #E07856;
-  font-weight: 700;
-  font-size: 16px;
-  flex-shrink: 0;
-}
-
-.research-img {
-  width: 100%;
-  border-radius: 8px;
-  display: block;
-  margin: 20px 0 28px;
-}
-
-.compounds-img {
-  width: 100%;
-  border-radius: 8px;
-  display: block;
-  margin: 20px 0 28px;
-}
-
-.wedding-photo {
-  width: 100%;
-  border-radius: 8px;
-  display: block;
-  margin: 20px 0;
-}
-
-.wedding-caption {
-  font-style: italic;
-  color: #999;
-  font-size: 13px;
-  text-align: center;
-  margin-bottom: 28px;
-}
-
-.inside-box {
-  background: #fafafa;
-  border: 1px solid #e0e0e0;
-  border-radius: 6px;
-  padding: 26px;
-  margin: 28px 0;
-}
-
-.inside-title {
-  font-size: 22px;
-  font-weight: 700;
-  color: #1A1A1A;
-  margin-bottom: 4px;
-}
-
-.inside-sub {
-  font-size: 13px;
-  color: #999;
-  margin-bottom: 20px;
-}
-
-.inside-item {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  margin-bottom: 16px;
-  font-size: 16px;
-  color: #333;
-  line-height: 1.65;
-}
-
-.i-check { color: #1e6b1e; font-weight: 900; font-size: 17px; flex-shrink: 0; }
 
 .testimonial-grid-img {
   width: 100%;
@@ -373,22 +215,167 @@ h1 {
 }
 
 .testimonial-caption {
+  font-family: 'Inter', sans-serif;
   font-style: italic;
-  color: #999;
+  color: #777;
   font-size: 14px;
   text-align: center;
+  margin-top: -16px;
   margin-bottom: 28px;
 }
 
+/* ── BODY COPY ── */
+.body-copy {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 21px;
+  color: #111;
+  line-height: 1.75;
+}
+
+.body-copy p {
+  margin-bottom: 28px;
+  color: #111;
+}
+
+.body-copy strong { font-weight: 700; color: #000; }
+
+.sh {
+  font-family: 'Inter', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #111;
+  margin-top: 48px;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+/* ── PULL QUOTE ── */
+.pull-quote {
+  background: #FFF7F2;
+  border-left: 4px solid #E07856;
+  border-radius: 0 6px 6px 0;
+  padding: 24px 28px;
+  margin: 32px 0;
+  font-style: italic;
+  font-size: 20px;
+  color: #222;
+  line-height: 1.72;
+}
+
+/* ── SOFT CTA ── */
+.soft-cta {
+  background: #F0F4F9;
+  border: 1.5px solid #1F3A5F;
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin: 36px 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  color: #111;
+  line-height: 1.6;
+}
+
+.soft-cta a {
+  color: #1F3A5F;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* ── ICON + COMPOUND LISTS ── */
+.icon-list { list-style: none; padding: 0; margin: 24px 0 28px; }
+
+.icon-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 20px;
+  color: #111;
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+
+.compound-list { list-style: none; padding: 0; margin: 24px 0 28px; }
+
+.compound-list li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  font-size: 20px;
+  color: #111;
+  line-height: 1.65;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.compound-list li:last-child { border-bottom: none; }
+
+.compound-num {
+  color: #E07856;
+  font-weight: 800;
+  font-size: 13px;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+/* ── INSIDE BOX ── */
+.inside-box {
+  background: #FFFDF9;
+  border: 1.5px solid #E0D8CE;
+  border-radius: 8px;
+  padding: 28px;
+  margin: 28px 0;
+}
+
+.inside-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.inside-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 22px;
+}
+
+.inside-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+  font-size: 18px;
+  color: #111;
+  line-height: 1.65;
+}
+
+.i-check {
+  color: #1a7a1a;
+  font-weight: 900;
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── FACEBOOK COMMENTS — exact 2026 UI ── */
 .fb-wrap {
   margin: 32px 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
+.fb-comment-block {
+  margin-bottom: 4px;
+}
+
 .fbc {
   display: flex;
   gap: 8px;
-  margin-bottom: 2px;
   align-items: flex-start;
 }
 
@@ -411,8 +398,8 @@ h1 {
 .fbc-bubble {
   background: #f0f2f5;
   border-radius: 18px;
-  padding: 8px 12px;
-  align-self: flex-start;
+  padding: 8px 14px;
+  display: inline-block;
   max-width: calc(100% - 52px);
 }
 
@@ -435,156 +422,52 @@ h1 {
 .fbc-text {
   font-size: 15px;
   color: #050505;
-  line-height: 1.36;
+  line-height: 1.4;
 }
 
 .fbc-tag { color: #1877f2; font-weight: 600; }
 
-.fbc-acts {
+/* Action row — the ONLY thing below the bubble */
+.fbc-actions {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 3px 0 14px 48px;
+  gap: 2px;
+  padding: 5px 0 16px 48px;
   font-size: 12px;
+  font-weight: 600;
   color: #65676b;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-.fbc-acts-sm { padding-left: 40px; }
-
-.fbc-act { font-weight: 700; color: #65676b; cursor: pointer; min-height: 44px; display: flex; align-items: center; }
-
-.fbc-sep { margin: 0 4px; font-weight: 400; }
-
-.fbc-ts { font-weight: 400; }
-
-.fbc-lc { font-weight: 400; font-size: 13px; }
-
-.fbc-replies { padding-left: 48px; }
-
-.urgency-banner {
-  background: #FEF2F2;
-  border: 2px solid #DC2626;
-  border-left: 5px solid #DC2626;
-  border-radius: 8px;
-  padding: 24px;
-  margin: 24px 0;
+.fbc-actions-sm {
+  padding-left: 40px;
 }
 
-.urgency-icon {
-  font-size: 24px;
-  margin-bottom: 12px;
+.fbc-action { color: #65676b; font-weight: 600; cursor: pointer; }
+.fbc-action:hover { text-decoration: underline; }
+.fbc-dot { margin: 0 5px; color: #bcc0c4; font-weight: 400; font-size: 11px; }
+.fbc-time { font-weight: 400; color: #65676b; }
+
+/* Reply threading */
+.fbc-replies {
+  padding-left: 48px;
+  margin-top: 0;
 }
 
-.urgency-title {
-  font-weight: 700;
-  color: #DC2626;
-  font-size: 18px;
-  margin-bottom: 12px;
-}
-
-.urgency-body {
-  font-size: 16px;
-  color: #333;
-  line-height: 1.65;
-  margin-bottom: 12px;
-}
-
-.urgency-counter {
-  color: #059669;
-  font-weight: 700;
-  font-size: 13px;
-}
-
-.guarantee-section {
-  background: #f0faf0;
-  border: 1px solid #8dc88d;
-  border-radius: 8px;
-  padding: 24px;
-  margin: 28px 0;
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-}
-
-.guarantee-badge {
-  flex-shrink: 0;
-}
-
-.guarantee-badge img {
-  width: 150px;
-  height: auto;
-  border-radius: 4px;
-}
-
-.guarantee-text h3 {
-  font-weight: 700;
-  color: #1F3A5F;
-  margin-bottom: 8px;
-  font-size: 18px;
-}
-
-.guarantee-text p {
-  font-size: 15px;
-  color: #333;
-  line-height: 1.74;
-}
-
-.sticky-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: white;
-  border-top: 1px solid #eee;
-  padding: 12px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
-}
-
-.sticky-bar.show {
-  transform: translateY(0);
-}
-
-.sticky-label {
-  font-size: 13px;
-  color: #666;
-  font-family: 'Inter', sans-serif;
-}
-
-.sticky-btn {
-  background: #E07856;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 12px 20px;
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-  font-family: 'Inter', sans-serif;
-  min-height: 44px;
-  min-width: 44px;
-}
-
-.sticky-btn:hover { background: #d46847; }
-
+/* ── CTA BLOCK ── */
 .cta-block {
   background: #FFF7F2;
   border: 1.5px solid #1F3A5F;
   border-radius: 10px;
   padding: 28px;
-  margin: 32px 0;
+  margin: 40px 0;
   text-align: center;
 }
 
 .cta-mockup {
   width: 100%;
-  max-width: 360px;
-  margin: 0 auto 20px;
+  max-width: 340px;
+  margin: 0 auto 22px;
   border-radius: 8px;
   display: block;
 }
@@ -595,50 +478,53 @@ h1 {
   color: #1F3A5F;
   font-weight: 700;
   margin-bottom: 8px;
+  line-height: 1.25;
 }
 
 .cta-subtitle {
+  font-family: 'Inter', sans-serif;
   font-size: 15px;
-  color: #999;
-  margin-bottom: 16px;
+  color: #777;
+  margin-bottom: 18px;
 }
 
-.price-line {
-  margin-bottom: 16px;
-}
+.price-line { margin-bottom: 18px; }
 
 .price-was {
   text-decoration: line-through;
   color: #bbb;
-  font-size: 18px;
+  font-size: 20px;
   margin-right: 8px;
+  font-family: 'Inter', sans-serif;
 }
 
 .price-now {
   color: #E07856;
-  font-size: 42px;
-  font-weight: 700;
+  font-size: 48px;
+  font-weight: 800;
+  font-family: 'Inter', sans-serif;
 }
 
 .checklist {
   list-style: none;
   padding: 0;
-  margin: 20px 0;
+  margin: 0 auto 22px;
   text-align: left;
   display: inline-block;
 }
 
 .checklist li {
-  font-size: 14px;
-  color: #333;
-  line-height: 1.8;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #222;
+  line-height: 1.9;
+  padding-left: 4px;
 }
 
 .checklist li::before {
   content: '✓ ';
-  color: #1e6b1e;
+  color: #1a7a1a;
   font-weight: 700;
-  margin-right: 6px;
 }
 
 .cta-btn {
@@ -646,29 +532,149 @@ h1 {
   color: white;
   border: none;
   border-radius: 8px;
-  padding: 18px 24px;
-  font-size: 19px;
+  padding: 20px 28px;
+  font-size: 20px;
   font-weight: 800;
   width: 100%;
   max-width: 480px;
-  min-height: 56px;
+  min-height: 60px;
   cursor: pointer;
   font-family: 'Inter', sans-serif;
-  box-shadow: 0 4px 12px rgba(224,120,86,0.35);
-  margin: 0 auto 12px;
+  box-shadow: 0 4px 16px rgba(224,120,86,0.40);
+  margin: 0 auto 14px;
   display: block;
+  letter-spacing: 0.01em;
+  transition: background 0.2s, transform 0.1s;
 }
 
-.cta-btn:hover { background: #d46847; }
+.cta-btn:hover { background: #d06540; }
+.cta-btn:active { transform: scale(0.99); }
 
 .cta-trust {
+  font-family: 'Inter', sans-serif;
   font-size: 13px;
   color: #999;
 }
 
+/* ── URGENCY ── */
+.urgency-banner {
+  background: #FEF2F2;
+  border: 1.5px solid #DC2626;
+  border-left: 5px solid #DC2626;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 28px 0;
+}
+
+.urgency-icon { font-size: 22px; margin-bottom: 10px; }
+
+.urgency-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  color: #DC2626;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.urgency-body {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  color: #111;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.urgency-counter {
+  font-family: 'Inter', sans-serif;
+  color: #059669;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* ── GUARANTEE ── */
+.guarantee-section {
+  background: #F0FAF0;
+  border: 1px solid #8dc88d;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 28px 0;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.guarantee-badge { flex-shrink: 0; }
+.guarantee-badge img { width: 130px; height: auto; }
+
+.guarantee-text h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  color: #1F3A5F;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.guarantee-text p {
+  font-size: 17px;
+  color: #222;
+  line-height: 1.72;
+}
+
+/* ── STICKY CTA BAR ── */
+.sticky-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  transform: translateY(100%);
+  transition: transform 0.25s ease;
+}
+
+.sticky-bar.show { transform: translateY(0); }
+
+.sticky-inner {
+  background: #E07856;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  padding: 0;
+  min-height: 58px;
+}
+
+.sticky-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  line-height: 1.3;
+}
+
+.sticky-sub {
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.85;
+  display: block;
+  margin-top: 2px;
+}
+
+/* ── DIVIDER ── */
+.divider {
+  border: none;
+  border-top: 1px solid #e4e0da;
+  margin: 44px 0;
+}
+
+/* ── FOOTER ── */
 .footer {
   background: #111;
-  color: rgba(255,255,255,0.36);
+  color: rgba(255,255,255,0.38);
   text-align: center;
   padding: 40px 20px;
   margin-top: 70px;
@@ -677,74 +683,84 @@ h1 {
   font-family: 'Inter', sans-serif;
 }
 
-.footer a { color: rgba(255,255,255,0.26); text-decoration: none; }
+.footer a { color: rgba(255,255,255,0.28); text-decoration: none; }
 
-.divider {
-  border: none;
-  border-top: 1px solid #ebebeb;
-  margin: 40px 0;
-}
-
+/* ── MOBILE ── */
 @media (max-width: 600px) {
-  body { font-size: 17px; }
-  .article-wrap { padding: 20px 16px 0; }
-  h1 { font-size: 24px; }
-  .sh { font-size: 22px; }
-  .guarantee-section { flex-direction: column; }
+  body { font-size: 19px; }
+  .article-wrap { padding: 20px 18px 0; }
+  h1 { font-size: 26px; }
+  .sh { font-size: 22px; margin-top: 40px; }
+  .deck { font-size: 19px; }
+  .body-copy { font-size: 19px; }
+  .pull-quote { font-size: 18px; padding: 20px; }
+  .icon-list li { font-size: 18px; }
+  .compound-list li { font-size: 18px; }
+  .inside-item { font-size: 17px; }
+  .guarantee-section { flex-direction: column; gap: 16px; }
   .guarantee-badge img { width: 100px; }
   .byline-right { text-align: left; }
-  .byline-row { flex-direction: column; gap: 8px; }
-  .sticky-bar { padding: 10px 12px; }
-  .sticky-btn { padding: 10px 16px; font-size: 12px; }
-  .cta-block { padding: 20px; }
+  .byline-row { flex-direction: column; gap: 10px; }
+  .cta-block { padding: 22px 18px; }
   .cta-title { font-size: 22px; }
-  .price-now { font-size: 36px; }
-  .cta-btn { font-size: 16px; min-height: 48px; }
+  .price-now { font-size: 40px; }
+  .cta-btn { font-size: 18px; }
+  .sticky-text { font-size: 16px; }
+  .pub-title { font-size: 28px; }
 }
 `
 
-type FbBubbleProps = {
+type FbComment = {
   av: string
   avSm?: boolean
   name: string
   admin?: boolean
   text: React.ReactNode
   ts: string
-  likes: string
-  replies?: FbBubbleProps[]
+  replies?: FbComment[]
 }
 
-function FbBubble({ c }: { c: FbBubbleProps }) {
+function FbBubble({ c }: { c: FbComment }) {
+  const actionsClass = `fbc-actions${c.avSm ? ' fbc-actions-sm' : ''}`
   return (
-    <>
+    <div className="fb-comment-block">
       <div className="fbc">
         <img src={c.av} alt={c.name} className={c.avSm ? 'fbc-av-sm' : 'fbc-av'} />
         <div className="fbc-bubble">
-          {c.admin ? <div className="fbc-name-admin">{c.name}</div> : <div className="fbc-name">{c.name}</div>}
+          {c.admin
+            ? <div className="fbc-name-admin">{c.name}</div>
+            : <div className="fbc-name">{c.name}</div>
+          }
           <div className="fbc-text">{c.text}</div>
         </div>
       </div>
-      <div className={`fbc-acts${c.avSm ? ' fbc-acts-sm' : ''}`}>
-        <div>
-          <span className="fbc-act">Like</span><span className="fbc-sep">·</span>
-          <span className="fbc-act">Reply</span><span className="fbc-sep">·</span>
-          <span className="fbc-ts">{c.ts}</span>
-        </div>
-        <span className="fbc-lc">👍 {c.likes}</span>
+      <div className={actionsClass}>
+        <span className="fbc-action">Like</span>
+        <span className="fbc-dot">·</span>
+        <span className="fbc-action">Reply</span>
+        <span className="fbc-dot">·</span>
+        <span className="fbc-time">{c.ts}</span>
       </div>
       {c.replies && (
         <div className="fbc-replies">
-          {c.replies.map((r, i) => <FbBubble key={i} c={{ ...r, avSm: true }} />)}
+          {c.replies.map((r, i) => (
+            <FbBubble key={i} c={{ ...r, avSm: true }} />
+          ))}
         </div>
       )}
-    </>
+    </div>
   )
 }
 
 function CtaBlock() {
   return (
     <div className="cta-block">
-      <img src={IMGS.productMockup} alt="The Glycation Reversal Protocol product guide" loading="lazy" className="cta-mockup" />
+      <img
+        src={IMGS.productMockup}
+        alt="The Glycation Reversal Protocol — 30-page PDF guide"
+        loading="lazy"
+        className="cta-mockup"
+      />
       <div className="cta-title">The Glycation Reversal Protocol</div>
       <div className="cta-subtitle">30-page clinical guide · Instant PDF · Delivered to your inbox in 2 minutes</div>
       <div className="price-line">
@@ -765,58 +781,53 @@ function CtaBlock() {
 
 export default function Page() {
   const [showSticky, setShowSticky] = useState(false)
-  const [ctaAlt, setCtaAlt] = useState(false)
+  const [ctaAlt, setCtaAlt]       = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      const threshold = window.innerHeight * 0.3
-      setShowSticky(window.scrollY > threshold)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    const onScroll = () => setShowSticky(window.scrollY > window.innerHeight * 0.3)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCtaAlt((prev) => !prev)
-    }, 8000)
-    return () => clearInterval(interval)
+    const t = setInterval(() => setCtaAlt(p => !p), 8000)
+    return () => clearInterval(t)
   }, [])
 
-  const fbComments: FbBubbleProps[] = [
+  const comments: FbComment[] = [
     {
-      av: IMGS.brenda, name: 'Brenda Atkinson', ts: '2h', likes: '1.9K',
+      av: IMGS.brenda, name: 'Brenda Atkinson', ts: '2h',
       text: <>Scrolled past 3 times before I read it. Wish I&apos;d read it the first time. 6 weeks in. My sister won&apos;t stop asking what I did. I haven&apos;t told her because it&apos;s a little bit fun to watch her try to figure it out 😂</>,
       replies: [{
-        av: IMGS.donna, name: 'Donna R.', ts: '1h', likes: '423', avSm: true,
+        av: IMGS.donna, name: 'Donna R.', ts: '1h',
         text: <><span className="fbc-tag">Brenda Atkinson</span> hahaha this is exactly me too. My book club is in my kitchen right now and every single one of them asked</>
       }]
     },
     {
-      av: IMGS.marcia, name: 'Marcia L.', ts: '4h', likes: '2.4K',
+      av: IMGS.marcia, name: 'Marcia L.', ts: '4h',
       text: <>Okay I&apos;ll be the skeptic. I&apos;ve bought every single thing. Olay. Rodan. Arbonne. Prevage. That $400 La Mer cream my daughter got me. NONE of it worked. Willing to try $19. I&apos;ll report back.</>,
       replies: [{
-        av: IMGS.marcia, name: 'Marcia L.', ts: '22m', likes: '1.1K', avSm: true,
+        av: IMGS.marcia, name: 'Marcia L.', ts: '22m',
         text: <>UPDATE week 4 — getting comments at church. Not deleting my original comment because I want other skeptical women to see the before</>
       }]
     },
     {
-      av: IMGS.ruth, name: 'Ruth V.', ts: '6h', likes: '89',
+      av: IMGS.ruth, name: 'Ruth V.', ts: '6h',
       text: <>Is this safe with blood pressure medication? My doctor is old school and I don&apos;t want to ask him if he&apos;ll just say no.</>,
       replies: [{
-        av: IMGS.admin, name: 'The Women\'s Daily · Dr. Kim\'s Team ✓', admin: true, ts: '5h', likes: '156', avSm: true,
+        av: IMGS.admin, name: "The Women's Daily · Dr. Kim's Team ✓", admin: true, ts: '5h',
         text: <>Hi Ruth — the guide includes a section on medication interactions. Please do check with your physician — but the three compounds have no known interactions with common BP meds. 💛</>
       }]
     },
     {
-      av: IMGS.barbara, name: 'Barbara M.', ts: '8h', likes: '3.2K',
+      av: IMGS.barbara, name: 'Barbara M.', ts: '8h',
       text: <>My husband just walked past the screen and said &quot;who is that&quot; and I said &quot;me&quot; and he said &quot;no the other picture&quot; and it WAS me. From 4 years ago. I&apos;m buying it tonight.</>
     },
     {
-      av: IMGS.eleanor, name: 'Eleanor F.', ts: '11h', likes: '234',
+      av: IMGS.eleanor, name: 'Eleanor F.', ts: '11h',
       text: <>I&apos;m 71. Is it too late? Will it still work?</>,
       replies: [{
-        av: IMGS.gladys, name: 'Gladys P.', ts: '10h', likes: '687', avSm: true,
+        av: IMGS.gladys, name: 'Gladys P.', ts: '10h',
         text: <><span className="fbc-tag">Eleanor F.</span> Eleanor I&apos;m 73, started 5 months ago. My great granddaughter asked me if I dye my skin. I said no honey. She said it&apos;s very pretty. That is all I will say</>
       }]
     },
@@ -854,15 +865,14 @@ export default function Page() {
             </div>
           </div>
           <div className="byline-right">
-            📅 Updated April 2026<br />⏱ 5 min read<br />👁 1,284,991 views
+            📅 Updated April 2026<br />⏱ 5 min read · 👁 1,284,991 views
           </div>
         </div>
 
-        <img src={IMGS.featuredIn} alt="Featured in trusted publications" className="featured-in-img" />
-
-        <img src={IMGS.heroGif} alt="Woman looking at transformation results" className="hero-gif" loading="eager" />
+        <img src={IMGS.heroGif} alt="Woman looking at transformation results in mirror" className="hero-gif" loading="eager" />
 
         <div className="body-copy">
+
           <p>My mother called me on a Sunday.</p>
           <p>She'd just turned 58.</p>
           <p>"Rachel," she said. "I added it up. I spent four thousand dollars on my face this year. I look worse."</p>
@@ -890,7 +900,7 @@ export default function Page() {
           <p>Scroll back 5 years.</p>
           <p>Look at your jawline then. Look at it now.</p>
 
-          <img src={IMGS.emotionalAnchor} alt="Woman comparing old and new photos on her phone" className="emotional-img" loading="lazy" />
+          <img src={IMGS.emotionalAnchor} alt="Woman comparing old and new photos on her phone, noticing changes in her jawline" className="emotional-img" loading="lazy" />
 
           <p>Most women I show this exercise to have the same reaction.</p>
           <p>The change wasn't gradual.</p>
@@ -911,7 +921,7 @@ export default function Page() {
           <p>So every cream you've ever bought — every single one — has been working on the wrong layer.</p>
           <p>The layer you care about is untouched.</p>
 
-          <img src={IMGS.mechanismGif} alt="Animation showing cream sitting on epidermis while glycation occurs in dermis underneath" className="mechanism-gif" loading="lazy" />
+          <img src={IMGS.mechanismGif} alt="Animation showing skincare cream sitting on top epidermis layer while glycation damages the dermis underneath" className="mechanism-gif" loading="lazy" />
           <p className="gif-caption">Your serum sits on top. Glycation happens underneath. They never meet.</p>
 
           <p>Ask any dermatologist. They'll tell you the same thing.</p>
@@ -931,7 +941,7 @@ export default function Page() {
           <p>Think of a mattress with old, rusted springs.</p>
           <p>The springs are still there. They just don't work anymore.</p>
 
-          <img src={IMGS.mattressGif} alt="Animation of mattress springs becoming stiff and losing bounce" className="mechanism-gif" loading="lazy" />
+          <img src={IMGS.mattressGif} alt="Animation of mattress springs stiffening and losing their bounce — a metaphor for glycated collagen" className="mechanism-gif" loading="lazy" />
 
           <p><strong>That is your face after 50.</strong></p>
 
@@ -962,13 +972,13 @@ export default function Page() {
           <p>If creams can't get there, what can?</p>
           <p>Your bloodstream.</p>
 
-          <img src={IMGS.bloodstreamGif} alt="Animation showing oral compound traveling through bloodstream to reach dermis" className="mechanism-gif" loading="lazy" />
+          <img src={IMGS.bloodstreamGif} alt="Animation showing an oral compound traveling through the bloodstream to reach the dermis from the inside" className="mechanism-gif" loading="lazy" />
 
           <p>That's the only delivery route that reaches the dermis from the inside.</p>
           <p>It's why Botox is injected. It's why Accutane is swallowed. Because the dermis doesn't accept topicals.</p>
           <p>After my mother's phone call, I spent six months reading clinical literature I hadn't touched since medical school.</p>
 
-          <img src={IMGS.researchImg} alt="Dr. Rachel Kim reading clinical research at desk" className="research-img" loading="lazy" />
+          <img src={IMGS.researchImg} alt="Dr. Rachel Kim studying clinical research papers at a desk surrounded by medical journals" className="research-img" loading="lazy" />
 
           <p>And I found three oral compounds.</p>
           <p>All three had real, peer-reviewed, placebo-controlled trials.</p>
@@ -983,7 +993,7 @@ export default function Page() {
             <li><span className="compound-num">03</span><span><strong>One has a double-blind trial behind it.</strong> A bark extract. Most brands sell it at a fraction of the study dose.</span></li>
           </ol>
 
-          <img src={IMGS.compoundsImg} alt="Three natural compound supplements - plant extract, berry oil, bark extract" className="compounds-img" loading="lazy" />
+          <img src={IMGS.compoundsImg} alt="Three natural supplements — plant extract, berry oil, bark extract — on a clean surface" className="compounds-img" loading="lazy" />
 
           <h2 className="sh">Why I Won't Name Them Here</h2>
 
@@ -1001,7 +1011,7 @@ export default function Page() {
           <p>Week 12: She sent me a photo from a wedding.</p>
           <p>She was 62.</p>
 
-          <img src={IMGS.weddingPhoto} alt="Dr. Rachel Kim's mother at a wedding, looking radiant at age 62" className="wedding-photo" loading="lazy" />
+          <img src={IMGS.weddingPhoto} alt="Dr. Kim's mother at a wedding, looking radiant at age 62 after 12 weeks on the protocol" className="wedding-photo" loading="lazy" />
           <p className="wedding-caption">My mother at my cousin's wedding, 12 weeks into the protocol. She was 62.</p>
 
           <p>She looked like herself. Not a younger version of herself. Just the version from the photos 5 years ago she'd stopped looking at.</p>
@@ -1034,17 +1044,17 @@ export default function Page() {
           </div>
 
           <h2 className="sh">What Women Have Said</h2>
-          <p style={{ fontSize: '16px', color: '#999', marginBottom: '20px' }}>
-            ⭐⭐⭐⭐⭐ 2,847 verified buyers · 4.9/5 average rating
+          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '15px', color: '#555', marginBottom: '20px' }}>
+            ⭐⭐⭐⭐⭐ &nbsp;2,847 verified buyers · 4.9/5 average rating
           </p>
 
-          <img src={IMGS.testimonialGrid} alt="Grid of real women's before and after results" className="testimonial-grid-img" loading="lazy" />
+          <img src={IMGS.testimonialGrid} alt="Grid showing real results from women who completed the Glycation Reversal Protocol" className="testimonial-grid-img" loading="lazy" />
           <p className="testimonial-caption">Real women. Real results. 2,193 verified buyers since launch.</p>
 
           <hr className="divider" />
 
           <div className="fb-wrap">
-            {fbComments.map((c, i) => <FbBubble key={i} c={c} />)}
+            {comments.map((c, i) => <FbBubble key={i} c={c} />)}
           </div>
 
           <hr className="divider" />
@@ -1093,6 +1103,7 @@ export default function Page() {
           <p><strong>The only thing I can't give you back is the next year.</strong></p>
 
           <CtaBlock />
+
         </div>
       </div>
 
@@ -1102,14 +1113,21 @@ export default function Page() {
         <p style={{ marginTop: '6px' }}>
           <a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Contact</a> · <a href="#">Disclaimer</a>
         </p>
-        <p style={{ marginTop: '14px', maxWidth: '640px', margin: '14px auto 0' }}>
+        <p style={{ maxWidth: '600px', margin: '14px auto 0' }}>
           Any photos depicted are models. Results vary. Statements have not been evaluated by the FDA. This product does not diagnose, treat, cure, or prevent any disease. Consult your physician before any supplement protocol.
         </p>
       </footer>
 
-      <div className={`sticky-bar ${showSticky ? 'show' : ''}`}>
-        <span className="sticky-label">Dr. Rachel Kim's Protocol</span>
-        <button className="sticky-btn">{ctaAlt ? '🟢 184 women bought today — $19 →' : 'Get The Protocol — $19 →'}</button>
+      {/* ── STICKY CTA BAR ── */}
+      <div className={`sticky-bar${showSticky ? ' show' : ''}`}>
+        <button className="sticky-inner" onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}>
+          <div className="sticky-text">
+            {ctaAlt ? '🟢 184 women bought today' : 'Get The Protocol — $19 →'}
+            <span className="sticky-sub">
+              {ctaAlt ? 'Tap to get yours for $19 →' : '60-day guarantee · Instant PDF delivery'}
+            </span>
+          </div>
+        </button>
       </div>
     </>
   )
