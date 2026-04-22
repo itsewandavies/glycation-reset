@@ -143,32 +143,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* ── AS FEATURED IN ── */
-.featured-in-bar {
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  padding: 14px 0;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.featured-in-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  color: #aaa;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.featured-in-pubs {
-  font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  color: #999;
-  font-weight: 500;
-  line-height: 1.6;
-}
 
 /* ── BYLINE ── */
 .byline-row {
@@ -758,7 +732,6 @@ h1 {
   .cta-btn { font-size: 18px; }
   .pub-title { font-size: 28px; }
   .guarantee-badge-img { float: none; display: block; width: 120px; margin: 0 auto 16px; }
-  .featured-in-pubs { font-size: 12px; }
   .byline-avatar { width: 48px; height: 48px; }
 }
 `
@@ -930,14 +903,6 @@ export default function Page() {
         <h1>Retired Dermatologist: "Women Who Are 50 But Look 30 Aren't Using Creams — They're Doing This Instead"</h1>
 
         <p className="deck">She spent 22 years telling women to buy the wrong thing. Her mother's phone call changed everything.</p>
-
-        {/* AS FEATURED IN — text treatment only */}
-        <div className="featured-in-bar">
-          <div className="featured-in-label">As Featured In</div>
-          <div className="featured-in-pubs">
-            Women's Health Daily &nbsp;·&nbsp; The Beauty Review &nbsp;·&nbsp; Dermatology Insider &nbsp;·&nbsp; Wellness Weekly &nbsp;·&nbsp; MD Journal Quarterly
-          </div>
-        </div>
 
         {/* Byline — redesigned */}
         <div className="byline-row">
