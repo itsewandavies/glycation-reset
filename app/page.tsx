@@ -381,11 +381,11 @@ export default function Home() {
         <div className="section-label">Skin Science</div>
 
         <h1 className="expert-h">
-          Why The $89 Billion Skincare Industry Has Been Selling Women Over 50 The Wrong Product For 40 Years
+          Retired Dermatologist: "Women Who Are 50 But Look 30 Aren't Using Creams — They're Doing This Instead"
         </h1>
 
         <h2 className="sub-h">
-          A retired dermatologist explains the "wrong layer" problem — and the three oral compounds that finally reach where skin actually ages
+          The $89 billion skincare industry doesn't want you to know what actually works — because it costs $19
         </h2>
 
         <div className="byline-bar">
