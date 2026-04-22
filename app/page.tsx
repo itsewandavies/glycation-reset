@@ -1,8 +1,8 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 
 const BASE = 'https://assets.checkoutchamp.com/Funnel/assets/images/fadfad32-3aee-484f-859c-b3ac63a4a1f3/9cb704f3-ec9c-4b35-b540-d2faa38624c8/'
-const CDN = 'https://assets.cdn.filesafe.space/fveUHPreYRqiA1APSbJt/media/'
+const CDN  = 'https://assets.cdn.filesafe.space/fveUHPreYRqiA1APSbJt/media/'
 
 const IMGS = {
   heroGif:         CDN + '69e88f32a1636a6c651bfda1.gif',
@@ -38,7 +38,18 @@ body {
   color: #111;
   font-family: 'Lora', Georgia, serif;
   font-size: 21px;
-  line-height: 1.75;
+  line-height: 1.78;
+}
+
+/* ── PROGRESS BAR ── */
+.progress-bar {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  background: #E07856;
+  z-index: 9999;
+  transition: width 0.15s linear;
+  pointer-events: none;
 }
 
 /* ── PUB HEADER ── */
@@ -91,7 +102,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 12px;
   font-weight: 600;
-  color: #1A1A1A;
+  color: #555;
   text-decoration: none;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -132,52 +143,74 @@ h1 {
   margin-bottom: 20px;
 }
 
+/* ── AS FEATURED IN ── */
+.featured-in-bar {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 14px 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.featured-in-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #aaa;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.featured-in-pubs {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #999;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* ── BYLINE ── */
 .byline-row {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-  padding: 16px 0;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+  gap: 14px;
+  padding: 18px 0;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
   margin-bottom: 28px;
 }
 
-.byline-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
 .byline-avatar {
-  width: 44px;
-  height: 44px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
+  border: 2px solid #e8e4de;
 }
+
+.byline-info { flex: 1; }
 
 .byline-name {
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 800;
   color: #111;
-  line-height: 1.4;
+  margin-bottom: 3px;
 }
 
-.byline-title {
+.byline-creds {
   font-family: 'Inter', sans-serif;
   font-size: 13px;
-  color: #555;
+  color: #666;
+  margin-bottom: 4px;
 }
 
-.byline-right {
+.byline-meta {
   font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  color: #555;
-  line-height: 1.7;
-  text-align: right;
+  font-size: 12px;
+  color: #888;
 }
 
 /* ── IMAGES ── */
@@ -188,21 +221,20 @@ h1 {
   margin-bottom: 32px;
 }
 
-.emotional-img, .mechanism-gif, .research-img, .compounds-img, .wedding-photo {
+.article-img {
   width: 100%;
   border-radius: 8px;
   display: block;
-  margin: 24px 0;
+  margin: 24px 0 8px;
 }
 
-.gif-caption, .wedding-caption {
+.img-caption {
   font-family: 'Inter', sans-serif;
   font-style: italic;
-  color: #777;
-  font-size: 14px;
+  color: #888;
+  font-size: 13px;
   text-align: center;
-  margin-top: -16px;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 .testimonial-grid-img {
@@ -211,17 +243,7 @@ h1 {
   object-fit: cover;
   border-radius: 8px;
   display: block;
-  margin: 20px 0;
-}
-
-.testimonial-caption {
-  font-family: 'Inter', sans-serif;
-  font-style: italic;
-  color: #777;
-  font-size: 14px;
-  text-align: center;
-  margin-top: -16px;
-  margin-bottom: 28px;
+  margin: 20px 0 8px;
 }
 
 /* ── BODY COPY ── */
@@ -229,14 +251,10 @@ h1 {
   font-family: 'Lora', Georgia, serif;
   font-size: 21px;
   color: #111;
-  line-height: 1.75;
+  line-height: 1.78;
 }
 
-.body-copy p {
-  margin-bottom: 28px;
-  color: #111;
-}
-
+.body-copy p { margin-bottom: 28px; color: #111; }
 .body-copy strong { font-weight: 700; color: #000; }
 
 .sh {
@@ -265,24 +283,55 @@ h1 {
 
 /* ── SOFT CTA ── */
 .soft-cta {
-  background: #F0F4F9;
-  border: 1.5px solid #1F3A5F;
-  border-radius: 8px;
-  padding: 20px 24px;
+  background: #FFF7F2;
+  border-left: 4px solid #E07856;
+  border-radius: 0 8px 8px 0;
+  padding: 20px 22px;
   margin: 36px 0;
+}
+
+.soft-cta-inner {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.soft-cta-icon { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
+
+.soft-cta-bold {
   font-family: 'Inter', sans-serif;
   font-size: 17px;
+  font-weight: 800;
   color: #111;
+  margin-bottom: 6px;
+}
+
+.soft-cta-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 14px;
   line-height: 1.6;
 }
 
-.soft-cta a {
-  color: #1F3A5F;
+.soft-cta-btn {
+  display: inline-block;
+  background: #E07856;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
   font-weight: 700;
-  text-decoration: underline;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 
-/* ── ICON + COMPOUND LISTS ── */
+.soft-cta-btn:hover { background: #d06540; }
+
+/* ── ICON LIST ── */
 .icon-list { list-style: none; padding: 0; margin: 24px 0 28px; }
 
 .icon-list li {
@@ -295,83 +344,104 @@ h1 {
   margin-bottom: 14px;
 }
 
-.compound-list { list-style: none; padding: 0; margin: 24px 0 28px; }
+/* ── COMPOUND CARDS ── */
+.compound-cards { margin: 24px 0 28px; display: flex; flex-direction: column; gap: 16px; }
 
-.compound-list li {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-  font-size: 20px;
-  color: #111;
-  line-height: 1.65;
-  margin-bottom: 16px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid #e8e8e8;
-}
-
-.compound-list li:last-child { border-bottom: none; }
-
-.compound-num {
-  color: #E07856;
-  font-weight: 800;
-  font-size: 13px;
-  font-family: 'Inter', sans-serif;
-  letter-spacing: 0.05em;
-  flex-shrink: 0;
-  margin-top: 4px;
-}
-
-/* ── INSIDE BOX ── */
-.inside-box {
-  background: #FFFDF9;
-  border: 1.5px solid #E0D8CE;
+.compound-card {
+  background: #FFF7F2;
   border-radius: 8px;
-  padding: 28px;
+  padding: 20px 22px;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.compound-badge {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  color: #E07856;
+  line-height: 1;
+  flex-shrink: 0;
+  min-width: 44px;
+}
+
+.compound-headline {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  color: #111;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.compound-desc {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ── GUIDE CARD ── */
+.guide-card {
+  background: #FFF7F2;
+  border-radius: 8px;
+  padding: 28px 28px 12px;
   margin: 28px 0;
 }
 
-.inside-title {
+.guide-card-title {
   font-family: 'Inter', sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 800;
   color: #111;
   margin-bottom: 4px;
 }
 
-.inside-sub {
+.guide-card-sub {
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  color: #777;
-  margin-bottom: 22px;
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 20px;
 }
 
-.inside-item {
+.guide-item {
   display: flex;
   gap: 14px;
   align-items: flex-start;
   margin-bottom: 18px;
+}
+
+.guide-check {
+  width: 24px;
+  height: 24px;
+  background: #1a7a1a;
+  border-radius: 50%;
+  color: white;
+  font-size: 13px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.guide-text {
   font-size: 18px;
   color: #111;
   line-height: 1.65;
 }
 
-.i-check {
-  color: #1a7a1a;
-  font-weight: 900;
-  font-size: 18px;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
+.guide-text strong { font-weight: 700; color: #000; }
 
-/* ── FACEBOOK COMMENTS — exact 2026 UI ── */
+/* ── FACEBOOK COMMENTS ── */
 .fb-wrap {
   margin: 32px 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-.fb-comment-block {
-  margin-bottom: 4px;
-}
+.fb-comment-block { margin-bottom: 4px; }
 
 .fbc {
   display: flex;
@@ -380,16 +450,14 @@ h1 {
 }
 
 .fbc-av {
-  width: 40px;
-  height: 40px;
+  width: 40px; height: 40px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
 }
 
 .fbc-av-sm {
-  width: 32px;
-  height: 32px;
+  width: 32px; height: 32px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
@@ -403,31 +471,11 @@ h1 {
   max-width: calc(100% - 52px);
 }
 
-.fbc-name {
-  font-size: 13px;
-  font-weight: 700;
-  color: #050505;
-  line-height: 1.2;
-  margin-bottom: 3px;
-}
-
-.fbc-name-admin {
-  font-size: 13px;
-  font-weight: 700;
-  color: #1877f2;
-  line-height: 1.2;
-  margin-bottom: 3px;
-}
-
-.fbc-text {
-  font-size: 15px;
-  color: #050505;
-  line-height: 1.4;
-}
-
+.fbc-name { font-size: 13px; font-weight: 700; color: #050505; line-height: 1.2; margin-bottom: 3px; }
+.fbc-name-admin { font-size: 13px; font-weight: 700; color: #1877f2; line-height: 1.2; margin-bottom: 3px; }
+.fbc-text { font-size: 15px; color: #050505; line-height: 1.4; }
 .fbc-tag { color: #1877f2; font-weight: 600; }
 
-/* Action row — the ONLY thing below the bubble */
 .fbc-actions {
   display: flex;
   align-items: center;
@@ -436,23 +484,14 @@ h1 {
   font-size: 12px;
   font-weight: 600;
   color: #65676b;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-.fbc-actions-sm {
-  padding-left: 40px;
-}
-
+.fbc-actions-sm { padding-left: 40px; }
 .fbc-action { color: #65676b; font-weight: 600; cursor: pointer; }
 .fbc-action:hover { text-decoration: underline; }
 .fbc-dot { margin: 0 5px; color: #bcc0c4; font-weight: 400; font-size: 11px; }
 .fbc-time { font-weight: 400; color: #65676b; }
-
-/* Reply threading */
-.fbc-replies {
-  padding-left: 48px;
-  margin-top: 0;
-}
+.fbc-replies { padding-left: 48px; }
 
 /* ── CTA BLOCK ── */
 .cta-block {
@@ -481,37 +520,14 @@ h1 {
   line-height: 1.25;
 }
 
-.cta-subtitle {
-  font-family: 'Inter', sans-serif;
-  font-size: 15px;
-  color: #777;
-  margin-bottom: 18px;
-}
+.cta-subtitle { font-family: 'Inter', sans-serif; font-size: 15px; color: #777; margin-bottom: 18px; }
 
 .price-line { margin-bottom: 18px; }
 
-.price-was {
-  text-decoration: line-through;
-  color: #bbb;
-  font-size: 20px;
-  margin-right: 8px;
-  font-family: 'Inter', sans-serif;
-}
+.price-was { text-decoration: line-through; color: #bbb; font-size: 20px; margin-right: 8px; font-family: 'Inter', sans-serif; }
+.price-now { color: #E07856; font-size: 48px; font-weight: 800; font-family: 'Inter', sans-serif; }
 
-.price-now {
-  color: #E07856;
-  font-size: 48px;
-  font-weight: 800;
-  font-family: 'Inter', sans-serif;
-}
-
-.checklist {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto 22px;
-  text-align: left;
-  display: inline-block;
-}
+.checklist { list-style: none; padding: 0; margin: 0 auto 22px; text-align: left; display: inline-block; }
 
 .checklist li {
   font-family: 'Inter', sans-serif;
@@ -521,11 +537,7 @@ h1 {
   padding-left: 4px;
 }
 
-.checklist li::before {
-  content: '✓ ';
-  color: #1a7a1a;
-  font-weight: 700;
-}
+.checklist li::before { content: '✓ '; color: #1a7a1a; font-weight: 700; }
 
 .cta-btn {
   background: #E07856;
@@ -543,18 +555,13 @@ h1 {
   box-shadow: 0 4px 16px rgba(224,120,86,0.40);
   margin: 0 auto 14px;
   display: block;
-  letter-spacing: 0.01em;
   transition: background 0.2s, transform 0.1s;
 }
 
 .cta-btn:hover { background: #d06540; }
 .cta-btn:active { transform: scale(0.99); }
 
-.cta-trust {
-  font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  color: #999;
-}
+.cta-trust { font-family: 'Inter', sans-serif; font-size: 13px; color: #999; }
 
 /* ── URGENCY ── */
 .urgency-banner {
@@ -566,13 +573,13 @@ h1 {
   margin: 28px 0;
 }
 
-.urgency-icon { font-size: 22px; margin-bottom: 10px; }
+.urgency-icon { font-size: 32px; margin-bottom: 10px; display: block; }
 
 .urgency-title {
   font-family: 'Inter', sans-serif;
   font-weight: 800;
-  color: #DC2626;
-  font-size: 18px;
+  color: #991B1B;
+  font-size: 20px;
   margin-bottom: 12px;
 }
 
@@ -581,7 +588,7 @@ h1 {
   font-size: 17px;
   color: #111;
   line-height: 1.7;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .urgency-counter {
@@ -589,6 +596,24 @@ h1 {
   color: #059669;
   font-weight: 700;
   font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@keyframes pulse-green {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+.pulse-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background: #059669;
+  border-radius: 50%;
+  animation: pulse-green 2s ease-in-out infinite;
+  flex-shrink: 0;
 }
 
 /* ── GUARANTEE ── */
@@ -598,15 +623,18 @@ h1 {
   border-radius: 8px;
   padding: 24px;
   margin: 28px 0;
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
+  overflow: hidden;
 }
 
-.guarantee-badge { flex-shrink: 0; }
-.guarantee-badge img { width: 130px; height: auto; }
+.guarantee-badge-img {
+  float: left;
+  width: 150px;
+  height: auto;
+  margin: 0 22px 10px 0;
+  border-radius: 4px;
+}
 
-.guarantee-text h3 {
+.guarantee-title {
   font-family: 'Inter', sans-serif;
   font-weight: 800;
   color: #1F3A5F;
@@ -614,79 +642,106 @@ h1 {
   font-size: 18px;
 }
 
-.guarantee-text p {
+.guarantee-body {
+  font-family: 'Lora', Georgia, serif;
   font-size: 17px;
   color: #222;
-  line-height: 1.72;
+  line-height: 1.74;
 }
 
-/* ── STICKY CTA BAR ── */
+/* ── STICKY CTA — mobile only ── */
 .sticky-bar {
+  display: none;
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
+  bottom: 0; left: 0; right: 0;
+  z-index: 9998;
   transform: translateY(100%);
   transition: transform 0.25s ease;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+  border-radius: 0;
 }
 
 .sticky-bar.show { transform: translateY(0); }
 
-.sticky-inner {
-  background: #E07856;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  cursor: pointer;
-  border: none;
+.sticky-btn {
+  display: block;
   width: 100%;
-  padding: 0;
-  min-height: 58px;
-}
-
-.sticky-text {
+  background: #E07856;
+  color: white;
+  border: none;
+  height: 60px;
   font-family: 'Inter', sans-serif;
   font-size: 17px;
   font-weight: 800;
-  color: white;
+  letter-spacing: 0.02em;
+  cursor: pointer;
   text-align: center;
-  padding: 14px 20px;
-  line-height: 1.3;
 }
 
-.sticky-sub {
-  font-size: 12px;
-  font-weight: 400;
-  opacity: 0.85;
-  display: block;
-  margin-top: 2px;
-}
+.sticky-btn:hover { background: #d06540; }
 
 /* ── DIVIDER ── */
-.divider {
-  border: none;
-  border-top: 1px solid #e4e0da;
-  margin: 44px 0;
-}
+.divider { border: none; border-top: 1px solid #e4e0da; margin: 44px 0; }
 
 /* ── FOOTER ── */
 .footer {
-  background: #111;
-  color: rgba(255,255,255,0.38);
+  background: #1A1A1A;
+  color: rgba(255,255,255,0.5);
   text-align: center;
-  padding: 40px 20px;
+  padding: 48px 20px 32px;
   margin-top: 70px;
-  font-size: 12px;
-  line-height: 2;
   font-family: 'Inter', sans-serif;
 }
 
-.footer a { color: rgba(255,255,255,0.28); text-decoration: none; }
+.footer-logo {
+  font-family: Georgia, serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.footer-tagline {
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.footer-links {
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 16px;
+  line-height: 2;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,0.45);
+  text-decoration: none;
+  margin: 0 6px;
+}
+
+.footer-links a:hover { color: rgba(255,255,255,0.7); }
+
+.footer-social {
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+
+.footer-legal {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+  line-height: 1.9;
+}
 
 /* ── MOBILE ── */
-@media (max-width: 600px) {
+@media (max-width: 680px) {
+  .sticky-bar { display: block; }
   body { font-size: 19px; }
   .article-wrap { padding: 20px 18px 0; }
   h1 { font-size: 26px; }
@@ -695,46 +750,37 @@ h1 {
   .body-copy { font-size: 19px; }
   .pull-quote { font-size: 18px; padding: 20px; }
   .icon-list li { font-size: 18px; }
-  .compound-list li { font-size: 18px; }
-  .inside-item { font-size: 17px; }
-  .guarantee-section { flex-direction: column; gap: 16px; }
-  .guarantee-badge img { width: 100px; }
-  .byline-right { text-align: left; }
-  .byline-row { flex-direction: column; gap: 10px; }
+  .guide-text { font-size: 17px; }
+  .compound-desc { font-size: 16px; }
   .cta-block { padding: 22px 18px; }
   .cta-title { font-size: 22px; }
   .price-now { font-size: 40px; }
   .cta-btn { font-size: 18px; }
-  .sticky-text { font-size: 16px; }
   .pub-title { font-size: 28px; }
+  .guarantee-badge-img { float: none; display: block; width: 120px; margin: 0 auto 16px; }
+  .featured-in-pubs { font-size: 12px; }
+  .byline-avatar { width: 48px; height: 48px; }
 }
 `
 
 type FbComment = {
-  av: string
-  avSm?: boolean
-  name: string
-  admin?: boolean
-  text: React.ReactNode
-  ts: string
-  replies?: FbComment[]
+  av: string; avSm?: boolean; name: string; admin?: boolean
+  text: React.ReactNode; ts: string; replies?: FbComment[]
 }
 
 function FbBubble({ c }: { c: FbComment }) {
-  const actionsClass = `fbc-actions${c.avSm ? ' fbc-actions-sm' : ''}`
   return (
     <div className="fb-comment-block">
       <div className="fbc">
-        <img src={c.av} alt={c.name} className={c.avSm ? 'fbc-av-sm' : 'fbc-av'} />
+        <img src={c.av} alt={c.name} className={c.avSm ? 'fbc-av-sm' : 'fbc-av'} loading="lazy" />
         <div className="fbc-bubble">
           {c.admin
             ? <div className="fbc-name-admin">{c.name}</div>
-            : <div className="fbc-name">{c.name}</div>
-          }
+            : <div className="fbc-name">{c.name}</div>}
           <div className="fbc-text">{c.text}</div>
         </div>
       </div>
-      <div className={actionsClass}>
+      <div className={`fbc-actions${c.avSm ? ' fbc-actions-sm' : ''}`}>
         <span className="fbc-action">Like</span>
         <span className="fbc-dot">·</span>
         <span className="fbc-action">Reply</span>
@@ -743,24 +789,17 @@ function FbBubble({ c }: { c: FbComment }) {
       </div>
       {c.replies && (
         <div className="fbc-replies">
-          {c.replies.map((r, i) => (
-            <FbBubble key={i} c={{ ...r, avSm: true }} />
-          ))}
+          {c.replies.map((r, i) => <FbBubble key={i} c={{ ...r, avSm: true }} />)}
         </div>
       )}
     </div>
   )
 }
 
-function CtaBlock() {
+function CtaBlock({ trustSuffix = 'this week' }: { trustSuffix?: string }) {
   return (
     <div className="cta-block">
-      <img
-        src={IMGS.productMockup}
-        alt="The Glycation Reversal Protocol — 30-page PDF guide"
-        loading="lazy"
-        className="cta-mockup"
-      />
+      <img src={IMGS.productMockup} alt="The Glycation Reversal Protocol — 30-page PDF guide showing the cover" loading="lazy" className="cta-mockup" />
       <div className="cta-title">The Glycation Reversal Protocol</div>
       <div className="cta-subtitle">30-page clinical guide · Instant PDF · Delivered to your inbox in 2 minutes</div>
       <div className="price-line">
@@ -774,24 +813,51 @@ function CtaBlock() {
         <li>Compounds cost ~$35/month total</li>
       </ul>
       <button className="cta-btn">👉 YES — GET THE PROTOCOL FOR $19</button>
-      <div className="cta-trust">🔒 Secure checkout · Instant delivery · 2,847 women ordered today</div>
+      <div className="cta-trust">🔒 Secure checkout · Instant delivery · 2,847 women ordered {trustSuffix}</div>
     </div>
   )
 }
 
 export default function Page() {
   const [showSticky, setShowSticky] = useState(false)
-  const [ctaAlt, setCtaAlt]       = useState(false)
+  const [progress,   setProgress]   = useState(0)
+  const [views,      setViews]       = useState(1284991)
+  const [buyCount,   setBuyCount]    = useState(184)
 
-  useEffect(() => {
-    const onScroll = () => setShowSticky(window.scrollY > window.innerHeight * 0.3)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
+  // Combined scroll handler
+  const handleScroll = useCallback(() => {
+    const scrollY   = window.scrollY
+    const totalH    = document.documentElement.scrollHeight - window.innerHeight
+    const pct       = totalH > 0 ? (scrollY / totalH) * 100 : 0
+    setProgress(pct)
+    setShowSticky(scrollY > window.innerHeight * 0.25)
   }, [])
 
   useEffect(() => {
-    const t = setInterval(() => setCtaAlt(p => !p), 8000)
-    return () => clearInterval(t)
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [handleScroll])
+
+  // Live views counter — increments 1 every 4-6 seconds
+  useEffect(() => {
+    let tid: ReturnType<typeof setTimeout>
+    const tick = () => {
+      setViews(v => v + 1)
+      tid = setTimeout(tick, 4000 + Math.random() * 2000)
+    }
+    tid = setTimeout(tick, 4000 + Math.random() * 2000)
+    return () => clearTimeout(tid)
+  }, [])
+
+  // Urgency counter — increments 1 every 20-30 seconds
+  useEffect(() => {
+    let tid: ReturnType<typeof setTimeout>
+    const tick = () => {
+      setBuyCount(c => c + 1)
+      tid = setTimeout(tick, 20000 + Math.random() * 10000)
+    }
+    tid = setTimeout(tick, 20000 + Math.random() * 10000)
+    return () => clearTimeout(tid)
   }, [])
 
   const comments: FbComment[] = [
@@ -833,9 +899,16 @@ export default function Page() {
     },
   ]
 
+  const fmtViews = views.toLocaleString('en-US')
+
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: css }} />
+
+      {/* Reading progress bar */}
+      {progress > 5 && (
+        <div className="progress-bar" style={{ width: `${Math.min(progress, 100)}%` }} />
+      )}
 
       <div className="trending-bar">⚡ TRENDING — Health & Beauty · Women's Health · Skin Science</div>
 
@@ -853,23 +926,30 @@ export default function Page() {
 
       <div className="article-wrap">
         <div className="section-label">Skin Science</div>
+
         <h1>Retired Dermatologist: "Women Who Are 50 But Look 30 Aren't Using Creams — They're Doing This Instead"</h1>
+
         <p className="deck">She spent 22 years telling women to buy the wrong thing. Her mother's phone call changed everything.</p>
 
-        <div className="byline-row">
-          <div className="byline-left">
-            <img src={IMGS.drKim} alt="Dr. Rachel Kim" className="byline-avatar" loading="lazy" />
-            <div>
-              <div className="byline-name">By Dr. Rachel Kim, MD</div>
-              <div className="byline-title">Retired Board-Certified Dermatologist</div>
-            </div>
-          </div>
-          <div className="byline-right">
-            📅 Updated April 2026<br />⏱ 5 min read · 👁 1,284,991 views
+        {/* AS FEATURED IN — text treatment only */}
+        <div className="featured-in-bar">
+          <div className="featured-in-label">As Featured In</div>
+          <div className="featured-in-pubs">
+            Women's Health Daily &nbsp;·&nbsp; The Beauty Review &nbsp;·&nbsp; Dermatology Insider &nbsp;·&nbsp; Wellness Weekly &nbsp;·&nbsp; MD Journal Quarterly
           </div>
         </div>
 
-        <img src={IMGS.heroGif} alt="Woman looking at transformation results in mirror" className="hero-gif" loading="eager" />
+        {/* Byline — redesigned */}
+        <div className="byline-row">
+          <img src={IMGS.drKim} alt="Dr. Rachel Kim, MD — Retired Board-Certified Dermatologist" className="byline-avatar" />
+          <div className="byline-info">
+            <div className="byline-name">By Dr. Rachel Kim, MD</div>
+            <div className="byline-creds">Retired Board-Certified Dermatologist · 22 years</div>
+            <div className="byline-meta">📅 Updated April 2026 · ⏱ 5 min read · 👁 {fmtViews} views</div>
+          </div>
+        </div>
+
+        <img src={IMGS.heroGif} alt="Woman looking in mirror and noticing her skin has visibly improved after the protocol" className="hero-gif" loading="eager" />
 
         <div className="body-copy">
 
@@ -900,7 +980,7 @@ export default function Page() {
           <p>Scroll back 5 years.</p>
           <p>Look at your jawline then. Look at it now.</p>
 
-          <img src={IMGS.emotionalAnchor} alt="Woman comparing old and new photos on her phone, noticing changes in her jawline" className="emotional-img" loading="lazy" />
+          <img src={IMGS.emotionalAnchor} alt="Woman sitting quietly scrolling through old photos on her phone, comparing how her face looked 5 years ago" className="article-img" loading="lazy" />
 
           <p>Most women I show this exercise to have the same reaction.</p>
           <p>The change wasn't gradual.</p>
@@ -921,8 +1001,8 @@ export default function Page() {
           <p>So every cream you've ever bought — every single one — has been working on the wrong layer.</p>
           <p>The layer you care about is untouched.</p>
 
-          <img src={IMGS.mechanismGif} alt="Animation showing skincare cream sitting on top epidermis layer while glycation damages the dermis underneath" className="mechanism-gif" loading="lazy" />
-          <p className="gif-caption">Your serum sits on top. Glycation happens underneath. They never meet.</p>
+          <img src={IMGS.mechanismGif} alt="Scientific animation showing a skincare cream sitting on the epidermis surface while glycation damage occurs in the dermis below — they never make contact" className="article-img" loading="lazy" />
+          <p className="img-caption">Your serum sits on top. Glycation happens underneath. They never meet.</p>
 
           <p>Ask any dermatologist. They'll tell you the same thing.</p>
           <p>They just won't tell you before you buy.</p>
@@ -941,12 +1021,20 @@ export default function Page() {
           <p>Think of a mattress with old, rusted springs.</p>
           <p>The springs are still there. They just don't work anymore.</p>
 
-          <img src={IMGS.mattressGif} alt="Animation of mattress springs stiffening and losing their bounce — a metaphor for glycated collagen" className="mechanism-gif" loading="lazy" />
+          <img src={IMGS.mattressGif} alt="Animation of a mattress cross-section showing springs becoming stiff and losing their bounce — a visual metaphor for glycated collagen that can no longer support the skin" className="article-img" loading="lazy" />
 
           <p><strong>That is your face after 50.</strong></p>
 
+          {/* Soft CTA — redesigned */}
           <div className="soft-cta">
-            🔒 Want to skip ahead? I put the full protocol — compounds, doses, brands, food list — in a 30-page guide. <a href="#cta">You can get it for $19 here →</a>
+            <div className="soft-cta-inner">
+              <div className="soft-cta-icon">🔒</div>
+              <div>
+                <div className="soft-cta-bold">Want to skip ahead?</div>
+                <div className="soft-cta-body">I put the full protocol — compounds, doses, brands, food list — in a 30-page guide.</div>
+                <a href="#cta" className="soft-cta-btn">Get It For $19 →</a>
+              </div>
+            </div>
           </div>
 
           <h2 className="sh">That Is Why Your Jaw Changed</h2>
@@ -972,13 +1060,13 @@ export default function Page() {
           <p>If creams can't get there, what can?</p>
           <p>Your bloodstream.</p>
 
-          <img src={IMGS.bloodstreamGif} alt="Animation showing an oral compound traveling through the bloodstream to reach the dermis from the inside" className="mechanism-gif" loading="lazy" />
+          <img src={IMGS.bloodstreamGif} alt="Medical animation showing an oral compound being absorbed into the bloodstream and traveling through capillaries to reach the dermis layer of skin from the inside" className="article-img" loading="lazy" />
 
           <p>That's the only delivery route that reaches the dermis from the inside.</p>
           <p>It's why Botox is injected. It's why Accutane is swallowed. Because the dermis doesn't accept topicals.</p>
           <p>After my mother's phone call, I spent six months reading clinical literature I hadn't touched since medical school.</p>
 
-          <img src={IMGS.researchImg} alt="Dr. Rachel Kim studying clinical research papers at a desk surrounded by medical journals" className="research-img" loading="lazy" />
+          <img src={IMGS.researchImg} alt="Dr. Rachel Kim at a research desk surrounded by open medical journals and clinical papers, studying dermatology literature" className="article-img" loading="lazy" />
 
           <p>And I found three oral compounds.</p>
           <p>All three had real, peer-reviewed, placebo-controlled trials.</p>
@@ -987,13 +1075,32 @@ export default function Page() {
           <p>I'm not going to name them publicly on this page. I'll explain why in a second.</p>
           <p>But I will tell you this:</p>
 
-          <ol className="compound-list">
-            <li><span className="compound-num">01</span><span><strong>One stops new damage.</strong> It's a plant extract. You've heard of the active molecule from red wine research.</span></li>
-            <li><span className="compound-num">02</span><span><strong>One rebuilds the structure underneath your skin.</strong> A berry oil. This is the one that creates the "lifted" look.</span></li>
-            <li><span className="compound-num">03</span><span><strong>One has a double-blind trial behind it.</strong> A bark extract. Most brands sell it at a fraction of the study dose.</span></li>
-          </ol>
+          {/* Compound cards — fixed formatting */}
+          <div className="compound-cards">
+            <div className="compound-card">
+              <div className="compound-badge">01</div>
+              <div>
+                <span className="compound-headline">One stops new damage.</span>
+                <span className="compound-desc">It's a plant extract. You've heard of the active molecule from red wine research.</span>
+              </div>
+            </div>
+            <div className="compound-card">
+              <div className="compound-badge">02</div>
+              <div>
+                <span className="compound-headline">One rebuilds the structure underneath your skin.</span>
+                <span className="compound-desc">A berry oil. This is the one that creates the "lifted" look.</span>
+              </div>
+            </div>
+            <div className="compound-card">
+              <div className="compound-badge">03</div>
+              <div>
+                <span className="compound-headline">One has a double-blind trial behind it.</span>
+                <span className="compound-desc">A bark extract. Most brands sell it at a fraction of the study dose.</span>
+              </div>
+            </div>
+          </div>
 
-          <img src={IMGS.compoundsImg} alt="Three natural supplements — plant extract, berry oil, bark extract — on a clean surface" className="compounds-img" loading="lazy" />
+          <img src={IMGS.compoundsImg} alt="Three natural supplement bottles arranged together — representing the plant extract, berry oil, and bark extract compounds in the protocol" className="article-img" loading="lazy" />
 
           <h2 className="sh">Why I Won't Name Them Here</h2>
 
@@ -1011,13 +1118,13 @@ export default function Page() {
           <p>Week 12: She sent me a photo from a wedding.</p>
           <p>She was 62.</p>
 
-          <img src={IMGS.weddingPhoto} alt="Dr. Kim's mother at a wedding, looking radiant at age 62 after 12 weeks on the protocol" className="wedding-photo" loading="lazy" />
-          <p className="wedding-caption">My mother at my cousin's wedding, 12 weeks into the protocol. She was 62.</p>
+          <img src={IMGS.weddingPhoto} alt="Dr. Kim's mother standing at a wedding looking radiant and youthful at age 62, photographed 12 weeks after starting the protocol" className="article-img" loading="lazy" />
+          <p className="img-caption">My mother at my cousin's wedding, 12 weeks into the protocol. She was 62.</p>
 
           <p>She looked like herself. Not a younger version of herself. Just the version from the photos 5 years ago she'd stopped looking at.</p>
           <p>That was three years ago. Since then I've given the protocol to hundreds of women.</p>
 
-          <CtaBlock />
+          <CtaBlock trustSuffix="this week" />
 
           <h2 className="sh">Why $19 And Not $400?</h2>
 
@@ -1032,24 +1139,43 @@ export default function Page() {
 
           <h2 className="sh">What's Actually In The Guide</h2>
 
-          <div className="inside-box">
-            <div className="inside-title">The Glycation Reversal Protocol</div>
-            <div className="inside-sub">30-page clinical guide · Instant PDF · No filler · No fluff</div>
-            <div className="inside-item"><span className="i-check">✓</span><span><strong>The three compounds, named</strong> — with the clinical-trial doses. Not label doses. Study doses.</span></div>
-            <div className="inside-item"><span className="i-check">✓</span><span><strong>Exactly which brands I trust</strong> — so you don't waste $60 at the health store on under-dosed versions.</span></div>
-            <div className="inside-item"><span className="i-check">✓</span><span><strong>The daily sequence</strong> — which compound at which time. Absorption windows matter more than people realise.</span></div>
-            <div className="inside-item"><span className="i-check">✓</span><span><strong>The 7 foods that accelerate the problem</strong> — one of them is almost certainly in your breakfast right now, and a nutritionist probably told you it was healthy.</span></div>
-            <div className="inside-item"><span className="i-check">✓</span><span><strong>The 12 foods that slow it down</strong> — most are cheap and already in your kitchen.</span></div>
-            <div className="inside-item"><span className="i-check">✓</span><span><strong>The 14-day + 90-day tracker</strong> — what to look for and when, so you're not guessing.</span></div>
+          {/* Redesigned guide checklist with circle badges */}
+          <div className="guide-card">
+            <div className="guide-card-title">The Glycation Reversal Protocol</div>
+            <div className="guide-card-sub">30-page clinical guide · Instant PDF · No filler · No fluff</div>
+            <div className="guide-item">
+              <div className="guide-check">✓</div>
+              <div className="guide-text"><strong>The three compounds, named</strong> — with the clinical-trial doses. Not label doses. Study doses.</div>
+            </div>
+            <div className="guide-item">
+              <div className="guide-check">✓</div>
+              <div className="guide-text"><strong>Exactly which brands I trust</strong> — so you don't waste $60 at the health store on under-dosed versions.</div>
+            </div>
+            <div className="guide-item">
+              <div className="guide-check">✓</div>
+              <div className="guide-text"><strong>The daily sequence</strong> — which compound at which time. Absorption windows matter more than people realise.</div>
+            </div>
+            <div className="guide-item">
+              <div className="guide-check">✓</div>
+              <div className="guide-text"><strong>The 7 foods that accelerate the problem</strong> — one of them is almost certainly in your breakfast right now, and a nutritionist probably told you it was healthy.</div>
+            </div>
+            <div className="guide-item">
+              <div className="guide-check">✓</div>
+              <div className="guide-text"><strong>The 12 foods that slow it down</strong> — most are cheap and already in your kitchen.</div>
+            </div>
+            <div className="guide-item">
+              <div className="guide-check">✓</div>
+              <div className="guide-text"><strong>The 14-day + 90-day tracker</strong> — what to look for and when, so you're not guessing.</div>
+            </div>
           </div>
 
           <h2 className="sh">What Women Have Said</h2>
-          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '15px', color: '#555', marginBottom: '20px' }}>
+          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '15px', color: '#666', marginBottom: '20px' }}>
             ⭐⭐⭐⭐⭐ &nbsp;2,847 verified buyers · 4.9/5 average rating
           </p>
 
-          <img src={IMGS.testimonialGrid} alt="Grid showing real results from women who completed the Glycation Reversal Protocol" className="testimonial-grid-img" loading="lazy" />
-          <p className="testimonial-caption">Real women. Real results. 2,193 verified buyers since launch.</p>
+          <img src={IMGS.testimonialGrid} alt="A grid of photos and quotes from real women who completed the Glycation Reversal Protocol, showing their before and after results" className="testimonial-grid-img" loading="lazy" />
+          <p className="img-caption">Real women. Real results. 2,847 verified buyers since launch.</p>
 
           <hr className="divider" />
 
@@ -1071,10 +1197,11 @@ export default function Page() {
 
           <h2 className="sh" id="cta">Get The Protocol</h2>
 
-          <CtaBlock />
+          <CtaBlock trustSuffix="this week" />
 
+          {/* Urgency section */}
           <div className="urgency-banner">
-            <div className="urgency-icon">⏳</div>
+            <span className="urgency-icon">⏳</span>
             <div className="urgency-title">This offer may not last</div>
             <div className="urgency-body">
               When I first published this, I expected maybe a few hundred orders. We're now at several thousand a day.<br /><br />
@@ -1082,17 +1209,17 @@ export default function Page() {
               If this article keeps being shared at the pace it's being shared, the three supplement brands I recommend in the guide will sell out. I've already had to update two of the recommendations because one brand temporarily halted orders.<br /><br />
               If you're on this page and the price still says $19, and the guide still includes my current brand recommendations, I'd buy it today. I genuinely cannot promise what this looks like next week.
             </div>
-            <div className="urgency-counter">🟢 184 women bought in the last hour</div>
+            <div className="urgency-counter">
+              <span className="pulse-dot" />
+              {buyCount} women bought in the last hour
+            </div>
           </div>
 
+          {/* Guarantee — badge floated left */}
           <div className="guarantee-section">
-            <div className="guarantee-badge">
-              <img src={IMGS.guaranteeBadge} alt="60-day money back guarantee badge" loading="lazy" />
-            </div>
-            <div className="guarantee-text">
-              <h3>The "If It Doesn't Work, Don't Pay" Promise</h3>
-              <p>Follow the protocol for 60 days. If your jawline hasn't tightened. If the lines haven't softened. If no one has commented. If you feel like you wasted $19 — email my team. We'll refund every cent. You keep the guide. I'm confident that after 60 days you won't want the refund. You'll want to know what comes next.</p>
-            </div>
+            <img src={IMGS.guaranteeBadge} alt="Official 60-day 100% money-back guarantee badge" loading="lazy" className="guarantee-badge-img" />
+            <h3 className="guarantee-title">The "If It Doesn't Work, Don't Pay" Promise</h3>
+            <p className="guarantee-body">Follow the protocol for 60 days. If your jawline hasn't tightened. If the lines haven't softened. If no one has commented. If you feel like you wasted $19 — email my team. We'll refund every cent. You keep the guide. I'm confident that after 60 days you won't want the refund. You'll want to know what comes next.</p>
           </div>
 
           <p><strong>P.S.</strong> — Let me say this one more time so it's clear.</p>
@@ -1102,31 +1229,38 @@ export default function Page() {
           <p>It's $19. It's guaranteed for 60 days. The compounds cost less than one bottle of serum.</p>
           <p><strong>The only thing I can't give you back is the next year.</strong></p>
 
-          <CtaBlock />
+          <CtaBlock trustSuffix="this week" />
 
         </div>
       </div>
 
+      {/* Footer — redesigned as real publication */}
       <footer className="footer">
-        <p>© 2026 The Women's Daily — Health & Beauty Desk</p>
-        <p>Contributor column by Dr. Rachel Kim, MD (retired). Views are the author's.</p>
-        <p style={{ marginTop: '6px' }}>
-          <a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Contact</a> · <a href="#">Disclaimer</a>
-        </p>
-        <p style={{ maxWidth: '600px', margin: '14px auto 0' }}>
-          Any photos depicted are models. Results vary. Statements have not been evaluated by the FDA. This product does not diagnose, treat, cure, or prevent any disease. Consult your physician before any supplement protocol.
-        </p>
+        <div className="footer-logo">THE WOMEN'S DAILY</div>
+        <div className="footer-tagline">Independent women's health journalism since 2019</div>
+        <div className="footer-links">
+          <a href="#">About Us</a> ·
+          <a href="#">Editorial Team</a> ·
+          <a href="#">Contact</a> ·
+          <a href="#">Advertise</a> ·
+          <a href="#">Privacy</a> ·
+          <a href="#">Terms</a> ·
+          <a href="#">Disclaimer</a>
+        </div>
+        <div className="footer-social">f &nbsp;|&nbsp; Instagram &nbsp;|&nbsp; Pinterest</div>
+        <div className="footer-legal">
+          © 2026 The Women's Daily — Health &amp; Beauty Desk. Contributor column by Dr. Rachel Kim, MD (retired). Views are the author's own.<br />
+          Any photos depicted are models. Results vary and are not guaranteed. Statements on this page have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Always consult your physician before beginning any supplement protocol.
+        </div>
       </footer>
 
-      {/* ── STICKY CTA BAR ── */}
+      {/* Sticky CTA — mobile only, shows after 25% scroll */}
       <div className={`sticky-bar${showSticky ? ' show' : ''}`}>
-        <button className="sticky-inner" onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}>
-          <div className="sticky-text">
-            {ctaAlt ? '🟢 184 women bought today' : 'Get The Protocol — $19 →'}
-            <span className="sticky-sub">
-              {ctaAlt ? 'Tap to get yours for $19 →' : '60-day guarantee · Instant PDF delivery'}
-            </span>
-          </div>
+        <button
+          className="sticky-btn"
+          onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}
+        >
+          GET THE PROTOCOL — $19 →
         </button>
       </div>
     </>
