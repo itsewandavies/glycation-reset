@@ -17,14 +17,15 @@ const IMGS = {
   testimonialGrid: CDN + '69e891bd717d5dd4e1f94797.png',
   guaranteeBadge:  CDN + '69e8916006d54209df925c4f.png',
   drKim:           CDN + '69e891d98313fff52bb06955.png',
-  brenda:  BASE + '9_1.jpg?versionId=_NrFzoGUnndioDAABcjz6al86X0letnS',
-  donna:   BASE + '2_1.jpg?versionId=Ps8uA8c4eOsFnAGmwbXvUtms08ikqERx',
-  marcia:  BASE + '4_1.jpg?versionId=utFzlkNYBuPmzPsNyUk5cd75NcnOK7kV',
-  ruth:    BASE + '8_1.jpg?versionId=.DWIe9uvM1jKnKNpaJgMDPHBteBX19sc',
-  barbara: BASE + '1_1.jpg?versionId=VSs1LgTNfG_zeSLPSFqQAmgq.ba1VlfH',
-  eleanor: BASE + '4.jpg?versionId=EEpo4rQl.5.gWGqPWQZT2CGKNlirgFLZ',
-  gladys:  BASE + '1.jpg?versionId=0NUAWrBI2VRSuyISbojxI79d82WYU1NQ',
-  admin:   BASE + '2.jpg?versionId=xU3ZcPP7DJric56PFRy8jrDu0xHei3Je',
+  brenda:    BASE + '9_1.jpg?versionId=_NrFzoGUnndioDAABcjz6al86X0letnS',
+  donna:     BASE + '2_1.jpg?versionId=Ps8uA8c4eOsFnAGmwbXvUtms08ikqERx',
+  marcia:    BASE + '4_1.jpg?versionId=utFzlkNYBuPmzPsNyUk5cd75NcnOK7kV',
+  ruth:      BASE + '8_1.jpg?versionId=.DWIe9uvM1jKnKNpaJgMDPHBteBX19sc',
+  barbara:   BASE + '1_1.jpg?versionId=VSs1LgTNfG_zeSLPSFqQAmgq.ba1VlfH',
+  margaret:  BASE + '6_1.jpg?versionId=E406lm8rbQZcPseNyqqGMeECrTJ9LR2k',
+  eleanor:   BASE + '4.jpg?versionId=EEpo4rQl.5.gWGqPWQZT2CGKNlirgFLZ',
+  gladys:    BASE + '1.jpg?versionId=0NUAWrBI2VRSuyISbojxI79d82WYU1NQ',
+  admin:     BASE + '2.jpg?versionId=xU3ZcPP7DJric56PFRy8jrDu0xHei3Je',
 }
 
 const css = `
@@ -41,7 +42,6 @@ body {
   line-height: 1.78;
 }
 
-/* ── PROGRESS BAR ── */
 .progress-bar {
   position: fixed;
   top: 0; left: 0;
@@ -52,7 +52,6 @@ body {
   pointer-events: none;
 }
 
-/* ── PUB HEADER ── */
 .trending-bar {
   background: #C0392B;
   color: #fff;
@@ -108,7 +107,6 @@ body {
   text-transform: uppercase;
 }
 
-/* ── ARTICLE ── */
 .article-wrap {
   max-width: 680px;
   margin: 0 auto;
@@ -143,8 +141,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-
-/* ── BYLINE ── */
 .byline-row {
   display: flex;
   align-items: flex-start;
@@ -187,7 +183,6 @@ h1 {
   color: #888;
 }
 
-/* ── IMAGES ── */
 .hero-gif {
   width: 100%;
   border-radius: 8px;
@@ -220,7 +215,6 @@ h1 {
   margin: 20px 0 8px;
 }
 
-/* ── BODY COPY ── */
 .body-copy {
   font-family: 'Lora', Georgia, serif;
   font-size: 21px;
@@ -242,7 +236,6 @@ h1 {
   line-height: 1.25;
 }
 
-/* ── PULL QUOTE ── */
 .pull-quote {
   background: #FFF7F2;
   border-left: 4px solid #E07856;
@@ -255,7 +248,6 @@ h1 {
   line-height: 1.72;
 }
 
-/* ── SOFT CTA ── */
 .soft-cta {
   background: #FFF7F2;
   border-left: 4px solid #E07856;
@@ -289,7 +281,6 @@ h1 {
 }
 
 .soft-cta-btn {
-  display: inline-block;
   background: #E07856;
   color: white;
   text-decoration: none;
@@ -305,7 +296,6 @@ h1 {
 
 .soft-cta-btn:hover { background: #d06540; }
 
-/* ── ICON LIST ── */
 .icon-list { list-style: none; padding: 0; margin: 24px 0 28px; }
 
 .icon-list li {
@@ -318,7 +308,6 @@ h1 {
   margin-bottom: 14px;
 }
 
-/* ── COMPOUND CARDS ── */
 .compound-cards { margin: 24px 0 28px; display: flex; flex-direction: column; gap: 16px; }
 
 .compound-card {
@@ -356,7 +345,6 @@ h1 {
   line-height: 1.6;
 }
 
-/* ── GUIDE CARD ── */
 .guide-card {
   background: #FFF7F2;
   border-radius: 8px;
@@ -409,7 +397,6 @@ h1 {
 
 .guide-text strong { font-weight: 700; color: #000; }
 
-/* ── FACEBOOK COMMENTS ── */
 .fb-wrap {
   margin: 32px 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -467,7 +454,6 @@ h1 {
 .fbc-time { font-weight: 400; color: #65676b; }
 .fbc-replies { padding-left: 48px; }
 
-/* ── CTA BLOCK ── */
 .cta-block {
   background: #FFF7F2;
   border: 1.5px solid #1F3A5F;
@@ -537,7 +523,6 @@ h1 {
 
 .cta-trust { font-family: 'Inter', sans-serif; font-size: 13px; color: #999; }
 
-/* ── URGENCY ── */
 .urgency-banner {
   background: #FEF2F2;
   border: 1.5px solid #DC2626;
@@ -590,7 +575,6 @@ h1 {
   flex-shrink: 0;
 }
 
-/* ── GUARANTEE ── */
 .guarantee-section {
   background: #F0FAF0;
   border: 1px solid #8dc88d;
@@ -623,7 +607,6 @@ h1 {
   line-height: 1.74;
 }
 
-/* ── STICKY CTA — mobile only ── */
 .sticky-bar {
   display: none;
   position: fixed;
@@ -632,7 +615,6 @@ h1 {
   transform: translateY(100%);
   transition: transform 0.25s ease;
   box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
-  border-radius: 0;
 }
 
 .sticky-bar.show { transform: translateY(0); }
@@ -654,10 +636,8 @@ h1 {
 
 .sticky-btn:hover { background: #d06540; }
 
-/* ── DIVIDER ── */
 .divider { border: none; border-top: 1px solid #e4e0da; margin: 44px 0; }
 
-/* ── FOOTER ── */
 .footer {
   background: #1A1A1A;
   color: rgba(255,255,255,0.5);
@@ -713,7 +693,6 @@ h1 {
   line-height: 1.9;
 }
 
-/* ── MOBILE ── */
 @media (max-width: 680px) {
   .sticky-bar { display: block; }
   body { font-size: 19px; }
@@ -772,20 +751,20 @@ function FbBubble({ c }: { c: FbComment }) {
 function CtaBlock({ trustSuffix = 'this week' }: { trustSuffix?: string }) {
   return (
     <div className="cta-block">
-      <img src={IMGS.productMockup} alt="The Glycation Reversal Protocol — 30-page PDF guide showing the cover" loading="lazy" className="cta-mockup" />
-      <div className="cta-title">The Glycation Reversal Protocol</div>
-      <div className="cta-subtitle">30-page clinical guide · Instant PDF · Delivered to your inbox in 2 minutes</div>
+      <img src={IMGS.productMockup} alt="The Kitchen Protocol — 42-page PDF guide" loading="lazy" className="cta-mockup" />
+      <div className="cta-title">The Kitchen Protocol</div>
+      <div className="cta-subtitle">The 90-day system that reverses facial glycation using ingredients already in your kitchen.</div>
       <div className="price-line">
         <span className="price-was">$47</span>
-        <span className="price-now">$19</span>
+        <span className="price-now">$27</span>
       </div>
       <ul className="checklist">
         <li>60-day money-back guarantee</li>
         <li>No subscription. No upsell. One-time.</li>
         <li>Works on women 45–75</li>
-        <li>Compounds cost ~$35/month total</li>
+        <li>Ingredients cost less than $20 total from any grocery store</li>
       </ul>
-      <button className="cta-btn">👉 YES — GET THE PROTOCOL FOR $19</button>
+      <button className="cta-btn">👉 YES — GET THE PROTOCOL FOR $27</button>
       <div className="cta-trust">🔒 Secure checkout · Instant delivery · 2,847 women ordered {trustSuffix}</div>
     </div>
   )
@@ -797,11 +776,10 @@ export default function Page() {
   const [views,      setViews]       = useState(1284991)
   const [buyCount,   setBuyCount]    = useState(184)
 
-  // Combined scroll handler
   const handleScroll = useCallback(() => {
-    const scrollY   = window.scrollY
-    const totalH    = document.documentElement.scrollHeight - window.innerHeight
-    const pct       = totalH > 0 ? (scrollY / totalH) * 100 : 0
+    const scrollY = window.scrollY
+    const totalH  = document.documentElement.scrollHeight - window.innerHeight
+    const pct     = totalH > 0 ? (scrollY / totalH) * 100 : 0
     setProgress(pct)
     setShowSticky(scrollY > window.innerHeight * 0.25)
   }, [])
@@ -811,24 +789,16 @@ export default function Page() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [handleScroll])
 
-  // Live views counter — increments 1 every 4-6 seconds
   useEffect(() => {
     let tid: ReturnType<typeof setTimeout>
-    const tick = () => {
-      setViews(v => v + 1)
-      tid = setTimeout(tick, 4000 + Math.random() * 2000)
-    }
+    const tick = () => { setViews(v => v + 1); tid = setTimeout(tick, 4000 + Math.random() * 2000) }
     tid = setTimeout(tick, 4000 + Math.random() * 2000)
     return () => clearTimeout(tid)
   }, [])
 
-  // Urgency counter — increments 1 every 20-30 seconds
   useEffect(() => {
     let tid: ReturnType<typeof setTimeout>
-    const tick = () => {
-      setBuyCount(c => c + 1)
-      tid = setTimeout(tick, 20000 + Math.random() * 10000)
-    }
+    const tick = () => { setBuyCount(c => c + 1); tid = setTimeout(tick, 20000 + Math.random() * 10000) }
     tid = setTimeout(tick, 20000 + Math.random() * 10000)
     return () => clearTimeout(tid)
   }, [])
@@ -844,7 +814,7 @@ export default function Page() {
     },
     {
       av: IMGS.marcia, name: 'Marcia L.', ts: '4h',
-      text: <>Okay I&apos;ll be the skeptic. I&apos;ve bought every single thing. Olay. Rodan. Arbonne. Prevage. That $400 La Mer cream my daughter got me. NONE of it worked. Willing to try $19. I&apos;ll report back.</>,
+      text: <>Okay I&apos;ll be the skeptic. I&apos;ve bought every single thing. Olay. Rodan. Arbonne. Prevage. That $400 La Mer cream my daughter got me. NONE of it worked. Willing to try $27. I&apos;ll report back.</>,
       replies: [{
         av: IMGS.marcia, name: 'Marcia L.', ts: '22m',
         text: <>UPDATE week 4 — getting comments at church. Not deleting my original comment because I want other skeptical women to see the before</>
@@ -852,15 +822,19 @@ export default function Page() {
     },
     {
       av: IMGS.ruth, name: 'Ruth V.', ts: '6h',
-      text: <>Is this safe with blood pressure medication? My doctor is old school and I don&apos;t want to ask him if he&apos;ll just say no.</>,
+      text: <>Is this going to be 500 weird ingredients I have to order online? I&apos;m not doing that. I want to use what I have.</>,
       replies: [{
         av: IMGS.admin, name: "The Women's Daily · Dr. Kim's Team ✓", admin: true, ts: '5h',
-        text: <>Hi Ruth — the guide includes a section on medication interactions. Please do check with your physician — but the three compounds have no known interactions with common BP meds. 💛</>
+        text: <>Hi Ruth — genuinely no. Everything in the core protocol is available in a normal grocery store. If you have cinnamon, green tea, and a few berries, you have 70% of it. The guide tells you exactly what to get and how to prepare it. 💛</>
       }]
     },
     {
       av: IMGS.barbara, name: 'Barbara M.', ts: '8h',
       text: <>My husband just walked past the screen and said &quot;who is that&quot; and I said &quot;me&quot; and he said &quot;no the other picture&quot; and it WAS me. From 4 years ago. I&apos;m buying it tonight.</>
+    },
+    {
+      av: IMGS.margaret, name: 'Margaret T.', ts: '3h',
+      text: <>I was skeptical because I thought this would be some expensive supplement list. It&apos;s not. I already had everything except one spice which was $3 at the grocery store. Started Monday. It&apos;s Friday. My husband just asked me if I&apos;d slept more this week. This is crazy.</>
     },
     {
       av: IMGS.eleanor, name: 'Eleanor F.', ts: '11h',
@@ -878,7 +852,6 @@ export default function Page() {
     <>
       <style dangerouslySetInnerHTML={{ __html: css }} />
 
-      {/* Reading progress bar */}
       {progress > 5 && (
         <div className="progress-bar" style={{ width: `${Math.min(progress, 100)}%` }} />
       )}
@@ -902,11 +875,10 @@ export default function Page() {
 
         <h1>Retired Dermatologist: "Women Who Are 50 But Look 30 Aren't Using Creams — They're Doing This Instead"</h1>
 
-        <p className="deck">She spent 22 years telling women to buy the wrong thing. Her mother's phone call changed everything.</p>
+        <p className="deck">She spent 22 years telling women to buy the wrong thing. Then she discovered her own grandmother had been doing it right all along — with ingredients from the kitchen.</p>
 
-        {/* Byline — redesigned */}
         <div className="byline-row">
-          <img src={IMGS.drKim} alt="Dr. Rachel Kim, MD — Retired Board-Certified Dermatologist" className="byline-avatar" />
+          <img src={IMGS.drKim} alt="Dr. Rachel Kim, MD — Retired Board-Certified Dermatologist" className="byline-avatar" loading="eager" />
           <div className="byline-info">
             <div className="byline-name">By Dr. Rachel Kim, MD</div>
             <div className="byline-creds">Retired Board-Certified Dermatologist · 22 years</div>
@@ -914,7 +886,7 @@ export default function Page() {
           </div>
         </div>
 
-        <img src={IMGS.heroGif} alt="Woman looking in mirror and noticing her skin has visibly improved after the protocol" className="hero-gif" loading="eager" />
+        <img src={IMGS.heroGif} alt="Woman looking in mirror and noticing her skin has visibly improved" className="hero-gif" loading="eager" />
 
         <div className="body-copy">
 
@@ -966,7 +938,7 @@ export default function Page() {
           <p>So every cream you've ever bought — every single one — has been working on the wrong layer.</p>
           <p>The layer you care about is untouched.</p>
 
-          <img src={IMGS.mechanismGif} alt="Scientific animation showing a skincare cream sitting on the epidermis surface while glycation damage occurs in the dermis below — they never make contact" className="article-img" loading="lazy" />
+          <img src={IMGS.mechanismGif} alt="Scientific animation showing a skincare cream sitting on the epidermis surface while glycation damage occurs in the dermis below" className="article-img" loading="lazy" />
           <p className="img-caption">Your serum sits on top. Glycation happens underneath. They never meet.</p>
 
           <p>Ask any dermatologist. They'll tell you the same thing.</p>
@@ -986,18 +958,17 @@ export default function Page() {
           <p>Think of a mattress with old, rusted springs.</p>
           <p>The springs are still there. They just don't work anymore.</p>
 
-          <img src={IMGS.mattressGif} alt="Animation of a mattress cross-section showing springs becoming stiff and losing their bounce — a visual metaphor for glycated collagen that can no longer support the skin" className="article-img" loading="lazy" />
+          <img src={IMGS.mattressGif} alt="Animation of a mattress cross-section showing springs becoming stiff and losing their bounce — a metaphor for glycated collagen" className="article-img" loading="lazy" />
 
           <p><strong>That is your face after 50.</strong></p>
 
-          {/* Soft CTA — redesigned */}
           <div className="soft-cta">
             <div className="soft-cta-inner">
               <div className="soft-cta-icon">🔒</div>
               <div>
                 <div className="soft-cta-bold">Want to skip ahead?</div>
-                <div className="soft-cta-body">I put the full protocol — compounds, doses, brands, food list — in a 30-page guide.</div>
-                <a href="#cta" className="soft-cta-btn">Get It For $19 →</a>
+                <div className="soft-cta-body">I put the full protocol — kitchen ingredients, morning ritual, tea preparation, food list — in a 42-page guide.</div>
+                <a href="#cta" className="soft-cta-btn">Get It For $27 →</a>
               </div>
             </div>
           </div>
@@ -1025,56 +996,114 @@ export default function Page() {
           <p>If creams can't get there, what can?</p>
           <p>Your bloodstream.</p>
 
-          <img src={IMGS.bloodstreamGif} alt="Medical animation showing an oral compound being absorbed into the bloodstream and traveling through capillaries to reach the dermis layer of skin from the inside" className="article-img" loading="lazy" />
+          <img src={IMGS.bloodstreamGif} alt="Medical animation showing a compound being absorbed into the bloodstream and traveling to reach the dermis layer of skin from the inside" className="article-img" loading="lazy" />
 
           <p>That's the only delivery route that reaches the dermis from the inside.</p>
           <p>It's why Botox is injected. It's why Accutane is swallowed. Because the dermis doesn't accept topicals.</p>
           <p>After my mother's phone call, I spent six months reading clinical literature I hadn't touched since medical school.</p>
 
-          <img src={IMGS.researchImg} alt="Dr. Rachel Kim at a research desk surrounded by open medical journals and clinical papers, studying dermatology literature" className="article-img" loading="lazy" />
+          <img src={IMGS.researchImg} alt="Dr. Rachel Kim at a research desk surrounded by open medical journals and clinical papers" className="article-img" loading="lazy" />
 
-          <p>And I found three oral compounds.</p>
-          <p>All three had real, peer-reviewed, placebo-controlled trials.</p>
-          <p>One showed statistically significant improvement in skin elasticity at 12 weeks in women aged 45–65.</p>
-          <p>Not marginal. <strong>Significant.</strong></p>
-          <p>I'm not going to name them publicly on this page. I'll explain why in a second.</p>
-          <p>But I will tell you this:</p>
+          <p>I expected to find some exotic compound. A patented peptide. A cutting-edge molecule locked behind a prescription.</p>
+          <p>What I found instead changed everything.</p>
 
-          {/* Compound cards — fixed formatting */}
+          <h2 className="sh">The Answer Was In My Grandmother's Kitchen</h2>
+
+          <p>My Korean grandmother lived to 94. Sharp-minded, walking, laughing, and — I realize now looking at photos — with skin that stayed firm and lifted into her eighties.</p>
+          <p>Growing up, she drank the same tea every morning. She kept a jar of cinnamon sticks and dried berries in the kitchen. She soaked her rice in a specific way before cooking it. She always had bone broth simmering on the stove.</p>
+          <p>I thought it was just her culture.</p>
+          <p>It turns out nearly every one of her daily habits had been independently documented in peer-reviewed Western research as powerful inhibitors of glycation — the exact process destroying your face after 50.</p>
+          <p>The foods and teas she used are all in a normal US grocery store.</p>
+          <p>Most of them are probably in your kitchen right now.</p>
+
+          <h2 className="sh">What The Research Actually Shows</h2>
+
+          <p>When I sat down with the glycation literature, a pattern emerged.</p>
+          <p>Certain kitchen ingredients have been shown in peer-reviewed studies to directly inhibit the formation of AGEs — the sugar-bonded collagen that stiffens your face.</p>
+          <p>I'm not going to list every study. But here's what's documented:</p>
+
           <div className="compound-cards">
             <div className="compound-card">
               <div className="compound-badge">01</div>
               <div>
-                <span className="compound-headline">One stops new damage.</span>
-                <span className="compound-desc">It's a plant extract. You've heard of the active molecule from red wine research.</span>
+                <span className="compound-headline">A common spice sitting unused in your cabinet.</span>
+                <span className="compound-desc">Shown to reduce AGE formation by up to 50% in laboratory conditions when consumed daily. Most women have it. Almost nobody uses enough of it, or uses it at the right time.</span>
               </div>
             </div>
             <div className="compound-card">
               <div className="compound-badge">02</div>
               <div>
-                <span className="compound-headline">One rebuilds the structure underneath your skin.</span>
-                <span className="compound-desc">A berry oil. This is the one that creates the "lifted" look.</span>
+                <span className="compound-headline">A specific tea, prepared a specific way.</span>
+                <span className="compound-desc">A direct AGE inhibitor. Most women in the West drink it wrong — the way most recipes tell you to brew it actually destroys the compound that matters. The difference between 90% effectiveness and 20% is one preparation step.</span>
               </div>
             </div>
             <div className="compound-card">
               <div className="compound-badge">03</div>
               <div>
-                <span className="compound-headline">One has a double-blind trial behind it.</span>
-                <span className="compound-desc">A bark extract. Most brands sell it at a fraction of the study dose.</span>
+                <span className="compound-headline">An everyday kitchen acid you already have.</span>
+                <span className="compound-desc">Blunts the blood sugar spike after meals by up to 30%. Less spike = less glycation. Taken before the right meals, it's the single highest-leverage habit change you can make this week.</span>
+              </div>
+            </div>
+            <div className="compound-card">
+              <div className="compound-badge">04</div>
+              <div>
+                <span className="compound-headline">Three common berries from the freezer section.</span>
+                <span className="compound-desc">More AGE-inhibiting power per gram than any expensive "anti-aging" product on the market. One of them is almost certainly in your grocery store's freezer section for $4.</span>
+              </div>
+            </div>
+            <div className="compound-card">
+              <div className="compound-badge">05</div>
+              <div>
+                <span className="compound-headline">A specific morning ritual — two minutes, before breakfast.</span>
+                <span className="compound-desc">Compounds the effect of everything else. My mother calls it the "two-minute ritual." Done in a specific order, it sets your whole day's glycation metabolism. Done in the wrong order, it does almost nothing.</span>
               </div>
             </div>
           </div>
 
-          <img src={IMGS.compoundsImg} alt="Three natural supplement bottles arranged together — representing the plant extract, berry oil, and bark extract compounds in the protocol" className="article-img" loading="lazy" />
+          <img src={IMGS.compoundsImg} alt="Natural kitchen ingredients — spices, teas, berries — arranged on a clean surface" className="article-img" loading="lazy" />
 
-          <h2 className="sh">Why I Won't Name Them Here</h2>
+          <p>These aren't secrets. They're just not profitable to tell you about, because you can't put a trademark on cinnamon.</p>
 
-          <p>Two reasons.</p>
-          <p>One — if I name the exact brands on an article this size, they sell out within 48 hours and the price doubles. I've watched it happen.</p>
-          <p>Two — the doses matter more than the compound. Most brands on Amazon sell these at 10–20% of the clinical dose. You'd be taking the right thing in the wrong amount and wondering why nothing's happening.</p>
-          <p>I put the exact protocol — compound names, clinical doses, where to buy them, when to take them — in a short guide.</p>
-          <p>It's 30 pages. It costs $19.</p>
-          <p>More on that in a moment.</p>
+          <h2 className="sh">Why I Won't Just Give You A List</h2>
+
+          <p>The mistake I made when I first told patients about this was just giving them a list.</p>
+          <p>"Drink green tea. Eat berries. Use cinnamon."</p>
+          <p>Nobody got results. Not because the science was wrong — but because the protocol matters more than the ingredients.</p>
+          <p>Here's what actually determines whether this works:</p>
+
+          <div className="compound-cards">
+            <div className="compound-card">
+              <div className="compound-badge">→</div>
+              <div>
+                <span className="compound-headline">Timing.</span>
+                <span className="compound-desc">When you consume each ingredient relative to meals matters enormously. The same food at 7am vs 7pm has opposite effects on your glycation levels.</span>
+              </div>
+            </div>
+            <div className="compound-card">
+              <div className="compound-badge">→</div>
+              <div>
+                <span className="compound-headline">Preparation.</span>
+                <span className="compound-desc">How you prepare green tea determines whether you get 90% of its AGE-inhibiting power or 20%. Most people ruin it without knowing, following normal brewing instructions.</span>
+              </div>
+            </div>
+            <div className="compound-card">
+              <div className="compound-badge">→</div>
+              <div>
+                <span className="compound-headline">Combination.</span>
+                <span className="compound-desc">Two ingredients paired together multiply each other's effect. The same two ingredients taken 6 hours apart do almost nothing. Order and pairing are everything.</span>
+              </div>
+            </div>
+            <div className="compound-card">
+              <div className="compound-badge">→</div>
+              <div>
+                <span className="compound-headline">Sequence.</span>
+                <span className="compound-desc">What you drink before your first meal of the day either sets your whole day's glycation clock to "off" or "on." This is the most important thing in the guide.</span>
+              </div>
+            </div>
+          </div>
+
+          <p>Without the exact sequence, you're eating healthy foods and hoping. With the sequence, you're running a 90-day protocol that has a predictable, measurable effect.</p>
+          <p>That's what's in the guide.</p>
 
           <h2 className="sh">First, Let Me Tell You What Happened To My Mother</h2>
 
@@ -1083,7 +1112,7 @@ export default function Page() {
           <p>Week 12: She sent me a photo from a wedding.</p>
           <p>She was 62.</p>
 
-          <img src={IMGS.weddingPhoto} alt="Dr. Kim's mother standing at a wedding looking radiant and youthful at age 62, photographed 12 weeks after starting the protocol" className="article-img" loading="lazy" />
+          <img src={IMGS.weddingPhoto} alt="Dr. Kim's mother standing at a wedding looking radiant and youthful at age 62, 12 weeks after starting the protocol" className="article-img" loading="lazy" />
           <p className="img-caption">My mother at my cousin's wedding, 12 weeks into the protocol. She was 62.</p>
 
           <p>She looked like herself. Not a younger version of herself. Just the version from the photos 5 years ago she'd stopped looking at.</p>
@@ -1091,46 +1120,54 @@ export default function Page() {
 
           <CtaBlock trustSuffix="this week" />
 
-          <h2 className="sh">Why $19 And Not $400?</h2>
+          <h2 className="sh">Why $27 And Not $400?</h2>
 
           <p>I want to be honest with you about this.</p>
           <p>I'm retired. I don't have a clinic. I don't need consultation fees.</p>
-          <p>But more than that — there are millions of women who have spent thousands of dollars on the wrong thing through no fault of their own.</p>
+          <p>But more than that — there are millions of women who have spent thousands of dollars on creams that couldn't reach their skin, through no fault of their own.</p>
           <p>I cannot in good conscience hide this behind a consultation price.</p>
-          <p>$19 is roughly my cost to publish and process the order.</p>
-          <p>If you do the protocol for 60 days and see what hundreds of other women have seen — and if you want to go further — there's a longer program you can ask me about later.</p>
-          <p>But the $19 guide is complete. You don't need anything else. The first step works.</p>
-          <p>Also worth knowing: the three compounds themselves cost about <strong>$35 a month total</strong>. Less than one bottle of the serum that isn't working.</p>
+          <p>$27 is roughly my cost to publish and process the order.</p>
+          <p>If you do the protocol for 60 days and see what hundreds of other women have seen — there's more I can share. But the $27 guide is complete. You don't need anything else to start.</p>
+          <p>And here's the part I love most:</p>
+          <p>The ingredients in the protocol cost almost nothing. Most of them are already in your kitchen. If you had to buy every single one fresh from a grocery store, you'd spend less than $20 — total — for the entire 90-day protocol.</p>
+          <p>That's less than one bottle of the serum that couldn't work.</p>
 
           <h2 className="sh">What's Actually In The Guide</h2>
 
-          {/* Redesigned guide checklist with circle badges */}
           <div className="guide-card">
-            <div className="guide-card-title">The Glycation Reversal Protocol</div>
-            <div className="guide-card-sub">30-page clinical guide · Instant PDF · No filler · No fluff</div>
+            <div className="guide-card-title">The Kitchen Protocol</div>
+            <div className="guide-card-sub">42-page clinical guide · Instant PDF · No filler · No fluff</div>
             <div className="guide-item">
               <div className="guide-check">✓</div>
-              <div className="guide-text"><strong>The three compounds, named</strong> — with the clinical-trial doses. Not label doses. Study doses.</div>
+              <div className="guide-text"><strong>The 9 kitchen ingredients that inhibit glycation</strong> — with the specific forms and preparations that actually work (most women use the wrong form of #3 and waste months).</div>
             </div>
             <div className="guide-item">
               <div className="guide-check">✓</div>
-              <div className="guide-text"><strong>Exactly which brands I trust</strong> — so you don't waste $60 at the health store on under-dosed versions.</div>
+              <div className="guide-text"><strong>The morning sequence</strong> — the exact 2-minute ritual to do before your first meal of the day. Sets your whole day's glycation metabolism.</div>
             </div>
             <div className="guide-item">
               <div className="guide-check">✓</div>
-              <div className="guide-text"><strong>The daily sequence</strong> — which compound at which time. Absorption windows matter more than people realise.</div>
+              <div className="guide-text"><strong>The tea protocol</strong> — how to prepare the primary AGE-inhibiting tea so you keep 90% of its power instead of destroying it.</div>
             </div>
             <div className="guide-item">
               <div className="guide-check">✓</div>
-              <div className="guide-text"><strong>The 7 foods that accelerate the problem</strong> — one of them is almost certainly in your breakfast right now, and a nutritionist probably told you it was healthy.</div>
+              <div className="guide-text"><strong>The 7 foods accelerating your aging</strong> — one is in your breakfast right now, and a nutritionist probably told you it was healthy.</div>
             </div>
             <div className="guide-item">
               <div className="guide-check">✓</div>
-              <div className="guide-text"><strong>The 12 foods that slow it down</strong> — most are cheap and already in your kitchen.</div>
+              <div className="guide-text"><strong>The 12 foods that slow glycation</strong> — most are already in your kitchen. I'll show you how to rotate them through your week.</div>
             </div>
             <div className="guide-item">
               <div className="guide-check">✓</div>
-              <div className="guide-text"><strong>The 14-day + 90-day tracker</strong> — what to look for and when, so you're not guessing.</div>
+              <div className="guide-text"><strong>The meal sequencing method</strong> — the order in which you eat the foods on your plate changes how much glycation each meal causes. This alone has been shown to reduce post-meal blood sugar spikes by 30%.</div>
+            </div>
+            <div className="guide-item">
+              <div className="guide-check">✓</div>
+              <div className="guide-text"><strong>The 14-day + 90-day results tracker</strong> — what to look for and when, so you're not guessing.</div>
+            </div>
+            <div className="guide-item">
+              <div className="guide-check">✓</div>
+              <div className="guide-text"><strong>Bonus: The international ingredient guide</strong> — which UK, Canadian, Australian, and European versions of key ingredients match the clinical-grade versions. For my international readers — thank you for the emails. I finally wrote it up.</div>
             </div>
           </div>
 
@@ -1139,7 +1176,7 @@ export default function Page() {
             ⭐⭐⭐⭐⭐ &nbsp;2,847 verified buyers · 4.9/5 average rating
           </p>
 
-          <img src={IMGS.testimonialGrid} alt="A grid of photos and quotes from real women who completed the Glycation Reversal Protocol, showing their before and after results" className="testimonial-grid-img" loading="lazy" />
+          <img src={IMGS.testimonialGrid} alt="A grid of photos and quotes from real women who completed the Kitchen Protocol" className="testimonial-grid-img" loading="lazy" />
           <p className="img-caption">Real women. Real results. 2,847 verified buyers since launch.</p>
 
           <hr className="divider" />
@@ -1164,15 +1201,14 @@ export default function Page() {
 
           <CtaBlock trustSuffix="this week" />
 
-          {/* Urgency section */}
           <div className="urgency-banner">
             <span className="urgency-icon">⏳</span>
-            <div className="urgency-title">This offer may not last</div>
+            <div className="urgency-title">Why The $27 Price Won't Last</div>
             <div className="urgency-body">
               When I first published this, I expected maybe a few hundred orders. We're now at several thousand a day.<br /><br />
-              My concern isn't the price. My concern is the <strong>supply of the three compounds</strong>.<br /><br />
-              If this article keeps being shared at the pace it's being shared, the three supplement brands I recommend in the guide will sell out. I've already had to update two of the recommendations because one brand temporarily halted orders.<br /><br />
-              If you're on this page and the price still says $19, and the guide still includes my current brand recommendations, I'd buy it today. I genuinely cannot promise what this looks like next week.
+              My team has told me the price needs to go up — both to slow the order volume and to match the value of what's inside.<br /><br />
+              The next price is $47, and it's happening in the next few days.<br /><br />
+              If you're on this page and the price still says $27, that's the price. I'd get it today.
             </div>
             <div className="urgency-counter">
               <span className="pulse-dot" />
@@ -1180,26 +1216,33 @@ export default function Page() {
             </div>
           </div>
 
-          {/* Guarantee — badge floated left */}
           <div className="guarantee-section">
             <img src={IMGS.guaranteeBadge} alt="Official 60-day 100% money-back guarantee badge" loading="lazy" className="guarantee-badge-img" />
             <h3 className="guarantee-title">The "If It Doesn't Work, Don't Pay" Promise</h3>
-            <p className="guarantee-body">Follow the protocol for 60 days. If your jawline hasn't tightened. If the lines haven't softened. If no one has commented. If you feel like you wasted $19 — email my team. We'll refund every cent. You keep the guide. I'm confident that after 60 days you won't want the refund. You'll want to know what comes next.</p>
+            <p className="guarantee-body">Follow the protocol for 60 days. If your jawline hasn't tightened. If the lines haven't softened. If no one has commented. If you feel like you wasted $27 — email my team. We'll refund every cent. You keep the guide. I'm confident that after 60 days you won't want the refund. You'll want to know what comes next.</p>
           </div>
 
           <p><strong>P.S.</strong> — Let me say this one more time so it's clear.</p>
           <p>Everything you've tried has been working on the wrong layer of your skin.</p>
           <p>You didn't fail. The products failed you.</p>
-          <p>The only real route to what you actually care about — the jawline, the cheeks, the lift — runs through the bloodstream. Not through a jar.</p>
-          <p>It's $19. It's guaranteed for 60 days. The compounds cost less than one bottle of serum.</p>
+          <p>The only real route to what you actually care about — the jawline, the cheeks, the lift — runs through your bloodstream. Not through a jar.</p>
+          <p>And the ingredients that actually reach it aren't in a pharmacy. They're in your kitchen. You just need to know which ones, how to prepare them, and when to use them.</p>
+          <p>It's $27. It's guaranteed for 60 days. The ingredients cost less than one bottle of serum.</p>
           <p><strong>The only thing I can't give you back is the next year.</strong></p>
+
+          <h2 className="sh">Why This Works In Every Country</h2>
+
+          <p>Before I published this, I tested it with women in 11 different countries.</p>
+          <p>Women in the UK, Canada, Australia, Ireland, South Africa, the Philippines, Germany, France, Spain, Singapore, and the US all ran the protocol.</p>
+          <p>The protocol worked the same in every single country — because every ingredient is globally available in any normal grocery store, under different brand names.</p>
+          <p>The guide includes the international ingredient guide specifically for this. You don't need to import anything. You don't need to find an American health store. You don't need to order online.</p>
+          <p>If you have a grocery store, you can do this.</p>
 
           <CtaBlock trustSuffix="this week" />
 
         </div>
       </div>
 
-      {/* Footer — redesigned as real publication */}
       <footer className="footer">
         <div className="footer-logo">THE WOMEN'S DAILY</div>
         <div className="footer-tagline">Independent women's health journalism since 2019</div>
@@ -1215,17 +1258,16 @@ export default function Page() {
         <div className="footer-social">f &nbsp;|&nbsp; Instagram &nbsp;|&nbsp; Pinterest</div>
         <div className="footer-legal">
           © 2026 The Women's Daily — Health &amp; Beauty Desk. Contributor column by Dr. Rachel Kim, MD (retired). Views are the author's own.<br />
-          Any photos depicted are models. Results vary and are not guaranteed. Statements on this page have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Always consult your physician before beginning any supplement protocol.
+          Any photos depicted are models. Results vary and are not guaranteed. Statements on this page have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Always consult your physician before beginning any dietary changes.
         </div>
       </footer>
 
-      {/* Sticky CTA — mobile only, shows after 25% scroll */}
       <div className={`sticky-bar${showSticky ? ' show' : ''}`}>
         <button
           className="sticky-btn"
           onClick={() => document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' })}
         >
-          GET THE PROTOCOL — $19 →
+          GET THE PROTOCOL — $27 →
         </button>
       </div>
     </>
